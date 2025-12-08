@@ -2,7 +2,7 @@
 layout: page
 title: "About Me"
 ---
-<img src="/assets/me.jpg"
+<img src="/assets/Anikat.jpg"
      alt="profile photo"
      width="180"
      style="
