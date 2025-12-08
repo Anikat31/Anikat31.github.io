@@ -2,16 +2,20 @@
 layout: page
 title: "About Me"
 ---
-# Hello — I’m **Anikat Kankaria**
-<img src="/assets/Anikat.jpg"
+<img src="/assets/Znikat.jpg"
      alt="profile photo"
-     width="180"
      style="
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
         border-radius: 50%;
         float: right;
-        margin-left: 20px;
-        margin-bottom: 20px;
-     " />
+        margin-left: 25px;
+        margin-bottom: 25px;
+     ">
+
+# Hello — I’m **Anikat Kankaria**
+
 I am a researcher at Internation Center for Theoritical Sciences- TIFR, Bengaluru. I am currently working working with [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
 
 ## Research Interests
