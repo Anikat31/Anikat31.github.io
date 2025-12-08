@@ -1,0 +1,17 @@
+title: "Anikat Kankaria"
+description: "Research in Fluid Dynamics, Turbulence & Nonlinear Physics"
+
+theme: minima
+
+# (Optional) site-wide metadata
+author:
+  name: "Anikat Kankaria"
+markdown: kramdown
+
+# Navigation pages — list your pages here
+header_pages:
+  - index.md
+  - research.md
+  - publications.md
+  - teaching.md
+  - contact.md
