@@ -5,8 +5,8 @@ title: "About Me"
 <img src="/assets/Anikat.jpg"
      alt="profile photo"
      style="
-        width: 260px;
-        height: 260px;
+        width: 320px;
+        height: 320px;
         object-fit: cover;
         border-radius: 50%;
         float: right;
@@ -16,6 +16,7 @@ title: "About Me"
 
 # Hello — I’m **Anikat Kankaria**
 
-I am a researcher at Internation Center for Theoritical Sciences- TIFR, Bengaluru. I am currently working working with [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
+I am a researcher at Internation Center for Theoritical Sciences - Tata Institure of Fundamental Research (ICTS-TIFR), Bengaluru. I am currently working working with [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
 
 ## Research Interests
+My research interests lie in far-from-equilibrium phenomena, especially turbulence. I am also deeply interested in dynamical systems and broader areas of non-equilibrium physics, including eco-evolutionary dynamics, complex networks, stochastic modeling, random walks, and the mathematical structure of turbulent flows. I enjoy exploring how these ideas connect across disciplines—from physics to ecology to finance.
