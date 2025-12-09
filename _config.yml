@@ -1,17 +1,13 @@
 title: "Anikat Kankaria"
 description: "Research in Fluid Dynamics, Turbulence & Nonlinear Physics"
 
-# Theme (GitHub Pages default theme)
 theme: minima
 
-# Author Information
 author:
   name: "Anikat Kankaria"
 
-# Markdown Processor
 markdown: kramdown
 
-# Navigation (pages that appear in the header)
 header_pages:
   - index.md
   - research.md
@@ -19,10 +15,14 @@ header_pages:
   - teaching.md
   - contact.md
 
-# URL settings (important for correct links)
-url: "https://Anikat31.github.io"
+# Required for proper URL generation
+url: "https://yourusername.github.io"
 baseurl: ""
 
-# Enable SCSS processing for custom stylesheet
+# Enable custom CSS
 sass:
   style: compressed
+
+# Social links (optional)
+github_username: Anikat31
+linkedin_username: https://www.linkedin.com/in/anikat-kankaria-5604a2293/
