@@ -10,11 +10,7 @@ markdown: kramdown
 
 header_pages:
   - index.md
-  - research.md
-  - publications.md
-  - teaching.md
-  - contact.md
-
+  - Gallery.md
 # Required for proper URL generation
 url: "https://yourusername.github.io"
 baseurl: ""
