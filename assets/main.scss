@@ -1,0 +1,28 @@
+.page-banner-img {
+  width: 100%;
+  padding: 7rem 1rem;
+  margin-bottom: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url('/assets/turbulence_banner.png') center/cover no-repeat;
+
+  color: white;
+}
+
+.page-banner-img h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
