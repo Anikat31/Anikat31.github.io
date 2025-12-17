@@ -4,12 +4,10 @@ title: Gallery
 permalink: /gallery/
 ---
 
-## Categories
-
 - [miscellaneous](/gallery/miscellaneous/)
-- [Simulations](/gallery/simulations/)
+- [Hall of Flows](/gallery/simulations/)
 
 ---
 
 This gallery documents my research activities, numerical simulations,
-scientific visualizations, and academic events.
+scientific visualizations, and other non academics aspects of my life.
