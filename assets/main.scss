@@ -26,3 +26,56 @@
   letter-spacing: 0.1em;
   font-weight: 500;
 }
+
+
+
+/* ===== Gallery Page ===== */
+
+.gallery-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-intro {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Cards */
+.gallery-card {
+  display: block;
+  padding: 1.8rem;
+  border-radius: 14px;
+  text-decoration: none;
+  background: linear-gradient(145deg, #f7f7f7, #ffffff);
+  border: 1px solid #eaeaea;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: #666;
+}
