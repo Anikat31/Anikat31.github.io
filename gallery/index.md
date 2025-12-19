@@ -16,15 +16,13 @@ permalink: /gallery/
   <a class="gallery-card" href="/gallery/simulations/">
     <div class="card-title">Hall of Flows</div>
     <div class="card-desc">
-      Direct numerical simulations, turbulence, coherent structures,
-      and spectral visualizations.
+      Direct numerical simulations, turbulence, coherent structures,and spectral visualizations.
     </div>
   </a>
 
   <a class="gallery-card" href="/gallery/miscellaneous/">
     <div class="card-title">Miscellaneous</div>
-    <div class="card-desc">
-      Conferences, travel, and moments beyond equations.
+    <div class="card-desc"> Conferences, travel, and moments beyond equations.
     </div>
   </a>
 
