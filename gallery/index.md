@@ -3,15 +3,29 @@ layout: page
 title: Gallery
 permalink: /gallery/
 ---
-<div class="page-banner-img">
-  <h1>Gallery</h1>
+
+<div class="gallery-hero">
+  <p class="gallery-intro">
+    A visual record of my research activities, numerical simulations,
+    scientific visualizations, and selected non-academic moments.
+  </p>
 </div>
 
+<div class="gallery-grid">
 
-- [miscellaneous](/gallery/miscellaneous/)
-- [Hall of Flows](/gallery/simulations/)
+  <a class="gallery-card" href="/gallery/simulations/">
+    <div class="card-title">Hall of Flows</div>
+    <div class="card-desc">
+      Direct numerical simulations, turbulence, coherent structures,
+      and spectral visualizations.
+    </div>
+  </a>
 
----
+  <a class="gallery-card" href="/gallery/miscellaneous/">
+    <div class="card-title">Miscellaneous</div>
+    <div class="card-desc">
+      Conferences, collaborations, travel, and moments beyond equations.
+    </div>
+  </a>
 
-This gallery documents my research activities, numerical simulations,
-scientific visualizations, and other non academics aspects of my life.
+</div>
