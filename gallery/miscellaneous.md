@@ -14,7 +14,7 @@ permalink: /gallery/miscellaneous/
   >
 
   <p style="color:#666;">
-    ICTS Fluid Dynamics Group Meeting, 2025
+    ICTS Fluid Dynamics Group, 2025
   </p>
 
 </div>
