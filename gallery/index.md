@@ -24,7 +24,7 @@ permalink: /gallery/
   <a class="gallery-card" href="/gallery/miscellaneous/">
     <div class="card-title">Miscellaneous</div>
     <div class="card-desc">
-      Conferences, collaborations, travel, and moments beyond equations.
+      Conferences, travel, and moments beyond equations.
     </div>
   </a>
 
