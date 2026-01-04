@@ -1,7 +1,7 @@
------------------
+---
 layout: page
 title: "About Me"
------------------
+---
 
 <img src="/assets/Anikat.jpg"
   alt="Profile photo of Anikat Kankaria"
