@@ -3,8 +3,16 @@ layout: page
 title: Teaching
 permalink: /Teaching/
 ---
-<img src="{{ 'Anikat31.github.io/Teaching/blackboard.png'}}"
-  style="width:90%; max-width:900px; border-radius:12px;">
+<img src="/assets/blackboard.png"
+     alt="profile photo"
+     style="
+        width: 320px;
+        height: 320px;
+        object-fit: cover;
+        float: right;
+  ">
+
+     
 <h1> Teaching:</h1>
 
 During my graduate studies I was lucky to have attended very interesting courses, below are some of the notes I took during the classes.
