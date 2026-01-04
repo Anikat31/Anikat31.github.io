@@ -17,10 +17,6 @@ title: "About Me"
 # Hello — I’m **Anikat Kankaria**
 I am a researcher at International Center for Theoritical Sciences - Tata Institute of Fundamental Research [(ICTS-TIFR)](https://www.icts.res.in/), Bengaluru. I am currently  working with 
 [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
-
-## Interactive Content
-
-- [Fractal Turbulence Simulation](/html/ML_NOTES.html)
   
 ## Research Interests
 My research interests lie in far-from-equilibrium phenomena, especially turbulence. I am also deeply interested in dynamical systems and broader areas of non-equilibrium physics, including eco-evolutionary dynamics, complex networks, stochastic modeling, random walks, and the mathematical structure of turbulent flows. I enjoy exploring how these ideas connect across disciplines—from physics to ecology to finance.
