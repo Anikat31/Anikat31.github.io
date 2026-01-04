@@ -4,24 +4,15 @@ layout: page
 title: "About Me"
 -----------------
 
-<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; margin-bottom:32px;">
-
-  <div style="flex:0 0 320px; text-align:center;">
-    <img src="/assets/Anikat.jpg"
-         alt="Profile photo of Anikat Kankaria"
-         style="width:320px; height:320px; object-fit:cover; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
-  </div>
-
-  <div style="flex:1; min-width:300px;">
+<img src="/assets/Anikat.jpg"
+  alt="Profile photo of Anikat Kankaria"
+  style="width:280px; height:280px; object-fit:cover; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,0.15); float:right; margin-left:32px; margin-bottom:24px;">
 
 # Hello — I’m **Anikat Kankaria**
 
 I am a researcher at the **International Centre for Theoretical Sciences – Tata Institute of Fundamental Research (ICTS–TIFR)**, Bengaluru. I currently work with [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
 
 My research focuses on **far-from-equilibrium phenomena**, with a particular emphasis on **turbulence** and its mathematical structure. I am broadly interested in how ideas from nonlinear dynamics and stochastic processes manifest across complex systems.
-
-  </div>
-</div>
 
 ## Research Interests
 
