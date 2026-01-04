@@ -24,7 +24,6 @@ I am a researcher at International Center for Theoritical Sciences - Tata Instit
   <li>Dynamical systems and nonlinear phenomena</li>
   <li>Stochastic modeling and random processes</li>
   <li>Complex networks and interacting systems</li>
-  <li>Eco-evolutionary dynamics and interdisciplinary applications</li>
 </ul>
 
 
