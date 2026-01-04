@@ -2,29 +2,36 @@
 layout: page
 title: "About Me"
 ---
-
 <img src="/assets/Anikat.jpg"
-  alt="Profile photo of Anikat Kankaria"
-  style="width:280px; height:280px; object-fit:cover; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,0.15); float:right; margin-left:32px; margin-bottom:24px;">
+     alt="profile photo"
+     style="
+        width: 320px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 50%;
+        float: right;
+        margin-left: 25px;
+        margin-bottom: 25px;
+     ">
 
 # Hello — I’m **Anikat Kankaria**
-
-I am a researcher at the **International Centre for Theoretical Sciences – Tata Institute of Fundamental Research (ICTS–TIFR)**, Bengaluru. I currently work with [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
-
-My research focuses on **far-from-equilibrium phenomena**, with a particular emphasis on **turbulence** and its mathematical structure. I am broadly interested in how ideas from nonlinear dynamics and stochastic processes manifest across complex systems.
-
+I am a researcher at International Center for Theoritical Sciences - Tata Institute of Fundamental Research [(ICTS-TIFR)](https://www.icts.res.in/), Bengaluru. I am currently  working with 
+[Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
+  
 ## Research Interests
+<ul>
+  <li>Turbulence and non-equilibrium statistical physics</li>
+  <li>Dynamical systems and nonlinear phenomena</li>
+  <li>Stochastic modeling and random processes</li>
+  <li>Complex networks and interacting systems</li>
+  <li>Eco-evolutionary dynamics and interdisciplinary applications</li>
+</ul>
 
-* Turbulence and non-equilibrium statistical physics
-* Dynamical systems and nonlinear phenomena
-* Stochastic modeling and random processes
-* Complex networks and interacting systems
-* Eco-evolutionary dynamics and interdisciplinary applications
 
-I enjoy exploring conceptual and methodological connections that bridge physics with fields such as ecology and finance.
+## Publications:
+1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence <br>
+   A. Kankaria and  Samriddhi Sankar Ray <br>
+   [ArXiv:2512.07164](https://arxiv.org/abs/2512.07164).
 
-## Publications
 
-1. **Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence**  
-   *A. Kankaria, S. S. Ray*  
-   [arXiv:2512.07164](https://arxiv.org/abs/2512.07164)
+
