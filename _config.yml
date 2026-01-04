@@ -11,8 +11,10 @@ markdown: kramdown
 header_pages:
   - index.md
   - gallery/index.md
+  - Teaching/index.md
+  
 # Required for proper URL generation
-url: "https://yourusername.github.io"
+url: "https://anikat31.github.io"
 baseurl: ""
 
 # Enable custom CSS
