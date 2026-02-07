@@ -10,7 +10,6 @@ markdown: kramdown
 
 header_pages:
   - index.md
-  - gallery/index.md
   - Teaching/index.md
   
 # Required for proper URL generation
