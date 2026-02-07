@@ -11,19 +11,12 @@ permalink: /gallery/
   </p>
 </div>
 
-<div class="gallery-grid">
+<div style="
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;">
 
-  <a class="gallery-card" href="/gallery/simulations/">
-    <div class="card-title">Hall of Flows</div>
-    <div class="card-desc">
-      Direct numerical simulations, turbulence, coherent structures,and spectral visualizations.
-    </div>
-  </a>
-
-  <a class="gallery-card" href="/gallery/miscellaneous/">
-    <div class="card-title">Miscellaneous</div>
-    <div class="card-desc"> Conferences, travel, and moments beyond equations.
-    </div>
-  </a>
+  <img src="{{ '/assets/flow.png' | relative_url }}" style="width:100%; border-radius:12px;">
+</div>
 
 </div>
