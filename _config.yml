@@ -11,7 +11,7 @@ markdown: kramdown
 header_pages:
   - index.md
   - Teaching/index.md
-  
+  - gallery.md
 # Required for proper URL generation
 url: "https://anikat31.github.io"
 baseurl: ""
