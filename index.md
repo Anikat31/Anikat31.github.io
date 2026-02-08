@@ -16,7 +16,7 @@ title: "About Me"
 
 # Hello — I’m **Anikat Kankaria** **(अनिकेत कांकरिया)**
 I am a researcher at International Center for Theoritical Sciences - Tata Institute of Fundamental Research [(ICTS-TIFR)](https://www.icts.res.in/), Bengaluru. I am currently  working with 
-[Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
+[Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)](https://www.icts.res.in/people/samriddhi-sankar-ray).
 <p>
  My research focuses on <strong>far-from-equilibrium phenomena</strong>,
  with a particular emphasis on <strong>turbulence</strong> and its mathematical structure.
