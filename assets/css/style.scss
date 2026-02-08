@@ -2,3 +2,14 @@
 ---
 
 @import "minima";
+
+/* Increase content width */
+.wrapper {
+  max-width: 1200px !important;
+}
+
+@media screen and (min-width: 800px) {
+  .wrapper {
+    max-width: 1200px !important;
+  }
+}
