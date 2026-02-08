@@ -177,8 +177,8 @@ title: "About Me"
     }
 
     .profile-image img {
-      width: 220px;
-      height: 220px;
+      width: 420px;
+      height: 420px;
     }
 
     .name-header {
@@ -235,7 +235,7 @@ title: "About Me"
 
 <div class="publication-item">
   <div class="publication-title">
-    Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
+   1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
   </div>
   <div class="publication-authors">
     Anikat Kankaria, Samriddhi Sankar Ray
