@@ -11,27 +11,35 @@ title: "About Me"
     --text-muted: #555;
     --bg-soft: #f8fafc;
     --border-soft: #e5e7eb;
+    --card-bg: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --bg-soft: #111827;
+      --border-soft: #1f2933;
+      --card-bg: #020617;
+    }
+  }
+
+  body {
+    color: var(--text-main);
   }
 
   .profile-section {
     display: flex;
-    align-items: flex-start;
     gap: 48px;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 
   .profile-image img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
+    width: 560px;
+    height: 560px;
     border-radius: 50%;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-  }
-
-  .profile-image img:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.14);
   }
 
   .profile-content {
@@ -41,14 +49,10 @@ title: "About Me"
   .name-header {
     font-size: 2.3em;
     font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 0.25em;
-    letter-spacing: -0.5px;
   }
 
   .name-native {
     font-size: 0.7em;
-    font-weight: 400;
     color: var(--text-muted);
     margin-left: 0.4em;
   }
@@ -56,117 +60,125 @@ title: "About Me"
   .affiliation {
     font-size: 1.08em;
     line-height: 1.75;
-    color: var(--text-main);
     margin-bottom: 1.2em;
   }
 
   .affiliation a {
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-  }
-
-  .affiliation a:hover {
-    border-bottom-color: var(--accent);
   }
 
   .research-focus {
-    font-size: 1.05em;
-    line-height: 1.85;
-    color: #133;
     background: var(--bg-soft);
     padding: 22px 26px;
     border-left: 4px solid var(--primary);
     border-radius: 6px;
-    margin-top: 1.6em;
   }
 
   .research-inline-list {
-    margin: 0;
     padding-left: 18px;
-  }
-
-  .research-inline-list li {
-    margin-bottom: 6px;
-    line-height: 1.6;
   }
 
   .section-header {
     font-size: 1.9em;
-    font-weight: 600;
-    color: var(--text-main);
-    margin-top: 70px;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
+    margin-top: 64px;
     border-bottom: 2px solid var(--border-soft);
+    padding-bottom: 10px;
   }
 
+  /* ===== CONTACT ===== */
+
+  .contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 22px 26px;
+    line-height: 1.9;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .copy-btn {
+    font-size: 0.85em;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-soft);
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-muted);
+  }
+
+  .copy-btn:hover {
+    background: var(--bg-soft);
+  }
+
+  .social-links {
+    margin-top: 14px;
+    display: flex;
+    gap: 18px;
+  }
+
+  .social-links a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  /* hide phone on small screens */
+  @media (max-width: 600px) {
+    .phone {
+      display: none;
+    }
+  }
+
+  /* ===== PUBLICATIONS ===== */
+
   .publication-item {
-    background: #ffffff;
+    background: var(--card-bg);
     border: 1px solid var(--border-soft);
     border-radius: 10px;
     padding: 26px 28px;
     margin-bottom: 26px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .publication-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   }
 
   .publication-title {
-    font-size: 1.18em;
     font-weight: 600;
-    color: var(--text-main);
-    line-height: 1.55;
     margin-bottom: 10px;
   }
 
   .publication-authors {
-    font-size: 1em;
     color: var(--text-muted);
     margin-bottom: 14px;
   }
 
-  /* 🔴 FORCE arXiv link to light red (override theme + visited state) */
+  /* 🔴 arXiv forced red */
   .publication-item a,
-  .publication-item a:link,
   .publication-item a:visited {
     color: #b91c1c !important;
     background: #fee2e2;
-    text-decoration: none;
-    font-weight: 500;
     padding: 7px 16px;
     border-radius: 999px;
+    text-decoration: none;
     display: inline-block;
-    transition: background 0.2s ease, color 0.2s ease;
   }
 
   .publication-item a:hover {
-    color: #7f1d1d !important;
     background: #fecaca;
-  }
-
-  @media (max-width: 768px) {
-    .profile-section {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .profile-image img {
-      width: 420px;
-      height: 420px;
-    }
-
-    .name-header {
-      font-size: 1.9em;
-    }
+    color: #7f1d1d !important;
   }
 </style>
+
+<script>
+  function copyText(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copied: " + text);
+  }
+</script>
 
 <div class="profile-section">
   <div class="profile-image">
@@ -181,39 +193,53 @@ title: "About Me"
 
     <div class="affiliation">
       Researcher at
-      <a href="https://www.icts.res.in/" target="_blank" rel="noopener">
-        International Centre for Theoretical Sciences
-      </a><br>
-      Tata Institute of Fundamental Research (ICTS–TIFR)<br>
-      Bengaluru, India
+      <a href="https://www.icts.res.in/" target="_blank">ICTS–TIFR</a>, Bengaluru
     </div>
 
     <div class="affiliation">
-      I am currently working with
-      <a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank" rel="noopener">
-        Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)
+      Working with
+      <a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank">
+        Samriddhi Sankar Ray
       </a>
     </div>
 
     <div class="research-focus">
       <p>
         My research focuses on <strong>far-from-equilibrium phenomena</strong>,
-        with particular emphasis on <strong>turbulence</strong> and its mathematical
-        structure. I am broadly interested in how ideas from nonlinear dynamics and
-        stochastic processes manifest across complex systems.
-      </p>
-
-      <p style="margin-top: 1em; margin-bottom: 0.4em;">
-        <strong>Specific interests include:</strong>
+        particularly <strong>turbulence</strong>, nonlinear dynamics, and stochastic processes.
       </p>
 
       <ul class="research-inline-list">
         <li>Turbulence and non-equilibrium statistical physics</li>
         <li>Dynamical systems and nonlinear phenomena</li>
-        <li>Stochastic modeling and random processes</li>
-        <li>Complex and interacting systems</li>
+        <li>Stochastic modeling</li>
+        <li>Complex systems</li>
       </ul>
     </div>
+  </div>
+</div>
+
+<h2 class="section-header">Contact</h2>
+
+<div class="contact-card">
+  <div class="contact-row">
+    📧 anikat.kankaria@icts.res.in
+    <button class="copy-btn" onclick="copyText('anikat.kankaria@icts.res.in')">Copy</button>
+  </div>
+
+  <div class="contact-row">
+    📧 anikat.kankaria@gmail.com
+    <button class="copy-btn" onclick="copyText('anikat.kankaria@gmail.com')">Copy</button>
+  </div>
+
+  <div class="contact-row phone">
+    📞 +91-9674850807
+  </div>
+
+  <div class="social-links">
+    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+    <a href="https://orcid.org/" target="_blank">ORCID</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
   </div>
 </div>
 
@@ -221,12 +247,12 @@ title: "About Me"
 
 <div class="publication-item">
   <div class="publication-title">
-    1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
+    Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
   </div>
   <div class="publication-authors">
     <b>Anikat Kankaria</b>, Samriddhi Sankar Ray
   </div>
-  <a href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">
+  <a href="https://arxiv.org/abs/2512.07164" target="_blank">
     arXiv:2512.07164
   </a>
 </div>
