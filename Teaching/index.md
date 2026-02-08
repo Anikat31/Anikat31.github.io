@@ -175,7 +175,7 @@ permalink: /Teaching/
   </div>
 
 <hr class="section-divider">
-
+<br>
 <h2 class="section-header">
   <span class="section-icon">📘</span>
   Course Notes
