@@ -28,64 +28,84 @@ html[data-theme="dark"] {
   --shadow-hover: rgba(0, 0, 0, 0.7);
 }
 
-/* Apply dark mode to HTML and body */
-html[data-theme="dark"],
-html[data-theme="dark"] body {
-  background-color: var(--bg-main) !important;
-  color: var(--text-main) !important;
+/* Apply dark mode - VERY AGGRESSIVE */
+html[data-theme="dark"] {
+  background-color: #0d0d0d !important;
 }
 
-html[data-theme="dark"] .site-header,
+html[data-theme="dark"] body {
+  background-color: #0d0d0d !important;
+  color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .site-header {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #2a2a2a !important;
+}
+
 html[data-theme="dark"] .site-footer {
-  background-color: var(--bg-soft) !important;
-  border-color: var(--border-soft) !important;
+  background-color: #1a1a1a !important;
+  border-top: 1px solid #2a2a2a !important;
 }
 
 html[data-theme="dark"] .site-title,
-html[data-theme="dark"] .site-nav .page-link,
+html[data-theme="dark"] .site-nav .page-link {
+  color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .site-nav .page-link:hover {
+  color: #3b82f6 !important;
+}
+
 html[data-theme="dark"] .footer-heading,
 html[data-theme="dark"] .contact-list,
 html[data-theme="dark"] .social-media-list,
-html[data-theme="dark"] .site-footer {
-  color: var(--text-main) !important;
+html[data-theme="dark"] .footer-col-wrapper,
+html[data-theme="dark"] .footer-col {
+  color: #9ca3af !important;
 }
 
 html[data-theme="dark"] a {
-  color: var(--accent) !important;
+  color: #3b82f6 !important;
 }
 
 html[data-theme="dark"] a:visited {
   color: #60a5fa !important;
 }
 
-html[data-theme="dark"] .page-content,
+html[data-theme="dark"] .page-content {
+  background-color: #0d0d0d !important;
+}
+
 html[data-theme="dark"] .post-content,
 html[data-theme="dark"] .wrapper {
-  background-color: var(--bg-main) !important;
-  color: var(--text-main) !important;
+  color: #e5e7eb !important;
 }
 
 html[data-theme="dark"] pre,
 html[data-theme="dark"] code {
-  background-color: var(--bg-soft) !important;
-  border: 1px solid var(--border-soft) !important;
-  color: var(--text-main) !important;
+  background-color: #1a1a1a !important;
+  border: 1px solid #2a2a2a !important;
+  color: #e5e7eb !important;
 }
 
 html[data-theme="dark"] blockquote {
-  color: var(--text-muted) !important;
-  border-left-color: var(--border-soft) !important;
+  color: #9ca3af !important;
+  border-left-color: #2a2a2a !important;
 }
 
-html[data-theme="dark"] table,
+html[data-theme="dark"] table {
+  border-color: #2a2a2a !important;
+}
+
 html[data-theme="dark"] table th,
 html[data-theme="dark"] table td {
-  border-color: var(--border-soft) !important;
-  color: var(--text-main) !important;
+  border-color: #2a2a2a !important;
+  color: #e5e7eb !important;
 }
 
 html[data-theme="dark"] table th {
-  background-color: var(--bg-soft) !important;
+  background-color: #1a1a1a !important;
 }
 
 html[data-theme="dark"] h1,
@@ -94,13 +114,19 @@ html[data-theme="dark"] h3,
 html[data-theme="dark"] h4,
 html[data-theme="dark"] h5,
 html[data-theme="dark"] h6 {
-  color: var(--text-main) !important;
+  color: #e5e7eb !important;
 }
 
 html[data-theme="dark"] p,
 html[data-theme="dark"] li,
-html[data-theme="dark"] div {
-  color: var(--text-main) !important;
+html[data-theme="dark"] div,
+html[data-theme="dark"] span {
+  color: #e5e7eb !important;
+}
+
+/* Make sure everything inherits properly */
+html[data-theme="dark"] * {
+  border-color: #2a2a2a;
 }
 
 /* Theme toggle button */
