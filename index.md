@@ -183,12 +183,10 @@ title: "About Me"
         structure. I am broadly interested in how ideas from nonlinear dynamics and
         stochastic processes manifest in complex systems.
       </p>
-
-      <p><strong>Specific interests include:</strong></p>
     </div>
   </div>
 </div>
-
+<strong>Specific interests include:</strong>
 <ul class="research-inline-list">
         <li>Turbulence and non-equilibrium statistical physics</li>
         <li>Dynamical systems and nonlinear phenomena</li>
