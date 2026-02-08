@@ -1,9 +1,3 @@
----
-layout: page
-title: Teaching
-permalink: /Teaching/
----
-
 <style>
   .teaching-hero {
     display: flex;
@@ -74,6 +68,9 @@ permalink: /Teaching/
   
   .section-icon {
     font-size: 1.5rem;
+    align-self: flex-start;
+    line-height: 1;
+    padding-top: 0.1rem;
   }
   
   .course-grid {
@@ -164,31 +161,3 @@ permalink: /Teaching/
     }
   }
 </style>
-
-<div class="teaching-hero">
-  <div class="teaching-content">
-    <p>
-      During my graduate studies, I had the opportunity to attend several
-      Interesting courses. Below are a few sets of lecture notes
-      and materials that I prepared while following these classes.
-    </p>
-  </div>
-
-<hr class="section-divider">
-<br>
-<h2 class="section-header">
-  <span class="section-icon">📘</span>
-  Course Notes
-</h2>
-
-<div class="course-grid">
-  <a href="/html/ML_NOTES.html" class="course-card">
-    <h3>Machine Learning 101</h3>
-    <p>
-      Introductory lecture notes covering core concepts of machine learning. The notes include
-      Regression, Kernel methods, SVD etc.
-    </p>
-  </a>
-  
-  <!-- Add more course cards here as needed -->
-</div>
