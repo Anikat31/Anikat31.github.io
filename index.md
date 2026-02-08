@@ -7,18 +7,18 @@ title: "About Me"
   :root {
     --primary: #1f3a5f;
     --accent: #2563eb;
-    --text-main: #1a1a1a;
-    --text-muted: #555;
-    --bg-soft: #f8fafc;
-    --border-soft: #e5e7eb;
+    --text-main: #111827;
+    --text-muted: #4b5563;
     --bg-main: #ffffff;
-    --shadow-color: rgba(0, 0, 0, 0.14);
-    --shadow-hover: rgba(0, 0, 0, 0.18);
+    --border-soft: #e5e7eb;
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-main);
+    font-family: "Source Serif 4", "Latin Modern Roman",
+                 "Computer Modern Serif", Georgia, "Times New Roman", serif;
+    line-height: 1.75;
   }
 
   .profile-section {
@@ -29,17 +29,10 @@ title: "About Me"
   }
 
   .profile-image img {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 10px 28px var(--shadow-color);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-  }
-
-  .profile-image img:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px var(--shadow-hover);
   }
 
   .profile-content {
@@ -47,11 +40,10 @@ title: "About Me"
   }
 
   .name-header {
-    font-size: 2.3em;
-    font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 0.25em;
-    letter-spacing: -0.5px;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.3px;
   }
 
   .name-native {
@@ -62,60 +54,45 @@ title: "About Me"
   }
 
   .affiliation {
-    font-size: 1.08em;
-    line-height: 1.75;
-    color: var(--text-main);
-    margin-bottom: 1.2em;
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 1.1em;
   }
 
   .affiliation a {
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
   }
 
   .affiliation a:hover {
-    border-bottom-color: var(--accent);
+    text-decoration: underline;
   }
 
+  /* Research section — simple & academic */
   .research-focus {
     font-size: 1.05em;
-    line-height: 1.85;
-    color: var(--text-main);
-    background: var(--bg-soft);
-    padding: 22px 26px;
-    border-left: 4px solid var(--primary);
-    border-radius: 6px;
     margin-top: 1.6em;
   }
 
   .research-inline-list {
-    margin: 0;
-    padding-left: 18px;
+    margin-top: 0.4em;
+    padding-left: 20px;
   }
 
   .research-inline-list li {
-    margin-bottom: 6px;
-    line-height: 1.6;
+    margin-bottom: 4px;
   }
 
   .section-header {
-    font-size: 1.9em;
+    font-size: 1.8em;
     font-weight: 600;
-    color: var(--text-main);
     margin-top: 64px;
-    margin-bottom: 28px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-soft);
+    margin-bottom: 26px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-soft);
   }
 
   .contact-card {
-    background: var(--bg-soft);
-    border: 1px solid var(--border-soft);
-    border-radius: 10px;
-    padding: 22px 26px;
-    box-shadow: 0 2px 6px var(--shadow-color);
     font-size: 1.05em;
     line-height: 1.8;
   }
@@ -123,7 +100,6 @@ title: "About Me"
   .contact-card a {
     color: var(--accent);
     text-decoration: none;
-    font-weight: 500;
   }
 
   .contact-card a:hover {
@@ -131,32 +107,19 @@ title: "About Me"
   }
 
   .publication-item {
-    background: var(--bg-soft);
-    border: 1px solid var(--border-soft);
-    border-radius: 10px;
-    padding: 26px 28px;
-    margin-bottom: 26px;
-    box-shadow: 0 2px 6px var(--shadow-color);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .publication-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px var(--shadow-hover);
+    margin-bottom: 28px;
   }
 
   .publication-title {
-    font-size: 1.18em;
+    font-size: 1.15em;
     font-weight: 600;
-    color: var(--text-main);
-    line-height: 1.55;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 
   .publication-authors {
     font-size: 1em;
     color: var(--text-muted);
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 
   /* arXiv link styling */
@@ -164,18 +127,12 @@ title: "About Me"
   .publication-item a:link,
   .publication-item a:visited {
     color: #b91c1c !important;
-    background: #fee2e2;
     text-decoration: none;
     font-weight: 500;
-    padding: 7px 16px;
-    border-radius: 999px;
-    display: inline-block;
-    transition: background 0.2s ease, color 0.2s ease;
   }
 
   .publication-item a:hover {
-    color: #7f1d1d !important;
-    background: #fecaca;
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {
@@ -186,12 +143,8 @@ title: "About Me"
     }
 
     .profile-image img {
-      width: 420px;
-      height: 420px;
-    }
-
-    .name-header {
-      font-size: 1.9em;
+      width: 360px;
+      height: 360px;
     }
   }
 </style>
@@ -228,12 +181,10 @@ title: "About Me"
         My research focuses on <strong>far-from-equilibrium phenomena</strong>,
         with particular emphasis on <strong>turbulence</strong> and its mathematical
         structure. I am broadly interested in how ideas from nonlinear dynamics and
-        stochastic processes manifest across complex systems.
+        stochastic processes manifest in complex systems.
       </p>
 
-      <p style="margin-top: 1em; margin-bottom: 0.4em;">
-        <strong>Specific interests include:</strong>
-      </p>
+      <p><strong>Specific interests include:</strong></p>
 
       <ul class="research-inline-list">
         <li>Turbulence and non-equilibrium statistical physics</li>
