@@ -1,29 +1,24 @@
-<link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
-
+<!-- Dark mode initialization script - runs immediately -->
 <script>
-  // Initialize theme before page renders to prevent flash
   (function() {
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
   })();
 </script>
 
-<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+<!-- Theme toggle button -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" id="theme-toggle">
   <span class="theme-icon">🌙</span>
 </button>
 
+<!-- Dark mode toggle script -->
 <script>
-  // Update icon on page load
-  window.addEventListener('DOMContentLoaded', function() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    updateThemeIcon(currentTheme);
-  });
-
   function toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
-    document.documentElement.setAttribute('data-theme', newTheme);
+    html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
   }
@@ -34,4 +29,10 @@
       icon.textContent = theme === 'dark' ? '☀️' : '🌙';
     }
   }
+
+  // Set correct icon on page load
+  window.addEventListener('DOMContentLoaded', function() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    updateThemeIcon(currentTheme);
+  });
 </script>
