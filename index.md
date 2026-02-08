@@ -185,17 +185,17 @@ title: "About Me"
       </p>
 
       <p><strong>Specific interests include:</strong></p>
+    </div>
+  </div>
+</div>
 
-      <ul class="research-inline-list">
+<ul class="research-inline-list">
         <li>Turbulence and non-equilibrium statistical physics</li>
         <li>Dynamical systems and nonlinear phenomena</li>
         <li>Stochastic modeling and random processes</li>
         <li>Complex and interacting systems</li>
       </ul>
-    </div>
-  </div>
-</div>
-
+      
 <h2 class="section-header">Contact</h2>
 
 <div class="contact-card">
