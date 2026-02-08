@@ -74,7 +74,7 @@ title: "About Me"
   .research-focus {
     font-size: 1.05em;
     line-height: 1.85;
-    color: #333;
+    color: #133;
     background: var(--bg-soft);
     padding: 22px 26px;
     border-left: 4px solid var(--primary);
@@ -208,12 +208,11 @@ title: "About Me"
     </div>
 
     <div class="affiliation">
-      Working with
+      I am currently Working with
       <a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank" rel="noopener">
         Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)
       </a>
     </div>
-
     <div class="research-focus">
       My research focuses on <strong>far-from-equilibrium phenomena</strong>,
       with particular emphasis on <strong>turbulence</strong> and its mathematical
@@ -225,7 +224,7 @@ title: "About Me"
 
 <h2 class="section-header">Research Interests</h2>
 
-<ul class="interests-list">
+<ul>
   <li>Turbulence and non-equilibrium statistical physics</li>
   <li>Dynamical systems and nonlinear phenomena</li>
   <li>Stochastic modeling and random processes</li>
