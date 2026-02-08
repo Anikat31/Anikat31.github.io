@@ -186,7 +186,7 @@ title: "About Me"
     </div>
   </div>
 </div>
-<h2><strong>Specific interests include:</strong></h2>
+<h3><strong>Specific interests include:</strong></h3>
 <ul class="research-inline-list">
         <li>Turbulence and non-equilibrium statistical physics</li>
         <li>Dynamical systems and nonlinear phenomena</li>
