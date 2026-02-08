@@ -21,8 +21,8 @@ title: "About Me"
   }
 
   .profile-image img {
-    width: 260px;
-    height: 260px;
+    width: 560px;
+    height: 560px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
@@ -153,17 +153,21 @@ title: "About Me"
     margin-bottom: 14px;
   }
 
-  .publication-link {
-    display: inline-block;
-    font-size: 0.95em;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 7px 16px;
-    background: #eff6ff;
-    border-radius: 999px;
-    transition: background 0.2s ease;
-  }
+.publication-link {
+  color: #b91c1c;            /* light academic red */
+  background: #fee2e2;       /* soft red background */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.publication-link:hover {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+
 
   .publication-link:hover {
     background: #dbeafe;
@@ -213,23 +217,28 @@ title: "About Me"
         Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)
       </a>
     </div>
-    <div class="research-focus">
-      My research focuses on <strong>far-from-equilibrium phenomena</strong>,
-      with particular emphasis on <strong>turbulence</strong> and its mathematical
-      structure. I am broadly interested in how ideas from nonlinear dynamics and
-      stochastic processes manifest across complex systems.
-    </div>
+<div class="research-focus">
+  <p>
+    My research focuses on <strong>far-from-equilibrium phenomena</strong>,
+    with particular emphasis on <strong>turbulence</strong> and its mathematical
+    structure. I am broadly interested in how ideas from nonlinear dynamics and
+    stochastic processes manifest across complex systems.
+  </p>
+
+  <p style="margin-top: 1em; margin-bottom: 0.4em;">
+    <strong>Specific interests include:</strong>
+  </p>
+
+  <ul class="research-inline-list">
+    <li>Turbulence and non-equilibrium statistical physics</li>
+    <li>Dynamical systems and nonlinear phenomena</li>
+    <li>Stochastic modeling and random processes</li>
+    <li>Complex and interacting systems</li>
+  </ul>
+</div>
   </div>
 </div>
 
-<h2 class="section-header">Research Interests</h2>
-
-<ul>
-  <li>Turbulence and non-equilibrium statistical physics</li>
-  <li>Dynamical systems and nonlinear phenomena</li>
-  <li>Stochastic modeling and random processes</li>
-  <li>Complex and interacting systems</li>
-</ul>
 
 <h2 class="section-header">Publications</h2>
 
@@ -238,7 +247,7 @@ title: "About Me"
    1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
   </div>
   <div class="publication-authors">
-    Anikat Kankaria, Samriddhi Sankar Ray
+    <b>Anikat Kankaria</b>, Samriddhi Sankar Ray
   </div>
   <a href="https://arxiv.org/abs/2512.07164" class="publication-link" target="_blank" rel="noopener">
     arXiv:2512.07164
