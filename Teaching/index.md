@@ -169,7 +169,7 @@ permalink: /Teaching/
   <div class="teaching-content">
     <p>
       During my graduate studies, I had the opportunity to attend several
-      intellectually stimulating courses. Below are a few sets of lecture notes
+      Interesting courses. Below are a few sets of lecture notes
       and materials that I prepared while following these classes.
     </p>
   </div>
@@ -192,8 +192,8 @@ permalink: /Teaching/
   <a href="/html/ML_NOTES.html" class="course-card">
     <h3>Machine Learning 101</h3>
     <p>
-      Introductory lecture notes covering core concepts, intuition,
-      and mathematical foundations of machine learning.
+      Introductory lecture notes covering core concepts of machine learning. The notes include
+      Regression, Kernel methods, SVD etc.
     </p>
   </a>
   
