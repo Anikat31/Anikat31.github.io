@@ -11,6 +11,47 @@ title: "About Me"
     --text-muted: #555;
     --bg-soft: #f8fafc;
     --border-soft: #e5e7eb;
+    --bg-main: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.14);
+    --shadow-hover: rgba(0, 0, 0, 0.18);
+  }
+
+  [data-theme="dark"] {
+    --primary: #60a5fa;
+    --accent: #3b82f6;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --bg-soft: #1a1a1a;
+    --border-soft: #2a2a2a;
+    --bg-main: #0d0d0d;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow-hover: rgba(0, 0, 0, 0.7);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px var(--shadow-hover);
   }
 
   .profile-section {
@@ -25,13 +66,13 @@ title: "About Me"
     height: 320px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 10px 28px var(--shadow-color);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
   }
 
   .profile-image img:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 18px 40px var(--shadow-hover);
   }
 
   .profile-content {
@@ -74,7 +115,7 @@ title: "About Me"
   .research-focus {
     font-size: 1.05em;
     line-height: 1.85;
-    color: #133;
+    color: var(--text-main);
     background: var(--bg-soft);
     padding: 22px 26px;
     border-left: 4px solid var(--primary);
@@ -103,11 +144,11 @@ title: "About Me"
   }
 
   .contact-card {
-    background: #ffffff;
+    background: var(--bg-soft);
     border: 1px solid var(--border-soft);
     border-radius: 10px;
     padding: 22px 26px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px var(--shadow-color);
     font-size: 1.05em;
     line-height: 1.8;
   }
@@ -123,18 +164,18 @@ title: "About Me"
   }
 
   .publication-item {
-    background: #ffffff;
+    background: var(--bg-soft);
     border: 1px solid var(--border-soft);
     border-radius: 10px;
     padding: 26px 28px;
     margin-bottom: 26px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px var(--shadow-color);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .publication-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px var(--shadow-hover);
   }
 
   .publication-title {
@@ -151,7 +192,7 @@ title: "About Me"
     margin-bottom: 14px;
   }
 
-  /* 🔴 FORCE arXiv link to light red */
+  /* arXiv link styling */
   .publication-item a,
   .publication-item a:link,
   .publication-item a:visited {
@@ -165,9 +206,21 @@ title: "About Me"
     transition: background 0.2s ease, color 0.2s ease;
   }
 
+  [data-theme="dark"] .publication-item a,
+  [data-theme="dark"] .publication-item a:link,
+  [data-theme="dark"] .publication-item a:visited {
+    color: #fca5a5 !important;
+    background: #7f1d1d;
+  }
+
   .publication-item a:hover {
     color: #7f1d1d !important;
     background: #fecaca;
+  }
+
+  [data-theme="dark"] .publication-item a:hover {
+    color: #fee2e2 !important;
+    background: #991b1b;
   }
 
   @media (max-width: 768px) {
@@ -185,8 +238,19 @@ title: "About Me"
     .name-header {
       font-size: 1.9em;
     }
+
+    .theme-toggle {
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      font-size: 1em;
+    }
   }
 </style>
+
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+  <span class="theme-icon">🌙</span>
+</button>
 
 <div class="profile-section">
   <div class="profile-image">
@@ -258,3 +322,24 @@ title: "About Me"
     arXiv:2512.07164
   </a>
 </div>
+
+<script>
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateThemeIcon(currentTheme);
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+  }
+
+  function updateThemeIcon(theme) {
+    const icon = document.querySelector('.theme-icon');
+    icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+  }
+</script>
