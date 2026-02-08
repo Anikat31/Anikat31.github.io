@@ -173,13 +173,6 @@ permalink: /Teaching/
       and materials that I prepared while following these classes.
     </p>
   </div>
-  
-  <div class="teaching-image-wrapper">
-    <img src="/assets/blackboard.png"
-         alt="Teaching illustration"
-         class="teaching-image">
-  </div>
-</div>
 
 <hr class="section-divider">
 
