@@ -14,7 +14,7 @@ title: "About Me"
         margin-bottom: 25px;
      ">
 
-# Hello — I’m **Anikat Kankaria** **(अनिकेत कंकारिया)**
+# Hello — I’m **Anikat Kankaria** **(अनिकेत कांकरिया)**
 I am a researcher at International Center for Theoritical Sciences - Tata Institute of Fundamental Research [(ICTS-TIFR)](https://www.icts.res.in/), Bengaluru. I am currently  working with 
 [Samriddhi Sankar Ray](https://www.icts.res.in/people/samriddhi-sankar-ray).
 <p>
