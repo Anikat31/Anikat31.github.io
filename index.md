@@ -21,8 +21,8 @@ title: "About Me"
   }
 
   .profile-image img {
-    width: 560px;
-    height: 560px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
