@@ -16,7 +16,7 @@
   --shadow-hover: rgba(0, 0, 0, 0.18);
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --primary: #60a5fa;
   --accent: #3b82f6;
   --text-main: #e5e7eb;
@@ -28,56 +28,78 @@
   --shadow-hover: rgba(0, 0, 0, 0.7);
 }
 
-/* Apply to all elements */
-[data-theme="dark"] {
-  background-color: var(--bg-main);
-  color: var(--text-main);
-}
-
-[data-theme="dark"] body {
+/* Apply dark mode to HTML and body */
+html[data-theme="dark"],
+html[data-theme="dark"] body {
   background-color: var(--bg-main) !important;
   color: var(--text-main) !important;
 }
 
-[data-theme="dark"] .site-header,
-[data-theme="dark"] .site-footer {
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .site-footer {
   background-color: var(--bg-soft) !important;
   border-color: var(--border-soft) !important;
 }
 
-[data-theme="dark"] .site-title,
-[data-theme="dark"] .site-nav .page-link,
-[data-theme="dark"] .site-footer .footer-col {
+html[data-theme="dark"] .site-title,
+html[data-theme="dark"] .site-nav .page-link,
+html[data-theme="dark"] .footer-heading,
+html[data-theme="dark"] .contact-list,
+html[data-theme="dark"] .social-media-list,
+html[data-theme="dark"] .site-footer {
   color: var(--text-main) !important;
 }
 
-[data-theme="dark"] a {
+html[data-theme="dark"] a {
   color: var(--accent) !important;
 }
 
-[data-theme="dark"] .page-content {
-  background-color: var(--bg-main) !important;
+html[data-theme="dark"] a:visited {
+  color: #60a5fa !important;
 }
 
-[data-theme="dark"] pre,
-[data-theme="dark"] code {
+html[data-theme="dark"] .page-content,
+html[data-theme="dark"] .post-content,
+html[data-theme="dark"] .wrapper {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+html[data-theme="dark"] pre,
+html[data-theme="dark"] code {
   background-color: var(--bg-soft) !important;
   border: 1px solid var(--border-soft) !important;
   color: var(--text-main) !important;
 }
 
-[data-theme="dark"] table th,
-[data-theme="dark"] table td {
+html[data-theme="dark"] blockquote {
+  color: var(--text-muted) !important;
+  border-left-color: var(--border-soft) !important;
+}
+
+html[data-theme="dark"] table,
+html[data-theme="dark"] table th,
+html[data-theme="dark"] table td {
   border-color: var(--border-soft) !important;
   color: var(--text-main) !important;
 }
 
-[data-theme="dark"] h1,
-[data-theme="dark"] h2,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4,
-[data-theme="dark"] h5,
-[data-theme="dark"] h6 {
+html[data-theme="dark"] table th {
+  background-color: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: var(--text-main) !important;
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] li,
+html[data-theme="dark"] div {
   color: var(--text-main) !important;
 }
 
