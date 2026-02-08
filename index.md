@@ -21,8 +21,8 @@ title: "About Me"
   }
 
   .profile-image img {
-    width: 560px;
-    height: 560px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
@@ -82,6 +82,16 @@ title: "About Me"
     margin-top: 1.6em;
   }
 
+  .research-inline-list {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .research-inline-list li {
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+
   .section-header {
     font-size: 1.9em;
     font-weight: 600;
@@ -90,38 +100,6 @@ title: "About Me"
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--border-soft);
-  }
-
-  .interests-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 18px;
-  }
-
-  .interests-list li {
-    background: #ffffff;
-    border: 1px solid var(--border-soft);
-    padding: 18px 22px;
-    border-radius: 10px;
-    font-size: 1.03em;
-    line-height: 1.6;
-    color: #333;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .interests-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .interests-list li::before {
-    content: "▸";
-    color: var(--primary);
-    font-weight: bold;
-    margin-right: 10px;
   }
 
   .publication-item {
@@ -153,24 +131,23 @@ title: "About Me"
     margin-bottom: 14px;
   }
 
-.publication-link {
-  color: #b91c1c;            /* light academic red */
-  background: #fee2e2;       /* soft red background */
-  text-decoration: none;
-  font-weight: 500;
-  padding: 7px 16px;
-  border-radius: 999px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
+  /* 🔴 FORCE arXiv link to light red (override theme + visited state) */
+  .publication-item a,
+  .publication-item a:link,
+  .publication-item a:visited {
+    color: #b91c1c !important;
+    background: #fee2e2;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 999px;
+    display: inline-block;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
 
-.publication-link:hover {
-  background: #fecaca;
-  color: #7f1d1d;
-}
-
-
-  .publication-link:hover {
-    background: #dbeafe;
+  .publication-item a:hover {
+    color: #7f1d1d !important;
+    background: #fecaca;
   }
 
   @media (max-width: 768px) {
@@ -212,44 +189,44 @@ title: "About Me"
     </div>
 
     <div class="affiliation">
-      I am currently Working with
+      I am currently working with
       <a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank" rel="noopener">
         Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)
       </a>
     </div>
-<div class="research-focus">
-  <p>
-    My research focuses on <strong>far-from-equilibrium phenomena</strong>,
-    with particular emphasis on <strong>turbulence</strong> and its mathematical
-    structure. I am broadly interested in how ideas from nonlinear dynamics and
-    stochastic processes manifest across complex systems.
-  </p>
 
-  <p style="margin-top: 1em; margin-bottom: 0.4em;">
-    <strong>Specific interests include:</strong>
-  </p>
+    <div class="research-focus">
+      <p>
+        My research focuses on <strong>far-from-equilibrium phenomena</strong>,
+        with particular emphasis on <strong>turbulence</strong> and its mathematical
+        structure. I am broadly interested in how ideas from nonlinear dynamics and
+        stochastic processes manifest across complex systems.
+      </p>
 
-  <ul class="research-inline-list">
-    <li>Turbulence and non-equilibrium statistical physics</li>
-    <li>Dynamical systems and nonlinear phenomena</li>
-    <li>Stochastic modeling and random processes</li>
-    <li>Complex and interacting systems</li>
-  </ul>
-</div>
+      <p style="margin-top: 1em; margin-bottom: 0.4em;">
+        <strong>Specific interests include:</strong>
+      </p>
+
+      <ul class="research-inline-list">
+        <li>Turbulence and non-equilibrium statistical physics</li>
+        <li>Dynamical systems and nonlinear phenomena</li>
+        <li>Stochastic modeling and random processes</li>
+        <li>Complex and interacting systems</li>
+      </ul>
+    </div>
   </div>
 </div>
-
 
 <h2 class="section-header">Publications</h2>
 
 <div class="publication-item">
   <div class="publication-title">
-   1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
+    1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
   </div>
   <div class="publication-authors">
     <b>Anikat Kankaria</b>, Samriddhi Sankar Ray
   </div>
-  <a href="https://arxiv.org/abs/2512.07164" class="publication-link" target="_blank" rel="noopener">
+  <a href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">
     arXiv:2512.07164
   </a>
 </div>
