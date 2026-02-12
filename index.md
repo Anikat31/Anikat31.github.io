@@ -162,7 +162,7 @@ title: "About Me"
 
     <div class="affiliation">
       I am a Research scholar  at
-      International Centre for Theoretical Sciences
+      International Centre for Theoretical Sciences <br>
       Tata Institute of Fundamental Research  <a href="https://www.icts.res.in/" target="_blank" rel="noopener">(ICTS–TIFR)</a> <br>
       Bengaluru, India
     </div>
