@@ -202,6 +202,20 @@ title: "About Me"
 
 <h2 class="section-header">Publications</h2>
 
+
+<div class="publication-item">
+  <div class="publication-title">
+    2. Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence
+  </div>
+  <div class="publication-authors">
+    <b>Anikat Kankaria</b>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray
+  </div>
+  <a href="https://arxiv.org/abs/2603.19180 " target="_blank" rel="noopener">
+    arXiv:2603.19180 
+  </a>
+</div>
+
+
 <div class="publication-item">
   <div class="publication-title">
     1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
@@ -216,14 +230,3 @@ title: "About Me"
 
 
 
-<div class="publication-item">
-  <div class="publication-title">
-    2. Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence
-  </div>
-  <div class="publication-authors">
-    <b>Anikat Kankaria</b>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray
-  </div>
-  <a href="https://arxiv.org/abs/2603.19180 " target="_blank" rel="noopener">
-    arXiv:2603.19180 
-  </a>
-</div>
