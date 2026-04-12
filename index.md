@@ -1,107 +1,231 @@
 ---
-layout: default
-title: Anikat Kankaria
+layout: page
+title: 
 ---
 
-<div class="av-page">
+<style>
+  :root {
+    --primary: #1f3a5f;
+    --accent: #2563eb;
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --bg-main: #ffffff;
+    --border-soft: #e5e7eb;
+  }
 
-  <div class="av-profile">
-    <div class="av-photo">
-      <img src="/assets/Anikat.jpg" alt="Anikat Kankaria">
-      <div class="av-photo-caption">anikat.kankaria at icts.res.in</div>
-    </div>
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Source Serif 4", "Latin Modern Roman",
+                 "Computer Modern Serif", Georgia, "Times New Roman", serif;
+    line-height: 1.75;
+  }
 
-    <h1 class="av-name">
-      <strong>Anikat</strong> Kankaria
-      <span class="av-name-native">अनिकेत कांकरिया</span>
+  .profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .profile-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .profile-content {
+    flex: 1;
+  }
+
+  .name-header {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.3px;
+  }
+
+  .name-native {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-left: 0.4em;
+  }
+
+  .affiliation {
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 1.1em;
+  }
+
+  .affiliation a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .affiliation a:hover {
+    text-decoration: underline;
+  }
+
+  /* Research section — simple & academic */
+  .research-focus {
+    font-size: 1.05em;
+    margin-top: 1.6em;
+  }
+
+  .research-inline-list {
+    margin-top: 0.4em;
+    padding-left: 20px;
+  }
+
+  .research-inline-list li {
+    margin-bottom: 4px;
+  }
+
+  .section-header {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 64px;
+    margin-bottom: 26px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .contact-card {
+    font-size: 1.05em;
+    line-height: 1.8;
+  }
+
+  .contact-card a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .contact-card a:hover {
+    text-decoration: underline;
+  }
+
+  .publication-item {
+    margin-bottom: 28px;
+  }
+
+  .publication-title {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .publication-authors {
+    font-size: 1em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  /* arXiv link styling */
+  .publication-item a,
+  .publication-item a:link,
+  .publication-item a:visited {
+    color: #b91c1c !important;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .publication-item a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .profile-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile-image img {
+      width: 360px;
+      height: 360px;
+    }
+  }
+</style>
+
+<div class="profile-section">
+  <div class="profile-image">
+    <img src="/assets/Anikat.jpg" alt="Anikat Kankaria">
+  </div>
+
+  <div class="profile-content">
+    <h1 class="name-header">
+      Anikat Kankaria
+      <span class="name-native">अनिकेत कांकरिया</span>
     </h1>
 
-    <div class="av-bio">
+    <div class="affiliation">
+      I am a Research scholar  at
+      International Centre for Theoretical Sciences <br>
+      Tata Institute of Fundamental Research  <a href="https://www.icts.res.in/" target="_blank" rel="noopener">(ICTS–TIFR)</a> <br>
+      Bengaluru, India
+    </div>
+
+    <div class="affiliation">
+      I am currently working with
+      <a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank" rel="noopener">
+        Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)
+      </a>
+    </div>
+
+    <div class="research-focus">
       <p>
-        I am a Research Scholar at the
-        <a href="https://www.icts.res.in/" target="_blank" rel="noopener">International Centre for Theoretical Sciences (ICTS–TIFR)</a>,
-        Bengaluru, India. I am currently working with
-        <a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank" rel="noopener">Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)</a>.
+        My research focuses on <strong>far-from-equilibrium phenomena</strong>,
+        with particular emphasis on <strong>turbulence</strong> and its mathematical
+        structure. I am broadly interested in how ideas from nonlinear dynamics and
+        stochastic processes manifest in complex systems.
       </p>
-      <p>
-        My research focuses on <strong>far-from-equilibrium phenomena</strong>, with
-        particular emphasis on <strong>turbulence</strong> and its mathematical structure.
-        I am broadly interested in how ideas from nonlinear dynamics and stochastic
-        processes manifest in complex systems.
-      </p>
-      <p><strong>Specific interests include:</strong></p>
-      <ul>
+    </div>
+  </div>
+</div>
+<h3><strong>Specific interests include:</strong></h3>
+<ul class="research-inline-list">
         <li>Turbulence and non-equilibrium statistical physics</li>
         <li>Dynamical systems and nonlinear phenomena</li>
         <li>Stochastic modeling and random processes</li>
         <li>Complex and interacting systems</li>
       </ul>
-    </div>
-  </div>
+      
+<h2 class="section-header">Contact</h2>
 
-  <h2 class="av-section-heading">news</h2>
-  <div class="av-news-wrap">
-    <table class="av-news-table">
-      <tbody>
-        <tr>
-          <th scope="row">Mar 2025</th>
-          <td>
-            New preprint on the reduction of triadic interactions and its role in
-            suppressing intermittency and anomalous dissipation in turbulence —
-            <a href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener">arXiv:2603.19180</a>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Dec 2024</th>
-          <td>
-            New preprint on shock trapping and inertial escape of dust particles
-            in compressible turbulence —
-            <a href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">arXiv:2512.07164</a>.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 class="av-section-heading">publications</h2>
-
-  <div class="av-pub">
-    <div class="av-pub-title">
-      2. Reduction of Triadic Interactions Suppresses Intermittency and
-      Anomalous Dissipation in Turbulence
-    </div>
-    <div class="av-pub-authors">
-      <b>Anikat Kankaria</b>, Ritwik Mukherjee, Sugan Durai Murugan,
-      Marco Edoardo Rosti, Samriddhi Sankar Ray
-    </div>
-    <a class="av-arxiv" href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener">arXiv:2603.19180</a>
-  </div>
-
-  <div class="av-pub">
-    <div class="av-pub-title">
-      1. Shock trapping and inertial escape: Dust-particle clustering in
-      compressible turbulence
-    </div>
-    <div class="av-pub-authors">
-      <b>Anikat Kankaria</b>, Samriddhi Sankar Ray
-    </div>
-    <a class="av-arxiv" href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">arXiv:2512.07164</a>
-  </div>
-
-  <div class="av-social">
-    <div class="av-social-icons">
-      <a href="mailto:anikat.kankaria@icts.res.in" title="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-      </a>
-      <a href="mailto:anikat.kankaria@gmail.com" title="Gmail">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 18h-1V8.5l-7 4.5-7-4.5V18H4a2 2 0 0 1-2-2V6l10 6.5L22 6v10a2 2 0 0 1-2 2z"/>
-        </svg>
-      </a>
-    </div>
-    <div class="av-contact-note">Best way to reach me is via email.</div>
-  </div>
-
+<div class="contact-card">
+  📧 <a href="mailto:anikat.kankaria@icts.res.in">anikat.kankaria@icts.res.in</a> |
+  <a href="mailto:anikat.kankaria@gmail.com">anikat.kankaria@gmail.com</a><br>
+  📞 <a href="tel:+919674850807">+91-9674850807</a>
 </div>
+
+<h2 class="section-header">Publications</h2>
+
+
+<div class="publication-item">
+  <div class="publication-title">
+    2. Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence
+  </div>
+  <div class="publication-authors">
+    <b>Anikat Kankaria</b>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray
+  </div>
+  <a href="https://arxiv.org/abs/2603.19180 " target="_blank" rel="noopener">
+    arXiv:2603.19180 
+  </a>
+</div>
+
+
+<div class="publication-item">
+  <div class="publication-title">
+    1. Shock trapping and inertial escape: Dust-particle clustering in compressible turbulence
+  </div>
+  <div class="publication-authors">
+    <b>Anikat Kankaria</b>, Samriddhi Sankar Ray
+  </div>
+  <a href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">
+    arXiv:2512.07164
+  </a>
+</div>
+
+
