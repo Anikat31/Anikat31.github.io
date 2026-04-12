@@ -1,23 +1,69 @@
-title: "Anikat Kankaria"
-description: "Research in Fluid Dynamics, Turbulence & Nonlinear Physics"
-theme: minima
-author:
-  name: "Anikat Kankaria"
-markdown: kramdown
-header_pages:
-  - index.md
-  - Teaching/index.md
-  - gallery.md
-# Required for proper URL generation
-url: "https://anikat31.github.io"
-baseurl: ""
-# Enable custom CSS
-sass:
-  style: compressed
-# Social links (optional)
-github_username: Anikat31
-linkedin_username: anikat-kankaria
+# ── Site settings ──────────────────────────────────────────────
+title:          Anikat Kankaria
+first_name:     Anikat
+middle_name:    ""
+last_name:      Kankaria
+email:          anikat.kankaria@icts.res.in
+description:    Academic website for Anikat Kankaria
+url:            https://anikat-kankaria.github.io   # ← change to your GitHub Pages URL
+baseurl:        ""
+lang:           en
 
-# Custom head include for dark mode
-minima:
-  skin: auto
+# ── Author / keywords ──────────────────────────────────────────
+keywords:       turbulence, statistical physics, nonlinear dynamics, stochastic processes
+
+# ── Theme ──────────────────────────────────────────────────────
+# Options: blue, green, purple, red, pink, light, dark, none
+theme_color:    blue
+
+# ── Profile photo ──────────────────────────────────────────────
+# Place your photo at assets/img/Anikat.jpg
+logo:           ""
+
+# ── Social links (shown as icons next to contact note) ─────────
+# Remove or comment out any you don't use.
+contact_note:   Best way to reach me is via email.
+
+social:
+  email:        anikat.kankaria@icts.res.in
+  # github:     your-github-username
+  # linkedin:   your-linkedin
+  # twitter:    your-twitter
+
+# ── Navigation pages ──────────────────────────────────────────
+# al-folio reads this to build the navbar.
+# Add / remove pages as needed.
+navbar-pages:
+  - about
+  - publications
+  - cv
+
+# ── News ──────────────────────────────────────────────────────
+news_scrollable: true   # show scrollable box if many items
+news_limit:      5      # show only the 5 most recent
+
+# ── Publications ──────────────────────────────────────────────
+enable_publication_badges: true
+enable_arxiv_links:        true
+
+# ── Jekyll build settings ─────────────────────────────────────
+markdown:    kramdown
+highlighter: rouge
+permalink:   latest
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-scholar       # needed for bibliography / publications
+  - jekyll-imagemagick   # optional: auto-generates responsive webp images
+
+# Jekyll Scholar settings
+scholar:
+  last_name:      [Kankaria]
+  first_name:     [Anikat]
+  style:          apa
+  locale:         en
+  sort_by:        year
+  order:          descending
+  bibliography:   papers.bib
+  bibliography_template: bib
