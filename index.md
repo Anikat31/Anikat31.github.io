@@ -23,33 +23,37 @@ body {
   color: var(--text-main);
   font-family: "Source Serif 4", "Noto Serif Devanagari", Georgia, serif;
   line-height: 1.8;
-  max-width: 900px;
+
+  max-width: 1200px;        /* wider page */
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 32px;
 }
 
+/* --- Profile Section --- */
 .profile-section {
   display: flex;
   align-items: center;
-  gap: 56px;
+  gap: 72px;                /* more breathing room */
   margin-bottom: 64px;
 }
 
 .profile-image img {
-  width: 220px;
-  height: 220px;
+  width: 260px;             /* bigger image */
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.10);
 }
 
 .profile-content {
   flex: 1;
+  max-width: 720px;         /* keeps text readable */
 }
 
+/* --- Typography --- */
 .name-header {
   font-family: "Inter", sans-serif;
-  font-size: 2.6em;
+  font-size: 2.8em;
   font-weight: 600;
   margin-bottom: 0.2em;
   letter-spacing: -0.5px;
@@ -84,6 +88,7 @@ body {
   margin-top: 1.4em;
 }
 
+/* --- Lists --- */
 .research-inline-list {
   margin-top: 10px;
   padding-left: 20px;
@@ -93,9 +98,10 @@ body {
   margin-bottom: 6px;
 }
 
+/* --- Section Headers --- */
 .section-header {
   font-family: "Inter", sans-serif;
-  font-size: 1.6em;
+  font-size: 1.7em;
   font-weight: 600;
   margin-top: 72px;
   margin-bottom: 24px;
@@ -103,6 +109,7 @@ body {
   border-bottom: 1px solid var(--border-soft);
 }
 
+/* --- Contact --- */
 .contact-card {
   font-size: 1.05em;
   line-height: 1.8;
@@ -117,23 +124,25 @@ body {
   text-decoration: underline;
 }
 
+/* --- Publications --- */
 .publication-item {
   margin-bottom: 24px;
-  padding: 18px 20px;
+  padding: 20px 22px;
   background: var(--bg-soft);
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--border-soft);
   transition: all 0.2s ease;
+  max-width: 850px;
 }
 
 .publication-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
 .publication-title {
   font-family: "Inter", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.15em;
   font-weight: 600;
   margin-bottom: 6px;
 }
@@ -154,15 +163,21 @@ body {
   text-decoration: underline;
 }
 
+/* --- Mobile --- */
 @media (max-width: 768px) {
+  body {
+    padding: 30px 18px;
+  }
+
   .profile-section {
     flex-direction: column;
     text-align: center;
+    gap: 32px;
   }
 
   .profile-image img {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
   }
 }
 </style>
