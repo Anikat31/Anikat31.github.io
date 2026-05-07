@@ -55,8 +55,8 @@ title:
   }
 
   .profile-photo img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 50%;
     filter: grayscale(12%) contrast(1.03);
