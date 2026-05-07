@@ -50,24 +50,19 @@ title:
   .profile-photo {
     position: relative;
     padding-top: 12px;
+    display: flex;
+    justify-content: center;
   }
 
   .profile-photo img {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: 50%;
     filter: grayscale(12%) contrast(1.03);
     display: block;
-  }
-
-  .profile-photo::after {
-    content: '';
-    position: absolute;
-    inset: 6px 0 0 6px;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    z-index: -1;
+    outline: 4px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--rule), 0 8px 28px rgba(28,25,23,0.12);
   }
 
   .profile-content {
@@ -204,54 +199,70 @@ title:
 
   /* ── CONTACT ── */
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 0;
-    border: 1px solid var(--rule-soft);
-    border-radius: 2px;
-    overflow: hidden;
+  .contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     max-width: 680px;
   }
 
-  .contact-item {
+  .contact-card {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 18px 22px;
-    border-bottom: 1px solid var(--rule-soft);
+    padding: 14px 20px;
+    background: var(--highlight);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.18s, border-color 0.18s;
+    min-width: 0;
+  }
+
+  .contact-card:hover {
+    background: var(--ivory);
+    border-color: var(--ink-muted);
+  }
+
+  .contact-card-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
     background: var(--paper);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: var(--crimson);
   }
 
-  .contact-item:last-child { border-bottom: none; }
-  .contact-item:nth-child(odd):not(:last-child) {
-    border-right: 1px solid var(--rule-soft);
+  .contact-card-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
 
-  .contact-icon {
+  .contact-card-label {
     font-family: "DM Sans", sans-serif;
-    font-size: 0.7em;
+    font-size: 0.62em;
     font-weight: 500;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--ink-muted);
-    min-width: 52px;
+    line-height: 1;
+    margin-bottom: 4px;
   }
 
-  .contact-value {
+  .contact-card-value {
     font-family: "DM Sans", sans-serif;
-    font-size: 0.78em;
-    color: var(--ink-soft);
-  }
-
-  .contact-value a {
+    font-size: 0.76em;
     color: var(--crimson-light);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-
-  .contact-value a:hover { border-bottom-color: var(--crimson-light); }
 
   /* ── PUBLICATIONS ── */
 
@@ -348,8 +359,6 @@ title:
       margin: 0 auto;
     }
 
-    .profile-photo::after { display: none; }
-
     .name-rule { margin: 16px auto 0; }
 
     .research-statement { border-left: none; border-top: 2px solid var(--crimson); padding-left: 0; padding-top: 14px; text-align: left; }
@@ -418,25 +427,32 @@ title:
 <div class="section">
   <h2 class="section-title">Contact</h2>
 
-  <div class="contact-grid">
-    <div class="contact-item">
-      <span class="contact-icon">Email</span>
-      <span class="contact-value">
-        <a href="mailto:anikat.kankaria@icts.res.in">anikat.kankaria@icts.res.in</a>
-      </span>
-    </div>
-    <div class="contact-item">
-      <span class="contact-icon">Alt.</span>
-      <span class="contact-value">
-        <a href="mailto:anikat.kankaria@gmail.com">anikat.kankaria@gmail.com</a>
-      </span>
-    </div>
-    <div class="contact-item">
-      <span class="contact-icon">Phone</span>
-      <span class="contact-value">
-        <a href="tel:+919674850807">+91 96748 50807</a>
-      </span>
-    </div>
+  <div class="contact-cards">
+
+    <a class="contact-card" href="mailto:anikat.kankaria@icts.res.in">
+      <div class="contact-card-icon">✉</div>
+      <div class="contact-card-body">
+        <span class="contact-card-label">Institute Email</span>
+        <span class="contact-card-value">anikat.kankaria@icts.res.in</span>
+      </div>
+    </a>
+
+    <a class="contact-card" href="mailto:anikat.kankaria@gmail.com">
+      <div class="contact-card-icon">✉</div>
+      <div class="contact-card-body">
+        <span class="contact-card-label">Personal Email</span>
+        <span class="contact-card-value">anikat.kankaria@gmail.com</span>
+      </div>
+    </a>
+
+    <a class="contact-card" href="tel:+919674850807">
+      <div class="contact-card-icon">✆</div>
+      <div class="contact-card-body">
+        <span class="contact-card-label">Phone</span>
+        <span class="contact-card-value">+91 96748 50807</span>
+      </div>
+    </a>
+
   </div>
 </div>
 
