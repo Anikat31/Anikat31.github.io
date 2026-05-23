@@ -38,7 +38,7 @@
   /* ========== PROFILE ========== */
   .profile{
     display:grid;
-    grid-template-columns:280px 1fr;
+    grid-template-columns:380px 1fr;
     gap:72px;
     align-items:start;
     margin-bottom:72px;
