@@ -45,7 +45,7 @@
   }
   .profile-photo{display:flex;justify-content:center;padding-top:6px;position:relative}
   .profile-photo img{
-    width:220px;height:220px;
+    width:220px;height:400px;
     object-fit:cover;border-radius:50%;
     filter:grayscale(15%) contrast(1.04);
     display:block;
