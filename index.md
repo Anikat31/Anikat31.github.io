@@ -473,6 +473,16 @@
       <div class="pub-item">
         <span class="pub-num">3</span>
         <div class="pub-content">
+          <div class="pub-title">The effect of observational and environmental noise in the  D-dimensional Kuramoto-Model  </div>
+          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Sarthal Chandra</div>
+          <span class="pub-status">Manuscript in preparation</span>
+        </div>
+      </div>
+
+      
+      <div class="pub-item">
+        <span class="pub-num">3</span>
+        <div class="pub-content">
           <div class="pub-title">Dynamical Slowdown, Bottlenecks, and Multiscaling in Voigt-Regularised Turbulence</div>
           <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Bikram Pal, Samriddhi Sankar Ray</div>
           <span class="pub-status">Manuscript in preparation</span>
