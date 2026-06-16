@@ -471,7 +471,7 @@
     <div class="pub-list">
 
       <div class="pub-item">
-        <span class="pub-num">3</span>
+        <span class="pub-num">4</span>
         <div class="pub-content">
           <div class="pub-title">The effect of observational and environmental noise in the  D-dimensional Kuramoto-Model  </div>
           <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Sarthal Chandra</div>
