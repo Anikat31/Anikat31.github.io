@@ -493,7 +493,7 @@
         <span class="pub-num">2</span>
         <div class="pub-content">
           <div class="pub-title">Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence</div>
-          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Samriddhi Sankar Ray</div>
+          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray</div>
           <a class="pub-link" href="https://arxiv.org/abs/2603.19180" target="_blank">arXiv:2603.19180</a>
         </div>
       </div>
@@ -502,7 +502,7 @@
         <span class="pub-num">1</span>
         <div class="pub-content">
           <div class="pub-title">Shock Trapping and Inertial Escape: Dust-Particle Clustering in Compressible Turbulence</div>
-          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray</div>
+           <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Samriddhi Sankar Ray</div>
           <a class="pub-link" href="https://arxiv.org/abs/2512.07164" target="_blank">arXiv:2512.07164</a>
         </div>
       </div>
