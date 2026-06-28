@@ -56,8 +56,8 @@ nav: gallery
 <div class="gframe">
   <video controls playsinline preload="metadata"
          poster="{{ '/assets/videos/2D_Navier_stokes.mp4' | relative_url }}"
-         style="width:100%;display:block">
-    <source src="{{ '/assets/videos/2D_Navier_stokes.mp4' | relative_url }}" type="video/mp4">
+style="width:100%;height:100%;object-fit:cover;display:block">    
+<source src="{{ '/assets/videos/2D_Navier_stokes.mp4' | relative_url }}" type="video/mp4">
     Your browser doesn't support embedded video.
   </video>
 </div>
