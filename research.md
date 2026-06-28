@@ -146,16 +146,16 @@ nav: research
     position:fixed;inset:0;z-index:120;display:none;
     align-items:flex-start;justify-content:center;
     padding:48px 20px;overflow-y:auto;
-    background:rgba(13,23,42,.72);backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
+    background:rgba(247,249,252,.93);backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
   }
   .rx.open{display:flex;animation:rxfade .22s ease both}
   @keyframes rxfade{
     from{opacity:0;backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0)}
-    to{opacity:1;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+    to{opacity:1;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
   }
   .rx__panel{
-    background:var(--paper);max-width:760px;width:100%;
+    background:#fff;max-width:760px;width:100%;
     border-radius:6px;border:1px solid var(--rule);
     box-shadow:0 30px 80px rgba(10,20,40,.4);
     overflow:hidden;animation:rxin .26s ease;
