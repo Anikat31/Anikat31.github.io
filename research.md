@@ -84,19 +84,18 @@ nav: research
   /* placeholder when no figure is supplied yet */
   .plate__ph{
     position:absolute;inset:0;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;gap:10px;text-align:center;
+    align-items:center;justify-content:center;gap:9px;text-align:center;
     background:
-      radial-gradient(120% 90% at 30% 0%, rgba(45,90,138,.45), transparent 60%),
-      linear-gradient(135deg,#13284a 0%,#1e3a6b 55%,#274d80 100%);
-    color:#cdd9ec;
+      repeating-linear-gradient(45deg,#eef3fa 0 13px,#e6eef7 13px 26px);
+    color:var(--navy);
   }
   .plate__ph .g{
     font-family:"Cormorant Garamond",serif;font-style:italic;
-    font-size:2.4rem;line-height:1;color:#9fb4d0;
+    font-size:2.6rem;line-height:1;color:var(--navy-pale);
   }
   .plate__ph .t{
-    font-family:"DM Sans",sans-serif;font-size:.62rem;font-weight:500;
-    letter-spacing:.16em;text-transform:uppercase;color:#8ea6c8;
+    font-family:"DM Sans",sans-serif;font-size:.64rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--navy-l);
   }
 
   /* thin accent rule between figure and text */
@@ -112,31 +111,31 @@ nav: research
     display:flex;align-items:center;justify-content:space-between;gap:12px;
   }
   .plate__no{
-    font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:500;
-    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+    font-family:"DM Sans",sans-serif;font-size:.64rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--navy);
   }
   .plate__status{
-    font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:500;
-    letter-spacing:.1em;text-transform:uppercase;
+    font-family:"DM Sans",sans-serif;font-size:.64rem;font-weight:600;
+    letter-spacing:.09em;text-transform:uppercase;
     display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
   }
   .plate__status::before{content:'';width:6px;height:6px;border-radius:50%}
   .plate__status.pub{color:var(--navy-l)}
   .plate__status.pub::before{background:var(--navy)}
-  .plate__status.prep{color:var(--ink-muted)}
+  .plate__status.prep{color:var(--ink-soft)}
   .plate__status.prep::before{background:var(--navy-pale)}
   .plate__title{
-    font-family:"Cormorant Garamond",serif;font-size:1.32rem;font-weight:600;
-    line-height:1.32;color:var(--ink);margin:0;
+    font-family:"Cormorant Garamond",serif;font-size:1.34rem;font-weight:600;
+    line-height:1.3;color:var(--ink);margin:0;
   }
   .plate__tag{
-    font-family:"DM Sans",sans-serif;font-size:.78rem;font-weight:300;
+    font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:400;
     color:var(--ink-soft);line-height:1.6;margin:0;
   }
   .plate__cue{
-    margin-top:4px;
-    font-family:"DM Sans",sans-serif;font-size:.66rem;font-weight:500;
-    letter-spacing:.08em;text-transform:uppercase;color:var(--navy-l);
+    margin-top:6px;
+    font-family:"DM Sans",sans-serif;font-size:.68rem;font-weight:600;
+    letter-spacing:.07em;text-transform:uppercase;color:var(--navy);
     display:inline-flex;align-items:center;gap:7px;
   }
   .plate__cue::after{content:'\2192';transition:transform .2s ease}
@@ -147,10 +146,14 @@ nav: research
     position:fixed;inset:0;z-index:120;display:none;
     align-items:flex-start;justify-content:center;
     padding:48px 20px;overflow-y:auto;
-    background:rgba(13,23,42,.55);backdrop-filter:blur(5px);
-    -webkit-backdrop-filter:blur(5px);
+    background:rgba(13,23,42,.72);backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
   }
-  .rx.open{display:flex}
+  .rx.open{display:flex;animation:rxfade .22s ease both}
+  @keyframes rxfade{
+    from{opacity:0;backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0)}
+    to{opacity:1;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+  }
   .rx__panel{
     background:var(--paper);max-width:760px;width:100%;
     border-radius:6px;border:1px solid var(--rule);
@@ -226,7 +229,7 @@ nav: research
     .rx__title{font-size:1.5rem}
   }
   @media (prefers-reduced-motion:reduce){
-    .plate,.plate__fig img,.plate__fig::after,.plate__cue::after,.rx__panel{transition:none;animation:none}
+    .plate,.plate__fig img,.plate__fig::after,.plate__cue::after,.rx.open,.rx__panel{transition:none;animation:none}
   }
 </style>
 
