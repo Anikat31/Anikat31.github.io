@@ -1,4 +1,5 @@
 ---
+layout: raw
 title: Gallery
 nav: gallery
 ---

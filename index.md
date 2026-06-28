@@ -1,4 +1,5 @@
 ---
+layout: raw
 nav: home
 ---
 <html lang="en">
