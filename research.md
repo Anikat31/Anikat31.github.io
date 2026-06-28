@@ -298,7 +298,7 @@ const PROJECTS = [
     ]
   },
   {
-    image: "",
+    image: "/assets/research/dissp.png",
     status: "Preprint · arXiv",
     statusKind: "pub",
     title: "Reduction of Triadic Interactions",
