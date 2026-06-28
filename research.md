@@ -316,7 +316,7 @@ const PROJECTS = [
     ]
   },
   {
-    image: "",
+    image: "/assets/research/dissp_field_voigt.png",
     status: "Manuscript in preparation",
     statusKind: "prep",
     title: "Voigt-Regularised Turbulence",
