@@ -1,3 +1,6 @@
+---
+nav: home
+---
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +9,9 @@
 <style>body{margin:0;background:#f7f9fc}</style>
 </head>
 <body>
+
+{% include nav.html %}
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Devanagari:wght@400;500&display=swap');
 
@@ -468,6 +474,7 @@
   <!-- ==================== PUBLICATIONS ==================== -->
   <div class="section">
     <h2 class="section-title">Publications &amp; Preprints</h2>
+    <a href="{{ '/research/' | relative_url }}" style="font-family:'DM Sans',sans-serif;font-size:.74em;font-weight:500;letter-spacing:.06em;color:var(--crimson-light);text-decoration:none;display:inline-block;margin:-14px 0 22px;border-bottom:1px solid transparent;transition:border-color .2s" onmouseover="this.style.borderColor='var(--crimson-light)'" onmouseout="this.style.borderColor='transparent'">Browse these as interactive research plates &rarr;</a>
     <div class="pub-list">
 
       <div class="pub-item">
@@ -511,7 +518,7 @@
   </div>
 
   <div class="pg-footer">
-    <span>Last updated · May 2026</span>
+    <span>Last updated · June 2026</span>
     <span class="crest">· · ·</span>
     <span>Bengaluru · India</span>
   </div>
