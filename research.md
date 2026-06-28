@@ -99,32 +99,26 @@ nav: research
     letter-spacing:.16em;text-transform:uppercase;color:#8ea6c8;
   }
 
-  .plate__plate{
-    position:absolute;top:12px;left:12px;
-    font-family:"DM Sans",sans-serif;font-size:.58rem;font-weight:500;
-    letter-spacing:.14em;text-transform:uppercase;
-    color:#eaf1fb;background:rgba(15,29,55,.55);
-    backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
-    padding:5px 9px;border-radius:2px;
+  /* thin accent rule between figure and text */
+  .plate__fig::after{
+    content:'';position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:var(--navy);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s ease;
   }
-  .plate__open{
-    position:absolute;bottom:12px;right:12px;
-    display:inline-flex;align-items:center;gap:6px;
-    font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:500;
-    letter-spacing:.1em;text-transform:uppercase;color:#fff;
-    background:rgba(15,29,55,.55);backdrop-filter:blur(3px);
-    -webkit-backdrop-filter:blur(3px);
-    padding:6px 11px;border-radius:2px;
-    opacity:0;transform:translateY(4px);transition:opacity .22s,transform .22s;
-  }
-  .plate__open::after{content:'⤢'}
-  .plate:hover .plate__open,.plate:focus-visible .plate__open{opacity:1;transform:none}
+  .plate:hover .plate__fig::after,.plate:focus-visible .plate__fig::after{transform:scaleX(1)}
 
-  .plate__body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px}
+  .plate__body{padding:18px 22px 20px;display:flex;flex-direction:column;gap:9px}
+  .plate__meta{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .plate__no{
+    font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:500;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+  }
   .plate__status{
     font-family:"DM Sans",sans-serif;font-size:.6rem;font-weight:500;
-    letter-spacing:.11em;text-transform:uppercase;
-    display:inline-flex;align-items:center;gap:7px;
+    letter-spacing:.1em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
   }
   .plate__status::before{content:'';width:6px;height:6px;border-radius:50%}
   .plate__status.pub{color:var(--navy-l)}
@@ -139,6 +133,14 @@ nav: research
     font-family:"DM Sans",sans-serif;font-size:.78rem;font-weight:300;
     color:var(--ink-soft);line-height:1.6;margin:0;
   }
+  .plate__cue{
+    margin-top:4px;
+    font-family:"DM Sans",sans-serif;font-size:.66rem;font-weight:500;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--navy-l);
+    display:inline-flex;align-items:center;gap:7px;
+  }
+  .plate__cue::after{content:'\2192';transition:transform .2s ease}
+  .plate:hover .plate__cue::after,.plate:focus-visible .plate__cue::after{transform:translateX(4px)}
 
   /* ---------- modal ---------- */
   .rx{
@@ -224,7 +226,7 @@ nav: research
     .rx__title{font-size:1.5rem}
   }
   @media (prefers-reduced-motion:reduce){
-    .plate,.plate__fig img,.plate__open,.rx__panel{transition:none;animation:none}
+    .plate,.plate__fig img,.plate__fig::after,.plate__cue::after,.rx__panel{transition:none;animation:none}
   }
 </style>
 
@@ -346,15 +348,11 @@ const PROJECTS = [
 const ROMAN = ["I","II","III","IV","V","VI","VII","VIII","IX","X"];
 const grid = document.getElementById("plates");
 
-function figMarkup(p, plateLabel){
+function figMarkup(p){
   const inner = p.image
     ? `<img src="${p.image}" alt="${p.title}" loading="lazy">`
     : `<div class="plate__ph"><span class="g">§</span><span class="t">Add figure or animation</span></div>`;
-  return `<div class="plate__fig">
-            ${inner}
-            <span class="plate__plate">${plateLabel}</span>
-            <span class="plate__open">View</span>
-          </div>`;
+  return `<div class="plate__fig">${inner}</div>`;
 }
 
 PROJECTS.forEach((p, i) => {
@@ -362,11 +360,15 @@ PROJECTS.forEach((p, i) => {
   btn.className = "plate";
   btn.setAttribute("aria-haspopup","dialog");
   btn.innerHTML = `
-    ${figMarkup(p, "Plate " + ROMAN[i])}
+    ${figMarkup(p)}
     <div class="plate__body">
-      <span class="plate__status ${p.statusKind}">${p.status}</span>
+      <div class="plate__meta">
+        <span class="plate__no">Plate ${ROMAN[i]}</span>
+        <span class="plate__status ${p.statusKind}">${p.status}</span>
+      </div>
       <h3 class="plate__title">${p.title}</h3>
       <p class="plate__tag">${p.tagline}</p>
+      <span class="plate__cue">Read summary</span>
     </div>`;
   btn.addEventListener("click", () => openModal(i, btn));
   grid.appendChild(btn);
