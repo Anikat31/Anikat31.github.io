@@ -51,6 +51,19 @@ nav: gallery
   </a>
   <p class="gcap">ICTS Fluid Dynamics Group · 2025</p>
 
+
+
+<div class="gframe">
+  <video controls playsinline preload="metadata"
+         poster="{{ '/assets/videos/2D_Navier_stokes.mp4' | relative_url }}"
+         style="width:100%;display:block">
+    <source src="{{ '/assets/videos/2D_Navier_stokes.mp4' | relative_url }}" type="video/mp4">
+    Your browser doesn't support embedded video.
+  </video>
+</div>
+<p class="gcap">2D Turbulence simulation·2026</p>
+
+
   <div class="gfoot">
     <span>Updated · June 2026</span>
     <span class="crest">· · ·</span>
