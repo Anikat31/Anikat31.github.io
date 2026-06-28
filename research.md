@@ -280,7 +280,7 @@ nav: research
    ============================================================ */
 const PROJECTS = [
   {
-    image: "/assets/flow.png",
+    image: "/assets/research/trap_escape_particles.png",
     status: "Preprint · arXiv",
     statusKind: "pub",
     title: "Shock Trapping and Inertial Escape",
