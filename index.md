@@ -438,10 +438,7 @@ nav: home
           <span class="cc-value">github.com/Anikat31</span>
         </div>
       </a>
-      <!-- Google Scholar: replace the href below with your profile URL
-           (open your Scholar profile, copy the address bar). If you don't
-           have a profile yet, delete this whole <a>...</a> block. -->
-      <a class="contact-card" href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank">
+      <a class="contact-card" href="https://scholar.google.com/citations?user=233a0UoAAAAJ&amp;hl=en" target="_blank">
         <div class="cc-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg></div>
         <div class="cc-body">
           <span class="cc-label">Google Scholar</span>
@@ -453,6 +450,13 @@ nav: home
         <div class="cc-body">
           <span class="cc-label">Curriculum Vitae</span>
           <span class="cc-value">Download PDF</span>
+        </div>
+      </a>
+      <a class="contact-card" href="https://orcid.org/0009-0006-9214-1653" target="_blank">
+        <div class="cc-icon">iD</div>
+        <div class="cc-body">
+          <span class="cc-label">ORCID</span>
+          <span class="cc-value">0009-0006-9214-1653</span>
         </div>
       </a>
     </div>
