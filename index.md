@@ -1,5 +1,7 @@
 ---
 layout: raw
+title: Home
+description: "Anikat Kankaria — PhD candidate in Physics at ICTS-TIFR, Bengaluru, working on turbulence, stochastic processes, and synchronisation dynamics."
 nav: home
 ---
 <html lang="en">
@@ -7,6 +9,7 @@ nav: home
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anikat Kankaria · ICTS-TIFR</title>
+{% seo title=false %}
 <style>body{margin:0;background:#f7f9fc}</style>
 </head>
 <body>
@@ -24,9 +27,9 @@ nav: home
     --ink-soft:#3a4a5e;
     --ink-muted:#6b7d92;
     --ink-faint:#a5b3c4;
-    --crimson:#1e3a6b;
-    --crimson-light:#2d5a8a;
-    --crimson-pale:#9fb4d0;
+    --navy:#1e3a6b;
+    --navy-l:#2d5a8a;
+    --navy-pale:#9fb4d0;
     --rule:#c8d3e2;
     --rule-soft:#e2e8f0;
     --highlight:#ebf0f7;
@@ -60,7 +63,7 @@ nav: home
   }
   .photo-ornament{
     position:absolute;bottom:6px;left:50%;transform:translateX(-50%) translateY(50%);
-    font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--crimson);
+    font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--navy);
     background:var(--paper);padding:0 10px;line-height:1;letter-spacing:.4em;
   }
   .profile-content{padding-top:4px}
@@ -77,7 +80,7 @@ nav: home
     margin-top:6px;letter-spacing:.02em;
   }
   .name-rule{
-    width:54px;height:1.5px;background:var(--crimson);
+    width:54px;height:1.5px;background:var(--navy);
     margin-top:16px;display:block;
   }
 
@@ -94,15 +97,15 @@ nav: home
   }
   .meta-value{color:var(--ink-soft)}
   .meta a{
-    color:var(--crimson-light);text-decoration:none;
+    color:var(--navy-l);text-decoration:none;
     border-bottom:1px solid transparent;transition:border-color .2s;
   }
-  .meta a:hover{border-bottom-color:var(--crimson-light)}
+  .meta a:hover{border-bottom-color:var(--navy-l)}
 
   .research-statement{
     font-size:1.04em;color:var(--ink-soft);
     font-style:italic;line-height:1.8;
-    border-left:2px solid var(--crimson);
+    border-left:2px solid var(--navy);
     padding:2px 0 2px 20px;margin:0 0 22px;
     position:relative;
   }
@@ -130,7 +133,7 @@ nav: home
   }
   .section-title::before{
     content:'§';font-family:"Cormorant Garamond",serif;
-    font-size:1.6em;color:var(--crimson);
+    font-size:1.6em;color:var(--navy);
     font-style:italic;font-weight:400;
     letter-spacing:0;line-height:1;
     transform:translateY(1px);
@@ -153,7 +156,7 @@ nav: home
   }
   .contact-card::before{
     content:'';position:absolute;left:0;top:0;bottom:0;
-    width:2px;background:var(--crimson);
+    width:2px;background:var(--navy);
     opacity:0;transition:opacity .2s;
   }
   .contact-card:hover{
@@ -169,7 +172,7 @@ nav: home
     border:1px solid var(--rule);
     display:flex;align-items:center;justify-content:center;
     flex-shrink:0;font-family:"DM Sans",sans-serif;
-    font-size:15px;color:var(--crimson);line-height:1;
+    font-size:15px;color:var(--navy);line-height:1;
   }
   .cc-body{display:flex;flex-direction:column;min-width:0}
   .cc-label{
@@ -180,7 +183,7 @@ nav: home
   }
   .cc-value{
     font-family:"DM Sans",sans-serif;
-    font-size:.76em;color:var(--crimson-light);
+    font-size:.76em;color:var(--navy-l);
     white-space:nowrap;overflow:hidden;
     text-overflow:ellipsis;font-weight:400;
   }
@@ -206,17 +209,17 @@ nav: home
     left:-5px;top:30px;
     width:9px;height:9px;border-radius:50%;
     background:var(--paper);
-    border:1.5px solid var(--crimson-pale);
+    border:1.5px solid var(--navy-pale);
   }
   .edu-item.current::before{
-    background:var(--crimson);
-    border-color:var(--crimson);
+    background:var(--navy);
+    border-color:var(--navy);
     box-shadow:0 0 0 4px rgba(30,58,107,.12);
   }
   .edu-years{
     font-family:"DM Sans",sans-serif;
     font-size:.74em;font-weight:500;
-    color:var(--crimson);
+    color:var(--navy);
     letter-spacing:.04em;
     padding-top:4px;
     line-height:1.5;
@@ -257,6 +260,48 @@ nav: home
   }
   .edu-detail .val{color:var(--ink-soft)}
 
+  /* ========== METHODS & TOOLKIT ========== */
+  .method-grid{
+    display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:12px;
+  }
+  .method-card{
+    display:flex;align-items:flex-start;gap:14px;
+    padding:16px 18px;background:var(--paper);
+    border:1px solid var(--rule-soft);border-radius:3px;
+    transition:all .2s;position:relative;overflow:hidden;
+  }
+  .method-card::before{
+    content:'';position:absolute;left:0;top:0;bottom:0;
+    width:2px;background:var(--navy);
+    opacity:0;transition:opacity .2s;
+  }
+  .method-card:hover{
+    background:var(--highlight-warm);
+    border-color:var(--rule);
+    transform:translateY(-1px);
+    box-shadow:0 4px 16px rgba(15,30,55,.08);
+  }
+  .method-card:hover::before{opacity:1}
+  .method-glyph{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--highlight);border:1px solid var(--rule);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;font-family:"Cormorant Garamond",serif;
+    font-style:italic;font-size:1.15em;color:var(--navy);line-height:1;
+  }
+  .method-body{min-width:0}
+  .method-title{
+    font-family:"DM Sans",sans-serif;
+    font-size:.78em;font-weight:500;color:var(--ink);
+    margin-bottom:5px;letter-spacing:.01em;
+  }
+  .method-desc{
+    font-family:"DM Sans",sans-serif;
+    font-size:.72em;font-weight:300;color:var(--ink-muted);
+    line-height:1.6;
+  }
+
   /* ========== PUBLICATIONS ========== */
   .pub-list{display:flex;flex-direction:column;gap:0;max-width:1100px}
   .pub-item{
@@ -270,7 +315,7 @@ nav: home
   .pub-num{
     font-family:"DM Sans",sans-serif;
     font-size:.74em;font-weight:500;
-    color:var(--crimson);padding-top:4px;
+    color:var(--navy);padding-top:4px;
     letter-spacing:.04em;
   }
   .pub-content{
@@ -298,7 +343,7 @@ nav: home
     font-family:"DM Sans",sans-serif;
     font-size:.7em;font-weight:500;
     letter-spacing:.07em;text-transform:uppercase;
-    color:var(--crimson-light);text-decoration:none;
+    color:var(--navy-l);text-decoration:none;
     border:1px solid var(--rule-soft);
     padding:8px 14px;border-radius:2px;
     transition:all .2s;white-space:nowrap;
@@ -306,8 +351,8 @@ nav: home
     align-self:center;justify-self:end;
   }
   .pub-link:hover{
-    border-color:var(--crimson-light);
-    color:var(--crimson);
+    border-color:var(--navy-l);
+    color:var(--navy);
     background:var(--highlight-warm);
   }
   .pub-link::after{content:'↗';font-size:.9em}
@@ -325,7 +370,7 @@ nav: home
   }
   .pub-status::before{
     content:'';width:6px;height:6px;border-radius:50%;
-    background:var(--crimson-pale);
+    background:var(--navy-pale);
     display:inline-block;
   }
 
@@ -342,12 +387,13 @@ nav: home
   .pg-footer .crest{
     font-family:"Cormorant Garamond",serif;
     font-style:italic;font-size:1.4em;
-    color:var(--crimson-pale);
+    color:var(--navy-pale);
     letter-spacing:.3em;line-height:1;
   }
 
   @media (max-width: 1000px){
     .contact-grid{grid-template-columns:repeat(2, 1fr)}
+    .method-grid{grid-template-columns:repeat(2, 1fr)}
   }
 
   @media (max-width: 760px){
@@ -361,18 +407,34 @@ nav: home
     .interests{justify-content:center}
     .research-statement{text-align:left}
     .contact-grid{grid-template-columns:1fr}
+    .method-grid{grid-template-columns:1fr}
     .edu-item{grid-template-columns:1fr;gap:6px;padding-left:24px}
     .edu-years{padding-top:0}
     .pub-content{grid-template-columns:1fr}
     .pub-link, .pub-status{grid-column:1;grid-row:auto;justify-self:start;margin-top:10px}
     .pub-title{font-size:1.05em}
   }
+
+  @media (prefers-reduced-motion: reduce){
+    .contact-card,.method-card{transition:none}
+  }
+
+  @media print{
+    body{background:#fff}
+    .pg{padding:24px;max-width:100%;background:#fff}
+    .profile-photo img{box-shadow:none;filter:none;outline:none}
+    .interest-tag,.contact-card,.method-card,.pub-link,.pub-status{box-shadow:none}
+    .contact-card:hover,.method-card:hover{transform:none;box-shadow:none;background:var(--paper)}
+    .contact-card::before,.method-card::before{display:none}
+    .edu-item,.pub-item,.method-card,.contact-card{break-inside:avoid}
+    .section{margin-top:32px}
+  }
 </style>
 
-<div class="pg">
+<main class="pg">
 
   <!-- ==================== PROFILE ==================== -->
-  <div class="profile">
+  <header class="profile">
     <div class="profile-photo">
       <img src="/assets/Anikat.jpg" alt="Anikat Kankaria">
     </div>
@@ -384,8 +446,9 @@ nav: home
       </div>
       <div class="meta">
         <div class="meta-row"><span class="meta-label">Position</span><span class="meta-value">PhD Candidate, Physics</span></div>
-        <div class="meta-row"><span class="meta-label">Institute</span><span class="meta-value"><a href="https://www.icts.res.in/" target="_blank">International Centre for Theoretical Sciences, TIFR</a>&ensp;·&ensp;Bengaluru, India</span></div>
-        <div class="meta-row"><span class="meta-label">Advisor</span><span class="meta-value"><a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank">Prof. Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)</a></span></div>
+        <div class="meta-row"><span class="meta-label">Institute</span><span class="meta-value"><a href="https://www.icts.res.in/" target="_blank" rel="noopener">International Centre for Theoretical Sciences, TIFR</a>&ensp;·&ensp;Bengaluru, India</span></div>
+        <div class="meta-row"><span class="meta-label">Advisor</span><span class="meta-value"><a href="https://www.icts.res.in/people/samriddhi-sankar-ray" target="_blank" rel="noopener">Prof. Samriddhi Sankar Ray (সমৃদ্ধি শঙ্কর রায়)</a></span></div>
+        <div class="meta-row"><span class="meta-label">Service</span><span class="meta-value">Coordinator, ICTS Fluid Seminar Series</span></div>
       </div>
       <p class="research-statement">My research centres on <strong>far-from-equilibrium phenomena</strong>, with particular emphasis on <strong>turbulence</strong> and its mathematical structure. I am broadly interested in how ideas from nonlinear dynamics and stochastic processes manifest in complex systems.</p>
       <div class="interests">
@@ -397,10 +460,10 @@ nav: home
         <span class="interest-tag">High-Performance Scientific Computing</span>
       </div>
     </div>
-  </div>
+  </header>
 
   <!-- ==================== CONTACT ==================== -->
-  <div class="section">
+  <section class="section">
     <h2 class="section-title">Contact</h2>
     <div class="contact-grid">
       <a class="contact-card" href="mailto:anikat.kankaria@icts.res.in">
@@ -424,35 +487,35 @@ nav: home
           <span class="cc-value">+91 96748 50807</span>
         </div>
       </a>
-      <a class="contact-card" href="https://anikat31.github.io" target="_blank">
+      <a class="contact-card" href="https://anikat31.github.io" target="_blank" rel="noopener">
         <div class="cc-icon">⌘</div>
         <div class="cc-body">
           <span class="cc-label">Website</span>
           <span class="cc-value">anikat31.github.io</span>
         </div>
       </a>
-      <a class="contact-card" href="https://github.com/Anikat31" target="_blank">
+      <a class="contact-card" href="https://github.com/Anikat31" target="_blank" rel="noopener">
         <div class="cc-icon"><svg viewBox="0 0 16 16" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></div>
         <div class="cc-body">
           <span class="cc-label">GitHub</span>
           <span class="cc-value">github.com/Anikat31</span>
         </div>
       </a>
-      <a class="contact-card" href="https://scholar.google.com/citations?user=233a0UoAAAAJ&amp;hl=en" target="_blank">
+      <a class="contact-card" href="https://scholar.google.com/citations?user=233a0UoAAAAJ&amp;hl=en" target="_blank" rel="noopener">
         <div class="cc-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg></div>
         <div class="cc-body">
           <span class="cc-label">Google Scholar</span>
           <span class="cc-value">Publications &amp; citations</span>
         </div>
       </a>
-      <a class="contact-card" href="{{ '/assets/Anikat_Kankaria_CV.pdf' | relative_url }}" target="_blank">
+      <a class="contact-card" href="{{ '/assets/Anikat_Kankaria_CV.pdf' | relative_url }}" target="_blank" rel="noopener">
         <div class="cc-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div>
         <div class="cc-body">
           <span class="cc-label">Curriculum Vitae</span>
           <span class="cc-value">Download PDF</span>
         </div>
       </a>
-      <a class="contact-card" href="https://orcid.org/0009-0006-9214-1653" target="_blank">
+      <a class="contact-card" href="https://orcid.org/0009-0006-9214-1653" target="_blank" rel="noopener">
         <div class="cc-icon">iD</div>
         <div class="cc-body">
           <span class="cc-label">ORCID</span>
@@ -460,10 +523,10 @@ nav: home
         </div>
       </a>
     </div>
-  </div>
+  </section>
 
   <!-- ==================== EDUCATION ==================== -->
-  <div class="section">
+  <section class="section">
     <h2 class="section-title">Education</h2>
     <div class="edu-list">
 
@@ -498,12 +561,68 @@ nav: home
       </div>
 
     </div>
-  </div>
+  </section>
+
+  <!-- ==================== METHODS & TOOLKIT ==================== -->
+  <section class="section">
+    <h2 class="section-title">Methods &amp; Toolkit</h2>
+    <div class="method-grid">
+
+      <div class="method-card">
+        <div class="method-glyph">∇</div>
+        <div class="method-body">
+          <div class="method-title">Pseudospectral Methods</div>
+          <div class="method-desc">Fourier-space solvers for the Navier&ndash;Stokes, Burgers, and Boussinesq equations, with dealiasing and shell-averaged spectral diagnostics.</div>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-glyph">∮</div>
+        <div class="method-body">
+          <div class="method-title">Structure-Preserving Integrators</div>
+          <div class="method-desc">Lawson and integrating-factor Runge&ndash;Kutta schemes (IFRK2/4) that respect manifold constraints and stiff linear propagators exactly.</div>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-glyph">λ</div>
+        <div class="method-body">
+          <div class="method-title">JAX &amp; GPU Computing</div>
+          <div class="method-desc">Differentiable, vectorised simulation pipelines built with vmap and lax.scan, run at ensemble scale on GPU hardware.</div>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-glyph">Σ</div>
+        <div class="method-body">
+          <div class="method-title">Random Matrix Theory</div>
+          <div class="method-desc">Spectral statistics of disordered coupling ensembles &mdash; Gaussian and Lorentzian &mdash; underlying synchronisation thresholds.</div>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-glyph">ξ</div>
+        <div class="method-body">
+          <div class="method-title">Stochastic Processes</div>
+          <div class="method-desc">Noise-driven dynamics on manifolds and in turbulent fields, from tangent-space projections to Ornstein&ndash;Uhlenbeck forcing.</div>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-glyph">α</div>
+        <div class="method-body">
+          <div class="method-title">Multifractal Analysis</div>
+          <div class="method-desc">Structure functions and singularity spectra (Chhabra&ndash;Jensen and partition-function methods) for intermittent, dissipative fields.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ==================== PUBLICATIONS ==================== -->
-  <div class="section">
+  <section class="section">
     <h2 class="section-title">Publications &amp; Preprints</h2>
-    <a href="{{ '/research/' | relative_url }}" style="font-family:'DM Sans',sans-serif;font-size:.74em;font-weight:500;letter-spacing:.06em;color:var(--crimson-light);text-decoration:none;display:inline-block;margin:-14px 0 22px;border-bottom:1px solid transparent;transition:border-color .2s" onmouseover="this.style.borderColor='var(--crimson-light)'" onmouseout="this.style.borderColor='transparent'">Browse these as interactive research plates &rarr;</a>
+    <a href="{{ '/research/' | relative_url }}" style="font-family:'DM Sans',sans-serif;font-size:.74em;font-weight:500;letter-spacing:.06em;color:var(--navy-l);text-decoration:none;display:inline-block;margin:-14px 0 22px;border-bottom:1px solid transparent;transition:border-color .2s" onmouseover="this.style.borderColor='var(--navy-l)'" onmouseout="this.style.borderColor='transparent'">Browse these as interactive research plates &rarr;</a>
     <div class="pub-list">
 
       <div class="pub-item">
@@ -530,7 +649,7 @@ nav: home
         <div class="pub-content">
           <div class="pub-title">Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence</div>
           <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray</div>
-          <a class="pub-link" href="https://arxiv.org/abs/2603.19180" target="_blank">arXiv:2603.19180</a>
+          <a class="pub-link" href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener">arXiv:2603.19180 · Mar 2026</a>
         </div>
       </div>
 
@@ -539,19 +658,19 @@ nav: home
         <div class="pub-content">
           <div class="pub-title">Shock Trapping and Inertial Escape: Dust-Particle Clustering in Compressible Turbulence</div>
            <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Samriddhi Sankar Ray</div>
-          <a class="pub-link" href="https://arxiv.org/abs/2512.07164" target="_blank">arXiv:2512.07164</a>
+          <a class="pub-link" href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">arXiv:2512.07164 · Dec 2025</a>
         </div>
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <div class="pg-footer">
-    <span>Last updated · June 2026</span>
+  <footer class="pg-footer">
+    <span>Last updated · July 2026</span>
     <span class="crest">· · ·</span>
     <span>Bengaluru · India</span>
-  </div>
+  </footer>
 
-</div>
+</main>
 </body>
 </html>

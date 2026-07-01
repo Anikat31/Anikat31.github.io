@@ -1,14 +1,32 @@
 title: Anikat Kankaria
-description: Academic website for Anikat Kankaria
+description: "Academic website of Anikat Kankaria, PhD candidate in Physics at ICTS-TIFR, Bengaluru."
 email: anikat.kankaria@icts.res.in
 url: "https://anikat31.github.io"
 baseurl: ""
+lang: en
+timezone: Asia/Kolkata
 
 theme: jekyll-theme-primer
 
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
+
+# Consumed by jekyll-seo-tag ({% seo %}) for meta description, Open Graph,
+# Twitter cards, and JSON-LD structured data across the site.
+author:
+  name: Anikat Kankaria
+  email: anikat.kankaria@icts.res.in
+
+logo: /assets/Anikat.jpg
+title-separator: "·"
+
+social:
+  name: Anikat Kankaria
+  links:
+    - https://github.com/Anikat31
+    - https://scholar.google.com/citations?user=233a0UoAAAAJ&hl=en
+    - https://orcid.org/0009-0006-9214-1653
 
 plugins:
   - jekyll-sitemap

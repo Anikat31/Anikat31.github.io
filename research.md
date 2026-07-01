@@ -1,6 +1,7 @@
 ---
 layout: raw
 title: Research
+description: "Research plates on turbulence, stochastic dynamics, and synchronisation from Anikat Kankaria's work at ICTS-TIFR."
 nav: research
 ---
 <html lang="en">
@@ -8,6 +9,7 @@ nav: research
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research · Anikat Kankaria</title>
+{% seo title=false %}
 <style>body{margin:0;background:#f7f9fc}</style>
 </head>
 <body>
@@ -141,6 +143,14 @@ nav: research
   .plate__cue::after{content:'\2192';transition:transform .2s ease}
   .plate:hover .plate__cue::after,.plate:focus-visible .plate__cue::after{transform:translateX(4px)}
 
+  .plate__tags{display:flex;flex-wrap:wrap;gap:6px;margin:1px 0 2px}
+  .plate__keyword{
+    font-family:"DM Sans",sans-serif;font-size:.62rem;font-weight:400;
+    letter-spacing:.03em;color:var(--ink-soft);
+    background:var(--highlight);border:1px solid var(--rule-soft);
+    padding:3px 9px;border-radius:1px;
+  }
+
   /* ---------- modal ---------- */
   .rx{
     position:fixed;inset:0;z-index:120;display:none;
@@ -185,9 +195,10 @@ nav: research
   }
   .rx__authors{
     font-family:"DM Sans",sans-serif;font-size:.78rem;color:var(--ink-muted);
-    line-height:1.6;margin:0 0 22px;
+    line-height:1.6;margin:0 0 14px;
   }
   .rx__authors .me{color:var(--ink);font-weight:500}
+  .rx__tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
   .rx__summary p{
     font-family:"Cormorant Garamond",serif;font-size:1.12rem;line-height:1.75;
     color:var(--ink-soft);margin:0 0 14px;
@@ -233,11 +244,11 @@ nav: research
   }
 </style>
 
-<div class="rpg">
+<main class="rpg">
   <header class="rhead">
     <h1>Research</h1>
     <div class="rule"></div>
-    <p>A set of plates from ongoing and published work on turbulence, stochastic
+    <p>A set of <span id="plateCount">four</span> plates from ongoing and published work on turbulence, stochastic
        dynamics, and synchronisation. Each is a figure from the work itself &mdash;
        open one to read what it shows.</p>
     <span class="cue">Click a plate to read its summary</span>
@@ -245,12 +256,12 @@ nav: research
 
   <div class="plates" id="plates"></div>
 
-  <div class="rfoot">
-    <span>Updated · June 2026</span>
+  <footer class="rfoot">
+    <span>Updated · July 2026</span>
     <span class="crest">· · ·</span>
     <span>Bengaluru · India</span>
-  </div>
-</div>
+  </footer>
+</main>
 
 <!-- ===================== MODAL ===================== -->
 <div class="rx" id="rx" role="dialog" aria-modal="true" aria-labelledby="rxTitle">
@@ -260,6 +271,7 @@ nav: research
       <div class="rx__status" id="rxStatus"></div>
       <h2 class="rx__title" id="rxTitle"></h2>
       <p class="rx__authors" id="rxAuthors"></p>
+      <div class="rx__tags" id="rxTags"></div>
       <div class="rx__summary" id="rxSummary"></div>
       <div class="rx__links" id="rxLinks"></div>
     </div>
@@ -286,6 +298,7 @@ const PROJECTS = [
     title: "Shock Trapping and Inertial Escape",
     sub: "Dust-particle clustering in compressible turbulence",
     tagline: "How inertial grains pile into shocks — and break free.",
+    tags: ["Compressible Turbulence", "Burgers Equation", "Correlation Dimension"],
     authors: ['<span class="me">Anikat Kankaria</span>', 'Samriddhi Sankar Ray'],
     summary: [
       "How do inertial dust grains organise themselves in a flow riddled with shocks? Using the two-dimensional, stochastically forced Burgers equation as a clean model of compressible turbulence, this work follows particles across a wide range of Stokes numbers.",
@@ -304,6 +317,7 @@ const PROJECTS = [
     title: "Reduction of Triadic Interactions",
     sub: "Suppressing intermittency and anomalous dissipation",
     tagline: "Cutting triads from Navier–Stokes, one by one.",
+    tags: ["Navier–Stokes", "Triadic Decimation", "Multifractality"],
     authors: ['<span class="me">Anikat Kankaria</span>','Ritwik Mukherjee','Sugan Durai Murugan','Marco Edoardo Rosti','Samriddhi Sankar Ray'],
     summary: [
       "Which part of the Navier–Stokes nonlinearity is actually responsible for intermittency and anomalous dissipation? This study answers by operating on the equations themselves — systematically thinning the network of triadic interactions in Fourier space — using direct numerical simulations of both fractally and homogeneously decimated dynamics.",
@@ -322,6 +336,7 @@ const PROJECTS = [
     title: "Voigt-Regularised Turbulence",
     sub: "Dynamical slowdown, bottlenecks, and multiscaling",
     tagline: "What a smoothed inertial term costs the cascade.",
+    tags: ["Voigt Regularisation", "Energy Flux", "Shell Models"],
     authors: ['<span class="me">Anikat Kankaria</span>','Bikram Pal','Samriddhi Sankar Ray'],
     summary: [
       "The Voigt regularisation replaces the inertial term of the Navier–Stokes and shell-model dynamics with a smoothed version, yielding a globally well-posed system that still aims to reproduce turbulent statistics.",
@@ -337,6 +352,7 @@ const PROJECTS = [
     title: "Noise in the D-dimensional Kuramoto Model",
     sub: "Observational and environmental fluctuations",
     tagline: "Two kinds of noise, one synchronisation transition.",
+    tags: ["Kuramoto–Lohe Model", "D-Sphere Synchronisation", "Critical Coupling"],
     authors: ['<span class="me">Anikat Kankaria</span>','Sarthak Chandra'],
     summary: [
       "Real oscillator networks are noisy in at least two distinct ways: the coupling or measurement is corrupted by observational noise, and each unit feels its own environmental fluctuations.",
@@ -349,13 +365,23 @@ const PROJECTS = [
 
 /* ---------- render plates ---------- */
 const ROMAN = ["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+const NUM_WORDS = ["zero","one","two","three","four","five","six","seven","eight","nine","ten"];
 const grid = document.getElementById("plates");
+
+const plateCountEl = document.getElementById("plateCount");
+if (plateCountEl) plateCountEl.textContent = NUM_WORDS[PROJECTS.length] || String(PROJECTS.length);
 
 function figMarkup(p){
   const inner = p.image
     ? `<img src="${p.image}" alt="${p.title}" loading="lazy">`
     : `<div class="plate__ph"><span class="g">§</span><span class="t">Add figure or animation</span></div>`;
   return `<div class="plate__fig">${inner}</div>`;
+}
+
+function tagsMarkup(p){
+  return (p.tags && p.tags.length)
+    ? `<div class="plate__tags">${p.tags.map(t => `<span class="plate__keyword">${t}</span>`).join("")}</div>`
+    : "";
 }
 
 PROJECTS.forEach((p, i) => {
@@ -371,6 +397,7 @@ PROJECTS.forEach((p, i) => {
       </div>
       <h3 class="plate__title">${p.title}</h3>
       <p class="plate__tag">${p.tagline}</p>
+      ${tagsMarkup(p)}
       <span class="plate__cue">Read summary</span>
     </div>`;
   btn.addEventListener("click", () => openModal(i, btn));
@@ -383,6 +410,7 @@ const rxFig = document.getElementById("rxFig");
 const rxStatus = document.getElementById("rxStatus");
 const rxTitle = document.getElementById("rxTitle");
 const rxAuthors = document.getElementById("rxAuthors");
+const rxTags = document.getElementById("rxTags");
 const rxSummary = document.getElementById("rxSummary");
 const rxLinks = document.getElementById("rxLinks");
 const rxClose = document.getElementById("rxClose");
@@ -399,6 +427,9 @@ function openModal(i, trigger){
   rxStatus.textContent = p.status;
   rxTitle.innerHTML = p.sub ? `${p.title} <span style="font-weight:400;color:var(--ink-muted)">— ${p.sub}</span>` : p.title;
   rxAuthors.innerHTML = p.authors.join(", ");
+  rxTags.innerHTML = (p.tags && p.tags.length)
+    ? p.tags.map(t => `<span class="plate__keyword">${t}</span>`).join("")
+    : "";
 
   let body = p.summary.map(t => `<p>${t}</p>`).join("");
   if (p.note) body += `<div class="rx__note">${p.note}</div>`;
