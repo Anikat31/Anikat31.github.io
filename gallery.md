@@ -122,7 +122,7 @@ nav: gallery
           Your browser doesn't support embedded video.
         </video>
       </div>
-      <figcaption class="gcap">2D Turbulence Simulation · 2026</figcaption>
+      <figcaption class="gcap">2D Burgers flow with tracers · 2026</figcaption>
     </figure>
 
 
