@@ -97,7 +97,7 @@ nav: gallery
       <a class="gframe" href="{{ '/assets/ICTS_morning.jpg' | relative_url }}" target="_blank" rel="noopener" style="display:block">
         <img src="{{ '/assets/ICTS_morning.jpg' | relative_url }}" alt="Mornings @ ICTS" loading="lazy">
       </a>
-      <figcaption class="gcap">ICTS Fluid Dynamics Group · 2025</figcaption>
+      <figcaption class="gcap"> Mornings at ICTS 2025</figcaption>
     </figure>
 
   </div>
