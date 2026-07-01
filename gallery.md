@@ -93,6 +93,17 @@ nav: gallery
       <figcaption class="gcap">ICTS Fluid Dynamics Group · 2025</figcaption>
     </figure>
 
+        <figure class="gitem">
+      <a class="gframe" href="{{ '/assets/ICTS_morning.jpg' | relative_url }}" target="_blank" rel="noopener" style="display:block">
+        <img src="{{ '/assets/ICTS_morning.jpg' | relative_url }}" alt="Mornings @ ICTS" loading="lazy">
+      </a>
+      <figcaption class="gcap">ICTS Fluid Dynamics Group · 2025</figcaption>
+    </figure>
+
+  </div>
+
+  <div class="ggrid">
+
     <figure class="gitem">
       <div class="gframe">
         <video controls playsinline preload="metadata" style="width:100%;display:block">
@@ -103,7 +114,20 @@ nav: gallery
       <figcaption class="gcap">2D Turbulence Simulation · 2026</figcaption>
     </figure>
 
+
+    <figure class="gitem">
+      <div class="gframe">
+        <video controls playsinline preload="metadata" style="width:100%;display:block">
+          <source src="{{ '/assets/videos/stochastic_tracer.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <figcaption class="gcap">2D Turbulence Simulation · 2026</figcaption>
+    </figure>
+
+
   </div>
+
 
   <footer class="gfoot">
     <span>Updated · July 2026</span>

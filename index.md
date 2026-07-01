@@ -563,62 +563,6 @@ nav: home
     </div>
   </section>
 
-  <!-- ==================== METHODS & TOOLKIT ==================== -->
-  <section class="section">
-    <h2 class="section-title">Methods &amp; Toolkit</h2>
-    <div class="method-grid">
-
-      <div class="method-card">
-        <div class="method-glyph">∇</div>
-        <div class="method-body">
-          <div class="method-title">Pseudospectral Methods</div>
-          <div class="method-desc">Fourier-space solvers for the Navier&ndash;Stokes, Burgers, and Boussinesq equations, with dealiasing and shell-averaged spectral diagnostics.</div>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-glyph">∮</div>
-        <div class="method-body">
-          <div class="method-title">Structure-Preserving Integrators</div>
-          <div class="method-desc">Lawson and integrating-factor Runge&ndash;Kutta schemes (IFRK2/4) that respect manifold constraints and stiff linear propagators exactly.</div>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-glyph">λ</div>
-        <div class="method-body">
-          <div class="method-title">JAX &amp; GPU Computing</div>
-          <div class="method-desc">Differentiable, vectorised simulation pipelines built with vmap and lax.scan, run at ensemble scale on GPU hardware.</div>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-glyph">Σ</div>
-        <div class="method-body">
-          <div class="method-title">Random Matrix Theory</div>
-          <div class="method-desc">Spectral statistics of disordered coupling ensembles &mdash; Gaussian and Lorentzian &mdash; underlying synchronisation thresholds.</div>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-glyph">ξ</div>
-        <div class="method-body">
-          <div class="method-title">Stochastic Processes</div>
-          <div class="method-desc">Noise-driven dynamics on manifolds and in turbulent fields, from tangent-space projections to Ornstein&ndash;Uhlenbeck forcing.</div>
-        </div>
-      </div>
-
-      <div class="method-card">
-        <div class="method-glyph">α</div>
-        <div class="method-body">
-          <div class="method-title">Multifractal Analysis</div>
-          <div class="method-desc">Structure functions and singularity spectra (Chhabra&ndash;Jensen and partition-function methods) for intermittent, dissipative fields.</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <!-- ==================== PUBLICATIONS ==================== -->
   <section class="section">
     <h2 class="section-title">Publications &amp; Preprints</h2>
