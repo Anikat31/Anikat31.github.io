@@ -1,768 +1,459 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Machine Learning - Deep Learning - Reinforcement Learning.</title><meta name="data-notion-page-icon" content="/icons/activity_gray.svg"/><link rel="icon" href="https://app.notion.com/icons/activity_gray.svg"/><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-/* Override strong tags inside headings to maintain consistent weight */
-h1 strong,
-h2 strong,
-h3 strong {
-	font-weight: 600;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 10px;
-	padding: 1rem;
-}
-
-/* For default-background callouts, render the border outline. */
-.callout.block-color-default_background {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-figure,
-aside,
-details {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-
-	table.collection-content {
-		width: 100%;
-		table-layout: fixed;
-	}
-
-	table.collection-content th,
-	table.collection-content td {
-		overflow-wrap: anywhere;
-	}
-
-	table.collection-content td > .user,
-	table.collection-content td > time {
-		white-space: pre-wrap;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content-wrapper {
-	overflow-x: auto;
-}
-
-@media only print {
-	.collection-content-wrapper {
-		overflow-x: visible;
-	}
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.collection-content td {
-	white-space: pre-wrap;
-	word-break: break-word;
-}
-
-.column-list {
-	display: flex;
-	gap: 46px;
-}
-
-.column {
-	min-width: 0;
-	overflow: hidden;
-}
-
-.column > *:first-child {
-	margin-top: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding-inline: 0.125rem;
-	padding-block: 0.375rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-table {
-	border-collapse: collapse;
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol.numbered-list.numbered-list-digits-2 {
-	padding-inline-start: 2em;
-}
-
-ol.numbered-list.numbered-list-digits-3plus {
-	padding-inline-start: 2.4em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-/*
- * Render emoji icons using a ::before pseudo-element to keep the glyph
- * out of the DOM textContent traversal. This avoids double-rendering icons
- * in callouts and page titles.
- * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
- * flag as a duplicate tag after codegen.
- */
-.icon[data-emoji]::before {
-	content: attr(data-emoji);
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.callout img.notion-static-icon {
-	width: 1em;
-	height: 1em;
-}
-
-.callout p {
-	margin: 0;
-}
-
-.callout h1,
-.callout h2,
-.callout h3 {
-	margin: 0 0 0.6rem;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	margin-right: 0.4em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-blockquote.quote-large {
-	font-size: 1.25em;
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.tab {
-	margin: 1.25em 0;
-	padding-inline: 1rem;
-	border: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(44, 44, 43, 1);
-}
-.highlight-gray {
-	color: rgba(125, 122, 117, 1);
-	fill: rgba(125, 122, 117, 1);
-}
-.highlight-brown {
-	color: rgba(159, 118, 90, 1);
-	fill: rgba(159, 118, 90, 1);
-}
-.highlight-orange {
-	color: rgba(210, 123, 45, 1);
-	fill: rgba(210, 123, 45, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 148, 52, 1);
-	fill: rgba(203, 148, 52, 1);
-}
-.highlight-teal {
-	color: rgba(80, 148, 110, 1);
-	fill: rgba(80, 148, 110, 1);
-}
-.highlight-blue {
-	color: rgba(56, 125, 201, 1);
-	fill: rgba(56, 125, 201, 1);
-}
-.highlight-purple {
-	color: rgba(154, 107, 180, 1);
-	fill: rgba(154, 107, 180, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(207, 81, 72, 1);
-	fill: rgba(207, 81, 72, 1);
-}
-.highlight-default_background {
-	color: rgba(44, 44, 43, 1);
-}
-.highlight-gray_background {
-	background: rgba(42, 28, 0, 0.07);
-}
-.highlight-brown_background {
-	background: rgba(139, 46, 0, 0.086);
-}
-.highlight-orange_background {
-	background: rgba(224, 101, 1, 0.129);
-}
-.highlight-yellow_background {
-	background: rgba(211, 168, 0, 0.137);
-}
-.highlight-teal_background {
-	background: rgba(0, 100, 45, 0.09);
-}
-.highlight-blue_background {
-	background: rgba(0, 124, 215, 0.094);
-}
-.highlight-purple_background {
-	background: rgba(102, 0, 178, 0.078);
-}
-.highlight-pink_background {
-	background: rgba(197, 0, 93, 0.086);
-}
-.highlight-red_background {
-	background: rgba(223, 22, 0, 0.094);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(125, 122, 117, 1);
-	fill: rgba(125, 122, 117, 1);
-}
-.block-color-brown {
-	color: rgba(159, 118, 90, 1);
-	fill: rgba(159, 118, 90, 1);
-}
-.block-color-orange {
-	color: rgba(210, 123, 45, 1);
-	fill: rgba(210, 123, 45, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 148, 52, 1);
-	fill: rgba(203, 148, 52, 1);
-}
-.block-color-teal {
-	color: rgba(80, 148, 110, 1);
-	fill: rgba(80, 148, 110, 1);
-}
-.block-color-blue {
-	color: rgba(56, 125, 201, 1);
-	fill: rgba(56, 125, 201, 1);
-}
-.block-color-purple {
-	color: rgba(154, 107, 180, 1);
-	fill: rgba(154, 107, 180, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(207, 81, 72, 1);
-	fill: rgba(207, 81, 72, 1);
-}
-.block-color-default_background {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray_background {
-	background: rgba(240, 239, 237, 1);
-}
-.block-color-brown_background {
-	background: rgba(245, 237, 233, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 235, 222, 1);
-}
-.block-color-yellow_background {
-	background: rgba(249, 243, 220, 1);
-}
-.block-color-teal_background {
-	background: rgba(232, 241, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(229, 242, 252, 1);
-}
-.block-color-purple_background {
-	background: rgba(243, 235, 249, 1);
-}
-.block-color-pink_background {
-	background: rgba(250, 233, 241, 1);
-}
-.block-color-red_background {
-	background: rgba(252, 233, 231, 1);
-}
-.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
-.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
-.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
-.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
-.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
-.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
-.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
-.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
-.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
-.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="68582c16-66c4-4b5a-abc1-68578587b384" class="page serif" data-notion-page-icon="/icons/activity_gray.svg"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon notion-static-icon" src="https://app.notion.com/icons/activity_gray.svg"/></div><h1 class="page-title" dir="auto"><strong>Machine Learning - Deep Learning - Reinforcement Learning.</strong></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="7914400c-ecb9-40e1-9c78-f9319305585c" class="" dir="auto">
-</p><figure id="b3ce3911-24fb-46e8-832b-6d84eb364824" class="link-to-page"><a href="Machine%20Learning%20-%20Deep%20Learning%20-%20Reinforcement%20L/Linear%20And%20Logistic%20Regression%20b3ce391124fb46e8832b6d84eb364824.html" data-notion-page-id="b3ce3911-24fb-46e8-832b-6d84eb364824" data-notion-space-id="a1859e2a-53bb-468e-8ade-891da9340e9f"><img class="icon notion-static-icon" src="https://app.notion.com/icons/science_gray.svg"/>Linear And Logistic Regression</a></figure><figure id="05b7d47d-b609-4f7f-b365-327fb94955f5" class="link-to-page"><a href="Machine%20Learning%20-%20Deep%20Learning%20-%20Reinforcement%20L/Generalised%20Linear%20Models%2005b7d47db6094f7fb365327fb94955f5.html" data-notion-page-id="05b7d47d-b609-4f7f-b365-327fb94955f5" data-notion-space-id="a1859e2a-53bb-468e-8ade-891da9340e9f"><img class="icon notion-static-icon" src="https://app.notion.com/icons/mathematics_gray.svg"/>Generalised Linear Models</a></figure><figure id="346ec478-9101-4867-b01c-248e8430ea71" class="link-to-page"><a href="Machine%20Learning%20-%20Deep%20Learning%20-%20Reinforcement%20L/Generative%20Learning%20Algorithms%20346ec47891014867b01c248e8430ea71.html" data-notion-page-id="346ec478-9101-4867-b01c-248e8430ea71" data-notion-space-id="a1859e2a-53bb-468e-8ade-891da9340e9f"><img class="icon notion-static-icon" src="https://app.notion.com/icons/upload_gray.svg"/>Generative Learning Algorithms</a></figure><figure id="aac11cab-9f33-4c1c-be3b-57ca3ddbed49" class="link-to-page"><a href="Machine%20Learning%20-%20Deep%20Learning%20-%20Reinforcement%20L/Kernel%20Methods%20aac11cab9f334c1cbe3b57ca3ddbed49.html" data-notion-page-id="aac11cab-9f33-4c1c-be3b-57ca3ddbed49" data-notion-space-id="a1859e2a-53bb-468e-8ade-891da9340e9f"><img class="icon notion-static-icon" src="https://app.notion.com/icons/share_gray.svg"/>Kernel Methods</a></figure><figure id="156af9ea-412a-4bfe-a612-4d59f1fad28e" class="link-to-page"><a href="Machine%20Learning%20-%20Deep%20Learning%20-%20Reinforcement%20L/Support%20Vector%20Machines%20156af9ea412a4bfea6124d59f1fad28e.html" data-notion-page-id="156af9ea-412a-4bfe-a612-4d59f1fad28e" data-notion-space-id="a1859e2a-53bb-468e-8ade-891da9340e9f"><img class="icon notion-static-icon" src="https://app.notion.com/icons/dependency_gray.svg"/>Support Vector Machines</a></figure><figure id="3737567c-3fd2-802e-981d-f449ca073122" class="link-to-page"><a href="Machine%20Learning%20-%20Deep%20Learning%20-%20Reinforcement%20L/Deep%20Learning%203737567c3fd2802e981df449ca073122.html" data-notion-page-id="3737567c-3fd2-802e-981d-f449ca073122" data-notion-space-id="a1859e2a-53bb-468e-8ade-891da9340e9f"><img class="icon notion-static-icon" src="https://app.notion.com/icons/branch-merge_gray.svg"/>Deep Learning</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+---
+layout: raw
+title: Research
+description: "Research plates on turbulence, stochastic dynamics, and synchronisation from Anikat Kankaria's work at ICTS-TIFR."
+nav: research
+---
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research · Anikat Kankaria</title>
+{% seo title=false %}
+<style>body{margin:0;background:#f7f9fc}</style>
+</head>
+<body>
+
+{% include nav.html %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap');
+
+  .rpg{
+    --paper:#f7f9fc; --ink:#1a2332; --ink-soft:#3a4a5e; --ink-muted:#6b7d92;
+    --ink-faint:#a5b3c4; --navy:#1e3a6b; --navy-l:#2d5a8a; --navy-pale:#9fb4d0;
+    --rule:#c8d3e2; --rule-soft:#e2e8f0; --highlight:#ebf0f7; --highlight-warm:#e6eef8;
+    font-family:"Cormorant Garamond",Georgia,serif;
+    color:var(--ink); background:var(--paper);
+    max-width:1200px; margin:0 auto; padding:56px 56px 96px;
+    line-height:1.7;
+  }
+
+  /* ---------- header ---------- */
+  .rhead{margin-bottom:14px}
+  .rhead h1{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2.6rem;font-weight:600;letter-spacing:.005em;
+    margin:0;line-height:1.05;color:var(--ink);
+  }
+  .rhead .rule{width:54px;height:1.5px;background:var(--navy);margin:16px 0 18px}
+  .rhead p{
+    font-family:"DM Sans",sans-serif;font-size:.92rem;font-weight:300;
+    color:var(--ink-soft);max-width:60ch;line-height:1.75;margin:0;
+  }
+  .rhead .cue{
+    display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+    font-family:"DM Sans",sans-serif;font-size:.7rem;font-weight:500;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);
+  }
+  .rhead .cue::before{
+    content:'';width:18px;height:18px;border-radius:50%;
+    border:1.5px solid var(--navy-pale);
+    background:radial-gradient(circle at 50% 42%, var(--navy) 0 2.5px, transparent 3px);
+  }
+
+  /* ---------- plate grid ---------- */
+  .plates{
+    margin-top:44px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:30px;
+  }
+  .plate{
+    appearance:none;text-align:left;cursor:pointer;
+    background:var(--paper);border:1px solid var(--rule-soft);border-radius:4px;
+    padding:0;overflow:hidden;display:flex;flex-direction:column;
+    transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+    font:inherit;color:inherit;
+  }
+  .plate:hover,.plate:focus-visible{
+    transform:translateY(-3px);
+    border-color:var(--rule);
+    box-shadow:0 14px 40px rgba(15,30,55,.14);
+    outline:none;
+  }
+  .plate:focus-visible{box-shadow:0 0 0 2px var(--navy),0 14px 40px rgba(15,30,55,.14)}
+
+  .plate__fig{
+    position:relative;aspect-ratio:16/10;width:100%;overflow:hidden;
+    background:#0f1d37;
+  }
+  .plate__fig img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .5s ease,filter .3s ease;
+    filter:saturate(1.02) contrast(1.02);
+  }
+  .plate:hover .plate__fig img{transform:scale(1.045)}
+
+  /* placeholder when no figure is supplied yet */
+  .plate__ph{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:9px;text-align:center;
+    background:
+      repeating-linear-gradient(45deg,#eef3fa 0 13px,#e6eef7 13px 26px);
+    color:var(--navy);
+  }
+  .plate__ph .g{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:2.6rem;line-height:1;color:var(--navy-pale);
+  }
+  .plate__ph .t{
+    font-family:"DM Sans",sans-serif;font-size:.64rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--navy-l);
+  }
+
+  /* thin accent rule between figure and text */
+  .plate__fig::after{
+    content:'';position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:var(--navy);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s ease;
+  }
+  .plate:hover .plate__fig::after,.plate:focus-visible .plate__fig::after{transform:scaleX(1)}
+
+  .plate__body{padding:18px 22px 20px;display:flex;flex-direction:column;gap:9px}
+  .plate__meta{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .plate__no{
+    font-family:"DM Sans",sans-serif;font-size:.64rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--navy);
+  }
+  .plate__status{
+    font-family:"DM Sans",sans-serif;font-size:.64rem;font-weight:600;
+    letter-spacing:.09em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+  }
+  .plate__status::before{content:'';width:6px;height:6px;border-radius:50%}
+  .plate__status.pub{color:var(--navy-l)}
+  .plate__status.pub::before{background:var(--navy)}
+  .plate__status.prep{color:var(--ink-soft)}
+  .plate__status.prep::before{background:var(--navy-pale)}
+  .plate__title{
+    font-family:"Cormorant Garamond",serif;font-size:1.34rem;font-weight:600;
+    line-height:1.3;color:var(--ink);margin:0;
+  }
+  .plate__tag{
+    font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:400;
+    color:var(--ink-soft);line-height:1.6;margin:0;
+  }
+  .plate__cue{
+    margin-top:6px;
+    font-family:"DM Sans",sans-serif;font-size:.68rem;font-weight:600;
+    letter-spacing:.07em;text-transform:uppercase;color:var(--navy);
+    display:inline-flex;align-items:center;gap:7px;
+  }
+  .plate__cue::after{content:'\2192';transition:transform .2s ease}
+  .plate:hover .plate__cue::after,.plate:focus-visible .plate__cue::after{transform:translateX(4px)}
+
+  .plate__tags{display:flex;flex-wrap:wrap;gap:6px;margin:1px 0 2px}
+  .plate__keyword{
+    font-family:"DM Sans",sans-serif;font-size:.62rem;font-weight:400;
+    letter-spacing:.03em;color:var(--ink-soft);
+    background:var(--highlight);border:1px solid var(--rule-soft);
+    padding:3px 9px;border-radius:1px;
+  }
+
+  /* ---------- modal ---------- */
+  .rx{
+    position:fixed;inset:0;z-index:120;display:none;
+    align-items:flex-start;justify-content:center;
+    padding:48px 20px;overflow-y:auto;
+    background:rgba(247,249,252,.93);backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .rx.open{display:flex;animation:rxfade .22s ease both}
+  @keyframes rxfade{
+    from{opacity:0;backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0)}
+    to{opacity:1;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  }
+  .rx__panel{
+    background:#fff;max-width:760px;width:100%;
+    border-radius:6px;border:1px solid var(--rule);
+    box-shadow:0 30px 80px rgba(10,20,40,.4);
+    overflow:hidden;animation:rxin .26s ease;
+  }
+  @keyframes rxin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .rx__fig{position:relative;width:100%;aspect-ratio:16/9;background:#0f1d37}
+  .rx__fig img{width:100%;height:100%;object-fit:cover;display:block}
+  .rx__close{
+    position:absolute;top:14px;right:14px;
+    width:34px;height:34px;border-radius:50%;cursor:pointer;
+    border:none;background:rgba(15,29,55,.6);color:#fff;
+    font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center;
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+    transition:background .2s;
+  }
+  .rx__close:hover{background:rgba(15,29,55,.85)}
+  .rx__body{padding:30px 38px 36px}
+  .rx__status{
+    font-family:"DM Sans",sans-serif;font-size:.62rem;font-weight:500;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);
+    display:inline-flex;align-items:center;gap:7px;margin-bottom:12px;
+  }
+  .rx__status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--navy)}
+  .rx__title{
+    font-family:"Cormorant Garamond",serif;font-size:1.85rem;font-weight:600;
+    line-height:1.25;color:var(--ink);margin:0 0 10px;
+  }
+  .rx__authors{
+    font-family:"DM Sans",sans-serif;font-size:.78rem;color:var(--ink-muted);
+    line-height:1.6;margin:0 0 14px;
+  }
+  .rx__authors .me{color:var(--ink);font-weight:500}
+  .rx__tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
+  .rx__summary p{
+    font-family:"Cormorant Garamond",serif;font-size:1.12rem;line-height:1.75;
+    color:var(--ink-soft);margin:0 0 14px;
+  }
+  .rx__summary sub{font-size:.7em}
+  .rx__note{
+    font-family:"DM Sans",sans-serif;font-size:.72rem;font-style:normal;
+    color:var(--ink-muted);background:var(--highlight);
+    border-left:2px solid var(--navy-pale);
+    padding:9px 14px;border-radius:2px;margin-top:6px;
+  }
+  .rx__links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .rx__links a{
+    font-family:"DM Sans",sans-serif;font-size:.7rem;font-weight:500;
+    letter-spacing:.07em;text-transform:uppercase;text-decoration:none;
+    color:var(--navy-l);border:1px solid var(--rule);
+    padding:9px 16px;border-radius:2px;
+    display:inline-flex;align-items:center;gap:6px;transition:all .2s;
+  }
+  .rx__links a:hover{background:var(--highlight-warm);border-color:var(--navy-l);color:var(--navy)}
+  .rx__links a::after{content:'↗';font-size:.9em}
+
+  .rfoot{
+    margin-top:80px;padding-top:24px;border-top:1px solid var(--rule-soft);
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:"DM Sans",sans-serif;font-size:.66rem;color:var(--ink-faint);
+    letter-spacing:.06em;
+  }
+  .rfoot .crest{font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.4em;color:var(--navy-pale);letter-spacing:.3em}
+
+  @media (max-width:760px){
+    .rpg{padding:36px 22px 72px}
+    .rhead h1{font-size:2rem}
+    .plates{grid-template-columns:1fr;gap:22px}
+    .rx{padding:0}
+    .rx__panel{min-height:100%;border-radius:0;border:none}
+    .rx__body{padding:24px 22px 30px}
+    .rx__title{font-size:1.5rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .plate,.plate__fig img,.plate__fig::after,.plate__cue::after,.rx.open,.rx__panel{transition:none;animation:none}
+  }
+</style>
+
+<main class="rpg">
+  <header class="rhead">
+    <h1>Research</h1>
+    <div class="rule"></div>
+    <p>A set of <span id="plateCount">four</span> plates from ongoing and published work on turbulence, stochastic
+       dynamics, and synchronisation. Each is a figure from the work itself &mdash;
+       open one to read what it shows.</p>
+    <span class="cue">Click a plate to read its summary</span>
+  </header>
+
+  <div class="plates" id="plates"></div>
+
+  <footer class="rfoot">
+    <span>Updated · July 2026</span>
+    <span class="crest">· · ·</span>
+    <span>Bengaluru · India</span>
+  </footer>
+</main>
+
+<!-- ===================== MODAL ===================== -->
+<div class="rx" id="rx" role="dialog" aria-modal="true" aria-labelledby="rxTitle">
+  <div class="rx__panel" role="document">
+    <div class="rx__fig" id="rxFig"></div>
+    <div class="rx__body">
+      <div class="rx__status" id="rxStatus"></div>
+      <h2 class="rx__title" id="rxTitle"></h2>
+      <p class="rx__authors" id="rxAuthors"></p>
+      <div class="rx__tags" id="rxTags"></div>
+      <div class="rx__summary" id="rxSummary"></div>
+      <div class="rx__links" id="rxLinks"></div>
+    </div>
+    <button class="rx__close" id="rxClose" aria-label="Close summary">×</button>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   EDIT HERE.  One entry per research work.
+   - image : path under /assets/research/ (a .png, .jpg, or .gif).
+             Leave as "" to show a styled placeholder panel.
+   - To add an animation, just drop a .gif into assets/research/
+     and point `image` at it.
+   - summary : array of paragraphs (HTML allowed, e.g. <sub>I</sub>).
+   - note    : optional small caption shown under the summary.
+   - links   : [{label, url}]
+   ============================================================ */
+const PROJECTS = [
+  {
+    image: "/assets/research/trap_escape_particles.png",
+    status: "Preprint · arXiv",
+    statusKind: "pub",
+    title: "Shock Trapping and Inertial Escape",
+    sub: "Dust-particle clustering in compressible turbulence",
+    tagline: "How inertial grains pile into shocks — and break free.",
+    tags: ["Compressible Turbulence", "Burgers Equation", "Correlation Dimension"],
+    authors: ['<span class="me">Anikat Kankaria</span>', 'Samriddhi Sankar Ray'],
+    summary: [
+      "How do inertial dust grains organise themselves in a flow riddled with shocks? Using the two-dimensional, stochastically forced Burgers equation as a clean model of compressible turbulence, this work follows particles across a wide range of Stokes numbers.",
+      "When inertia is small, grains are caught at shock fronts and collapse into nearly singular clusters, with the correlation dimension dropping toward zero. As inertia grows, particles repeatedly cross shocks in a trap-and-escape cycle and the motion crosses over to a quasi-ballistic regime.",
+      "Through the intermediate range, density fluctuations decay as a power law in the Stokes number and the coarse-grained density turns scale-free. The picture is qualitatively unlike clustering in incompressible turbulence and bears directly on where dust concentrates in shock-rich settings such as protoplanetary discs."
+    ],
+    links: [
+      {label:"arXiv:2512.07164", url:"https://arxiv.org/abs/2512.07164"},
+      {label:"PDF", url:"https://arxiv.org/pdf/2512.07164"}
+    ]
+  },
+  {
+    image: "/assets/research/dissp.png",
+    status: "Preprint · arXiv",
+    statusKind: "pub",
+    title: "Reduction of Triadic Interactions",
+    sub: "Suppressing intermittency and anomalous dissipation",
+    tagline: "Cutting triads from Navier–Stokes, one by one.",
+    tags: ["Navier–Stokes", "Triadic Decimation", "Multifractality"],
+    authors: ['<span class="me">Anikat Kankaria</span>','Ritwik Mukherjee','Sugan Durai Murugan','Marco Edoardo Rosti','Samriddhi Sankar Ray'],
+    summary: [
+      "Which part of the Navier–Stokes nonlinearity is actually responsible for intermittency and anomalous dissipation? This study answers by operating on the equations themselves — systematically thinning the network of triadic interactions in Fourier space — using direct numerical simulations of both fractally and homogeneously decimated dynamics.",
+      "As more triads are removed, intermittency steadily weakens and, most strikingly, the mean dissipation rate vanishes in the high-Reynolds-number limit. Structure-function exponents relax to their dimensional (non-intermittent) values, the multifractal spectrum narrows, and the velocity field grows smoother as its analyticity strip widens.",
+      "The conclusion: anomalous dissipation is not an automatic property of Navier–Stokes, but instead needs the full combinatorial richness of its triad interactions."
+    ],
+    links: [
+      {label:"arXiv:2603.19180", url:"https://arxiv.org/abs/2603.19180"},
+      {label:"PDF", url:"https://arxiv.org/pdf/2603.19180"}
+    ]
+  },
+  {
+    image: "/assets/research/dissp_field_voigt.png",
+    status: "Manuscript in preparation",
+    statusKind: "prep",
+    title: "Voigt-Regularised Turbulence",
+    sub: "Dynamical slowdown, bottlenecks, and multiscaling",
+    tagline: "What a smoothed inertial term costs the cascade.",
+    tags: ["Voigt Regularisation", "Energy Flux", "Shell Models"],
+    authors: ['<span class="me">Anikat Kankaria</span>','Bikram Pal','Samriddhi Sankar Ray'],
+    summary: [
+      "The Voigt regularisation replaces the inertial term of the Navier–Stokes and shell-model dynamics with a smoothed version, yielding a globally well-posed system that still aims to reproduce turbulent statistics.",
+      "This work asks what that regularisation changes: how the energy flux scales, where the regularisation sets in — a crossover wavenumber k<sub>I</sub> separating the Navier–Stokes-like cascade from the Voigt-modified scales — and how it reshapes intermittency and multiscaling. The emerging picture is one of dynamical slowdown and a spectral bottleneck near the crossover."
+    ],
+    note: "Draft summary — manuscript in preparation. Refine before publishing.",
+    links: []
+  },
+  {
+    image: "",
+    status: "Manuscript in preparation",
+    statusKind: "prep",
+    title: "Noise in the D-dimensional Kuramoto Model",
+    sub: "Observational and environmental fluctuations",
+    tagline: "Two kinds of noise, one synchronisation transition.",
+    tags: ["Kuramoto–Lohe Model", "D-Sphere Synchronisation", "Critical Coupling"],
+    authors: ['<span class="me">Anikat Kankaria</span>','Sarthak Chandra'],
+    summary: [
+      "Real oscillator networks are noisy in at least two distinct ways: the coupling or measurement is corrupted by observational noise, and each unit feels its own environmental fluctuations.",
+      "This project extends the Kuramoto model of synchronisation to D dimensions — oscillators living on spheres, in the Lohe picture — and asks how these two kinds of noise reshape the onset of collective order: where the critical coupling sits, how the order parameter behaves near threshold, and how the dimensionality D enters the transition."
+    ],
+    note: "Draft summary — manuscript in preparation. Refine before publishing.",
+    links: []
+  }
+];
+
+/* ---------- render plates ---------- */
+const ROMAN = ["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+const NUM_WORDS = ["zero","one","two","three","four","five","six","seven","eight","nine","ten"];
+const grid = document.getElementById("plates");
+
+const plateCountEl = document.getElementById("plateCount");
+if (plateCountEl) plateCountEl.textContent = NUM_WORDS[PROJECTS.length] || String(PROJECTS.length);
+
+function figMarkup(p){
+  const inner = p.image
+    ? `<img src="${p.image}" alt="${p.title}" loading="lazy">`
+    : `<div class="plate__ph"><span class="g">§</span><span class="t">Add figure or animation</span></div>`;
+  return `<div class="plate__fig">${inner}</div>`;
+}
+
+function tagsMarkup(p){
+  return (p.tags && p.tags.length)
+    ? `<div class="plate__tags">${p.tags.map(t => `<span class="plate__keyword">${t}</span>`).join("")}</div>`
+    : "";
+}
+
+PROJECTS.forEach((p, i) => {
+  const btn = document.createElement("button");
+  btn.className = "plate";
+  btn.setAttribute("aria-haspopup","dialog");
+  btn.innerHTML = `
+    ${figMarkup(p)}
+    <div class="plate__body">
+      <div class="plate__meta">
+        <span class="plate__no">Plate ${ROMAN[i]}</span>
+        <span class="plate__status ${p.statusKind}">${p.status}</span>
+      </div>
+      <h3 class="plate__title">${p.title}</h3>
+      <p class="plate__tag">${p.tagline}</p>
+      ${tagsMarkup(p)}
+      <span class="plate__cue">Read summary</span>
+    </div>`;
+  btn.addEventListener("click", () => openModal(i, btn));
+  grid.appendChild(btn);
+});
+
+/* ---------- modal logic ---------- */
+const rx = document.getElementById("rx");
+const rxFig = document.getElementById("rxFig");
+const rxStatus = document.getElementById("rxStatus");
+const rxTitle = document.getElementById("rxTitle");
+const rxAuthors = document.getElementById("rxAuthors");
+const rxTags = document.getElementById("rxTags");
+const rxSummary = document.getElementById("rxSummary");
+const rxLinks = document.getElementById("rxLinks");
+const rxClose = document.getElementById("rxClose");
+let lastFocus = null;
+
+function openModal(i, trigger){
+  const p = PROJECTS[i];
+  lastFocus = trigger || null;
+
+  rxFig.innerHTML = p.image
+    ? `<img src="${p.image}" alt="${p.title}">`
+    : `<div class="plate__ph"><span class="g">§</span><span class="t">Add figure or animation</span></div>`;
+
+  rxStatus.textContent = p.status;
+  rxTitle.innerHTML = p.sub ? `${p.title} <span style="font-weight:400;color:var(--ink-muted)">— ${p.sub}</span>` : p.title;
+  rxAuthors.innerHTML = p.authors.join(", ");
+  rxTags.innerHTML = (p.tags && p.tags.length)
+    ? p.tags.map(t => `<span class="plate__keyword">${t}</span>`).join("")
+    : "";
+
+  let body = p.summary.map(t => `<p>${t}</p>`).join("");
+  if (p.note) body += `<div class="rx__note">${p.note}</div>`;
+  rxSummary.innerHTML = body;
+
+  rxLinks.innerHTML = p.links && p.links.length
+    ? p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join("")
+    : "";
+
+  rx.classList.add("open");
+  document.body.style.overflow = "hidden";
+  rxClose.focus();
+}
+
+function closeModal(){
+  rx.classList.remove("open");
+  document.body.style.overflow = "";
+  if (lastFocus) lastFocus.focus();
+}
+
+rxClose.addEventListener("click", closeModal);
+rx.addEventListener("click", e => { if (e.target === rx) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && rx.classList.contains("open")) closeModal(); });
+</script>
+
+</body>
+</html>
