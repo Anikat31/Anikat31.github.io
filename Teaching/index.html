@@ -1,0 +1,168 @@
+---
+layout: raw
+title: Teaching
+description: "Notes on machine learning fundamentals, from linear regression through kernel methods, generative models, and deep learning."
+nav: teaching
+---
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching · Anikat Kankaria</title>
+{% seo title=false %}
+<style>body{margin:0;background:#f7f9fc}</style>
+</head>
+<body>
+
+{% include nav.html %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap');
+  .tpg{
+    --paper:#f7f9fc;--ink:#1a2332;--ink-soft:#3a4a5e;--ink-muted:#6b7d92;
+    --ink-faint:#a5b3c4;--navy:#1e3a6b;--navy-pale:#9fb4d0;--rule-soft:#e2e8f0;--rule:#c8d3e2;
+    --highlight:#eef2f8;--highlight-warm:#f4f0e8;
+    font-family:"Cormorant Garamond",Georgia,serif;color:var(--ink);
+    background:var(--paper);max-width:1100px;margin:0 auto;padding:56px 56px 96px;
+  }
+
+  /* ---------- header ---------- */
+  .rhead{margin-bottom:8px}
+  .rhead h1{
+    font-family:"Cormorant Garamond",serif;font-size:2.6rem;font-weight:600;
+    letter-spacing:.005em;margin:0;line-height:1.05;color:var(--ink);
+  }
+  .rhead .rule{width:54px;height:1.5px;background:var(--navy);margin:16px 0 18px}
+  .rhead p{
+    font-family:"DM Sans",sans-serif;font-size:.92rem;font-weight:300;
+    color:var(--ink-soft);max-width:64ch;line-height:1.75;margin:0;
+  }
+
+  /* ---------- note grid ---------- */
+  .note-grid{
+    margin-top:44px;
+    display:grid;grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+  }
+  .note-card{
+    display:block;padding:26px 28px;background:#fff;
+    border:1px solid var(--rule-soft);border-radius:4px;
+    text-decoration:none;color:inherit;
+    box-shadow:0 8px 26px rgba(15,30,55,.06);
+    transition:all .2s ease;position:relative;overflow:hidden;
+  }
+  .note-card::before{
+    content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:var(--navy);opacity:0;transition:opacity .2s;
+  }
+  .note-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 36px rgba(15,30,55,.12);
+    border-color:var(--rule);
+  }
+  .note-card:hover::before{opacity:1}
+  .note-glyph{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--highlight);border:1px solid var(--rule);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.3em;color:var(--navy);margin-bottom:18px;line-height:1;
+  }
+  .note-title{
+    font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-weight:600;
+    color:var(--ink);margin:0 0 8px;line-height:1.2;
+  }
+  .note-desc{
+    font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:300;
+    color:var(--ink-muted);line-height:1.65;margin:0 0 16px;
+  }
+  .note-cue{
+    font-family:"DM Sans",sans-serif;font-size:.66rem;font-weight:600;
+    letter-spacing:.07em;text-transform:uppercase;color:var(--navy);
+    display:inline-flex;align-items:center;gap:7px;
+  }
+  .note-cue::after{content:'\2192';transition:transform .2s ease}
+  .note-card:hover .note-cue::after{transform:translateX(4px)}
+
+  .tfoot{
+    margin-top:72px;padding-top:24px;border-top:1px solid var(--rule-soft);
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:"DM Sans",sans-serif;font-size:.66rem;color:var(--ink-faint);letter-spacing:.06em;
+  }
+  .tfoot .crest{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.4em;color:var(--navy-pale);letter-spacing:.3em}
+
+  @media (max-width:760px){
+    .tpg{padding:36px 22px 72px}
+    .rhead h1{font-size:2rem}
+    .note-grid{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .note-card{transition:none}
+  }
+</style>
+
+<main class="tpg">
+
+  <header class="rhead">
+    <h1>Teaching</h1>
+    <div class="rule"></div>
+    <p>Notes on machine learning fundamentals &mdash; from linear regression through kernel
+       methods, generative models, and a first pass at deep learning.</p>
+  </header>
+
+  <div class="note-grid">
+
+    <a class="note-card" href="{{ '/teaching/linear-and-logistic-regression/' | relative_url }}">
+      <div class="note-glyph">&theta;</div>
+      <h2 class="note-title">Linear and Logistic Regression</h2>
+      <p class="note-desc">Least squares, the normal equations, Newton's method, and the logistic regression model.</p>
+      <span class="note-cue">Read notes</span>
+    </a>
+
+    <a class="note-card" href="{{ '/teaching/generalised-linear-models/' | relative_url }}">
+      <div class="note-glyph">&eta;</div>
+      <h2 class="note-title">Generalised Linear Models</h2>
+      <p class="note-desc">The exponential family, and how Bernoulli and Gaussian assumptions recover logistic and ordinary least-squares regression.</p>
+      <span class="note-cue">Read notes</span>
+    </a>
+
+    <a class="note-card" href="{{ '/teaching/generative-learning-algorithms/' | relative_url }}">
+      <div class="note-glyph">𝒩</div>
+      <h2 class="note-title">Generative Learning Algorithms</h2>
+      <p class="note-desc">Gaussian discriminant analysis and Naive Bayes, from the generative side of classification.</p>
+      <span class="note-cue">Read notes</span>
+    </a>
+
+    <a class="note-card" href="{{ '/teaching/kernel-methods/' | relative_url }}">
+      <div class="note-glyph">&kappa;</div>
+      <h2 class="note-title">Kernel Methods</h2>
+      <p class="note-desc">The kernel trick applied to least squares, and what makes a similarity function a valid kernel.</p>
+      <span class="note-cue">Read notes</span>
+    </a>
+
+    <a class="note-card" href="{{ '/teaching/support-vector-machines/' | relative_url }}">
+      <div class="note-glyph">&gamma;</div>
+      <h2 class="note-title">Support Vector Machines</h2>
+      <p class="note-desc">Functional and geometric margins, the optimal margin classifier, and Lagrangian duality.</p>
+      <span class="note-cue">Read notes</span>
+    </a>
+
+    <a class="note-card" href="{{ '/teaching/deep-learning/' | relative_url }}">
+      <div class="note-glyph">&sigma;</div>
+      <h2 class="note-title">Deep Learning</h2>
+      <p class="note-desc">From logistic regression as a single neuron to full architectures: layers, activations, and parameters.</p>
+      <span class="note-cue">Read notes</span>
+    </a>
+
+  </div>
+
+  <footer class="tfoot">
+    <span>Updated · July 2026</span>
+    <span class="crest">· · ·</span>
+    <span>Bengaluru · India</span>
+  </footer>
+
+</main>
+
+</body>
+</html>
