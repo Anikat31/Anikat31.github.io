@@ -129,6 +129,20 @@ nav: gallery
   </div>
 
 
+
+  <div class="ggrid">
+
+    <figure class="gitem">
+      <a class="gframe" href="{{ '/assets/butterfly_garden.jpg' | relative_url }}" target="_blank" rel="noopener" style="display:block">
+        <img src="{{ '/assets/butterfly_garden.jpg' | relative_url }}" alt="Butterfly Garden Hesseraghatta" loading="lazy">
+      </a>
+      <figcaption class="gcap">Butterfly Garden Hesseraghatta</figcaption>
+    </figure>
+
+  </div>
+
+
+
   <footer class="gfoot">
     <span>Updated · July 2026</span>
     <span class="crest">· · ·</span>
