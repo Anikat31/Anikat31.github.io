@@ -141,34 +141,6 @@ nav: gallery
 
   </div>
 
-  <div class="ggrid">
-
-    <figure class="gitem">
-      <div class="gframe">
-        <video controls playsinline preload="metadata" style="width:100%;display:block">
-          <source src="{{ '/assets/videos/kuramoto_2D_sync_with_order.mp4' | relative_url }}" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
-      </div>
-      <figcaption class="gcap">2D Kuramoto Model Simulation · 2026</figcaption>
-    </figure>
-
-
-    <figure class="gitem">
-      <div class="gframe">
-        <video controls playsinline preload="metadata" style="width:100%;display:block">
-          <source src="{{ '/assets/videos/kuramoto_3D_sphere.mp4' | relative_url }}" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
-      </div>
-      <figcaption class="gcap">3D Kuramoto Model Simulation  · 2026</figcaption>
-    </figure>
-
-
-  </div>
-
-
-
   <footer class="gfoot">
     <span>Updated · July 2026</span>
     <span class="crest">· · ·</span>
