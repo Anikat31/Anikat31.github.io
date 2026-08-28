@@ -583,16 +583,15 @@ nav: home
         <span class="pub-num">3</span>
         <div class="pub-content">
           <div class="pub-title">Dynamical Slowdown, Bottlenecks, and Multiscaling in Voigt-Regularised Turbulence</div>
-          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Bikram Pal, Samriddhi Sankar Ray</div>
-          <span class="pub-status">Manuscript in preparation</span>
+          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Bikram Pal,  Edriss S. Titi and Samriddhi Sankar Ray</div>
+          <a class="pub-link" href="https://arxiv.org/abs/2608.27355" target="_blank" rel="noopener">arXiv:2608.27355 · Aug 2026</a>
         </div>
       </div>
-
       <div class="pub-item">
         <span class="pub-num">2</span>
         <div class="pub-content">
           <div class="pub-title">Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence</div>
-          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti, Samriddhi Sankar Ray</div>
+          <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti and Samriddhi Sankar Ray</div>
           <a class="pub-link" href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener">arXiv:2603.19180 · Mar 2026</a>
         </div>
       </div>
@@ -601,7 +600,7 @@ nav: home
         <span class="pub-num">1</span>
         <div class="pub-content">
           <div class="pub-title">Shock Trapping and Inertial Escape: Dust-Particle Clustering in Compressible Turbulence</div>
-           <div class="pub-authors"><span class="self">Anikat Kankaria</span>, Samriddhi Sankar Ray</div>
+           <div class="pub-authors"><span class="self">Anikat Kankaria</span> and Samriddhi Sankar Ray</div>
           <a class="pub-link" href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">arXiv:2512.07164 · Dec 2025</a>
         </div>
       </div>
