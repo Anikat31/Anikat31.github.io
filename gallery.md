@@ -128,23 +128,38 @@ nav: gallery
 
   </div>
 
-  <div class="ggrid">
+<div class="ggrid">
 
-    <figure class="gitem">
-      <a class="gframe" href="{{ '/assets/IMG_0024.jpeg' | relative_url }}" target="_blank" rel="noopener" style="display:block">
-        <img src="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" alt="ICTS Fluid Dynamics Group, 2025" loading="lazy">
-      </a>
-      <figcaption class="gcap">ICTS Fluid Dynamics Group · 2025</figcaption>
-    </figure>
+  <figure class="gitem">
+    <a class="gframe"
+       href="{{ '/assets/IMG_0024.jpeg' | relative_url }}"
+       target="_blank"
+       rel="noopener"
+       style="display:block">
+      <img
+        src="{{ '/assets/IMG_0024.jpeg' | relative_url }}"
+        alt="ICTS Fluid Dynamics Group"
+        loading="lazy">
+    </a>
+    <figcaption class="gcap">ICTS Fluid Dynamics Group · 2025</figcaption>
+  </figure>
 
-        <figure class="gitem">
-      <a class="gframe" href="{{ '/assets/IMG_0085.gif' | relative_url }}" target="_blank" rel="noopener" style="display:block">
-        <img src="{{ '/assets/ICTS_morning.jpg' | relative_url }}" alt="Mornings @ ICTS" loading="lazy">
-      </a>
-      <figcaption class="gcap"> Mornings at ICTS 2025</figcaption>
-    </figure>
+  <figure class="gitem">
+    <a class="gframe"
+       href="{{ '/assets/IMG_0085.gif' | relative_url }}"
+       target="_blank"
+       rel="noopener"
+       style="display:block">
+      <img
+        src="{{ '/assets/IMG_0085.gif' | relative_url }}"
+        alt="Mornings at ICTS"
+        loading="lazy">
+    </a>
+    <figcaption class="gcap">Mornings at ICTS · 2025</figcaption>
+  </figure>
 
-  </div>
+</div>
+
   
   <div class="ggrid">
 
