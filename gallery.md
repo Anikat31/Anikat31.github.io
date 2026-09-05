@@ -37,6 +37,7 @@ nav: gallery
     color:var(--ink-soft);max-width:60ch;line-height:1.75;margin:0;
   }
 
+
   /* ---------- gallery grid ---------- */
   .ggrid{
     margin-top:40px;
@@ -168,6 +169,36 @@ nav: gallery
     </figure>
 
   </div>
+
+<div class="ggrid">
+
+  <figure class="gitem">
+    <a class="gframe"
+       href="{{ '/assets/kumar_peak.jpeg' | relative_url }}"
+       target="_blank"
+       rel="noopener">
+      <img
+        src="{{ '/assets/kumar_peak.jpeg' | relative_url }}"
+        alt="Kumara Parvat peak"
+        loading="lazy">
+    </a>
+    <figcaption class="gcap">Kumara Parvat Peak · 2026</figcaption>
+  </figure>
+
+  <figure class="gitem">
+    <a class="gframe"
+       href="{{ '/assets/kumar_view.jpeg' | relative_url }}"
+       target="_blank"
+       rel="noopener">
+      <img
+        src="{{ '/assets/kumar_view.jpeg' | relative_url }}"
+        alt="Kumara Parvat view"
+        loading="lazy">
+    </a>
+    <figcaption class="gcap">Kumara Parvat view · 2026</figcaption>
+  </figure>
+
+</div>
 
   <footer class="gfoot">
     <span>Updated · July 2026</span>
