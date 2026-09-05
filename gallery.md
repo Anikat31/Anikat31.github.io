@@ -134,32 +134,29 @@ nav: gallery
     <a class="gframe"
        href="{{ '/assets/IMG_0024.jpeg' | relative_url }}"
        target="_blank"
-       rel="noopener"
-       style="display:block">
+       rel="noopener">
       <img
         src="{{ '/assets/IMG_0024.jpeg' | relative_url }}"
-        alt="ICTS Fluid Dynamics Group"
+        alt="Kudremukh peak"
         loading="lazy">
     </a>
-    <figcaption class="gcap">ICTS Fluid Dynamics Group · 2025</figcaption>
+    <figcaption class="gcap">Kudremukh Peak · 2026</figcaption>
   </figure>
 
   <figure class="gitem">
     <a class="gframe"
-       href="{{ '/assets/IMG_0085.gif' | relative_url }}"
+       href="{{ '/assets/IMG_0085.GIF' | relative_url }}"
        target="_blank"
-       rel="noopener"
-       style="display:block">
+       rel="noopener">
       <img
-        src="{{ '/assets/IMG_0085.gif' | relative_url }}"
-        alt="Mornings at ICTS"
+        src="{{ '/assets/IMG_0085.GIF' | relative_url }}"
+        alt="View from Netravati peak"
         loading="lazy">
     </a>
-    <figcaption class="gcap">Mornings at ICTS · 2025</figcaption>
+    <figcaption class="gcap">Netravati Peak · 2026</figcaption>
   </figure>
 
 </div>
-
   
   <div class="ggrid">
 
