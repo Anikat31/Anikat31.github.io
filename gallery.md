@@ -200,6 +200,33 @@ nav: gallery
 
 </div>
 
+  <div class="ggrid">
+
+    <figure class="gitem">
+      <div class="gframe">
+        <video controls playsinline preload="metadata" style="width:100%;display:block">
+          <source src="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <figcaption class="gcap">2D active nematic Turbulence Simulation · 2026</figcaption>
+    </figure>
+
+
+    <figure class="gitem">
+      <div class="gframe">
+        <video controls playsinline preload="metadata" style="width:100%;display:block">
+          <source src="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <figcaption class="gcap">2D active nematic Turbulence Simulation  order parameter· 2026</figcaption>
+    </figure>
+
+
+  </div>
+  
+
   <footer class="gfoot">
     <span>Updated · July 2026</span>
     <span class="crest">· · ·</span>
