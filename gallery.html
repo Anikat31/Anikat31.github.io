@@ -1,0 +1,121 @@
+---
+layout: site
+title: Gallery
+nav: gallery
+description: "Photos and simulation visuals from Anikat Kankaria's research and the ICTS Fluid Dynamics Group."
+---
+<div class="wrap">
+
+  <header class="page-head">
+    <h1>Gallery</h1>
+    <div class="rule"></div>
+    <p>Snapshots from the group, our simulations, and life at ICTS — updated as the work moves along.</p>
+  </header>
+
+  <div class="gallery">
+
+    <div class="pair">
+      <figure style="--r:1.497">
+        <a href="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" data-full><img src="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" alt="ICTS Fluid Dynamics Group, 2025" width="1800" height="1202" loading="lazy"></a>
+        <figcaption>ICTS Fluid Dynamics Group · 2025</figcaption>
+      </figure>
+      <figure style="--r:1.333">
+        <a href="{{ '/assets/ICTS_morning.jpg' | relative_url }}" data-full><img src="{{ '/assets/gallery/ICTS_morning.jpg' | relative_url }}" alt="A morning at ICTS" width="2000" height="1500" loading="lazy"></a>
+        <figcaption>Mornings at ICTS · 2025</figcaption>
+      </figure>
+    </div>
+
+    <div class="pair">
+      <figure style="--r:1">
+        <video controls playsinline preload="none" width="3000" height="3000" poster="{{ '/assets/videos/posters/2D_Navier_stokes.jpg' | relative_url }}">
+          <source src="{{ '/assets/videos/2D_Navier_stokes.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn’t support embedded video.
+        </video>
+        <figcaption>2D turbulence simulation · 2026</figcaption>
+      </figure>
+      <figure style="--r:1">
+        <video controls playsinline preload="none" width="1600" height="1600" poster="{{ '/assets/videos/posters/stochastic_tracer.jpg' | relative_url }}">
+          <source src="{{ '/assets/videos/stochastic_tracer.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn’t support embedded video.
+        </video>
+        <figcaption>2D Burgers flow with tracers · 2026</figcaption>
+      </figure>
+    </div>
+
+    <div class="pair">
+      <figure style="--r:1.333">
+        <a href="{{ '/assets/IMG_0024.jpeg' | relative_url }}" data-full><img src="{{ '/assets/gallery/IMG_0024.jpg' | relative_url }}" alt="Kudremukh peak" width="2000" height="1500" loading="lazy"></a>
+        <figcaption>Kudremukh Peak · 2026</figcaption>
+      </figure>
+      <figure style="--r:1.333">
+        <img src="{{ '/assets/IMG_0085.GIF' | relative_url }}" alt="View from Netravati peak" width="640" height="480" loading="lazy">
+        <figcaption>Netravati Peak · 2026</figcaption>
+      </figure>
+    </div>
+
+    <figure>
+      <a href="{{ '/assets/butterfly_garden.jpg' | relative_url }}" data-full><img src="{{ '/assets/gallery/butterfly_garden.jpg' | relative_url }}" alt="Butterfly Garden, Hesseraghatta" width="2800" height="562" loading="lazy"></a>
+      <figcaption>Butterfly Garden Hesseraghatta</figcaption>
+    </figure>
+
+    <div class="pair">
+      <figure style="--r:1.333">
+        <a href="{{ '/assets/kumar_peak.jpeg' | relative_url }}" data-full><img src="{{ '/assets/gallery/kumar_peak.jpg' | relative_url }}" alt="Kumara Parvat peak" width="2000" height="1500" loading="lazy"></a>
+        <figcaption>Kumara Parvat Peak · 2026</figcaption>
+      </figure>
+      <figure style="--r:1.778">
+        <a href="{{ '/assets/kumar_view.jpeg' | relative_url }}" data-full><img src="{{ '/assets/kumar_view.jpeg' | relative_url }}" alt="Kumara Parvat view" width="1280" height="720" loading="lazy"></a>
+        <figcaption>Kumara Parvat view · 2026</figcaption>
+      </figure>
+    </div>
+
+    <div class="pair">
+      <figure style="--r:1.187">
+        <video controls playsinline preload="none" width="1282" height="1080" poster="{{ '/assets/videos/posters/nematic_vorticity.jpg' | relative_url }}">
+          <source src="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn’t support embedded video.
+        </video>
+        <figcaption>2D active nematic turbulence simulation · 2026</figcaption>
+      </figure>
+      <figure style="--r:1.191">
+        <video controls playsinline preload="none" width="1286" height="1080" poster="{{ '/assets/videos/posters/nematic_orderparam.jpg' | relative_url }}">
+          <source src="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}" type="video/mp4">
+          Your browser doesn’t support embedded video.
+        </video>
+        <figcaption>2D active nematic turbulence simulation, order parameter · 2026</figcaption>
+      </figure>
+    </div>
+
+  </div>
+
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged photo">
+  <button type="button" aria-label="Close">×</button>
+  <img alt="">
+  <p></p>
+</dialog>
+
+<script>
+  // Click a photo to see it large; without scripting the links open the full image.
+  (function () {
+    var box = document.getElementById('lightbox');
+    if (!box || typeof box.showModal !== 'function') return;
+    var img = box.querySelector('img');
+    var caption = box.querySelector('p');
+    document.querySelectorAll('.gallery a[data-full]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var thumb = link.querySelector('img');
+        img.src = link.getAttribute('href');
+        img.alt = thumb.alt;
+        caption.textContent = link.parentNode.querySelector('figcaption').textContent;
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', function (e) {
+      if (e.target === box || e.target.tagName === 'BUTTON') box.close();
+    });
+    box.addEventListener('close', function () { img.removeAttribute('src'); });
+  })();
+</script>
