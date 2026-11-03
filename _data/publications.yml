@@ -1,0 +1,44 @@
+# Your publication list. The home page is built from this file.
+#
+# To add a paper: copy one entry, paste it at the TOP of "preprints" (newest first),
+# and edit the lines. Keep the quotes. That is all; no page editing needed.
+#
+#   title    paper title
+#   authors  full author list; "Anikat Kankaria" is made bold automatically
+#   arxiv    arXiv number only, e.g. "2608.27355" (links to arxiv.org/abs/...)
+#   date     as you want it shown, e.g. "August 2026"
+#   image    optional small figure (web-sized copy in /assets/research/web/)
+#   image_width / image_height   size of that image in pixels (stops the page jumping)
+#
+# When a manuscript is accepted or posted, move its entry from "in_preparation"
+# to "preprints" and add arxiv, date and image.
+
+preprints:
+  - title: "Dynamical Slowdown, Bottlenecks, and Multiscaling in Voigt-Regularised Turbulence"
+    authors: "Anikat Kankaria, Bikram Pal, Edriss S. Titi and Samriddhi Sankar Ray"
+    arxiv: "2608.27355"
+    date: "August 2026"
+    image: /assets/research/web/dissp_field_voigt.jpg
+    image_width: 1100
+    image_height: 1098
+
+  - title: "Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence"
+    authors: "Anikat Kankaria, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti and Samriddhi Sankar Ray"
+    arxiv: "2603.19180"
+    date: "March 2026"
+    image: /assets/research/web/dissp.jpg
+    image_width: 1100
+    image_height: 1100
+
+  - title: "Shock Trapping and Inertial Escape: Dust-Particle Clustering in Compressible Turbulence"
+    authors: "Anikat Kankaria and Samriddhi Sankar Ray"
+    arxiv: "2512.07164"
+    date: "December 2025"
+    image: /assets/research/web/trap_escape_particles.jpg
+    image_width: 848
+    image_height: 786
+
+in_preparation:
+  - title: "The effect of observational and environmental noise in the D-dimensional Kuramoto-Model"
+    authors: "Anikat Kankaria and Sarthak Chandra"
+    note: "Manuscript in preparation"

@@ -100,44 +100,36 @@ description: "Anikat Kankaria — PhD candidate in Physics at ICTS-TIFR, Bengalu
     <section class="section" id="publications">
       <h2>Publications &amp; preprints</h2>
 
+      {% if site.data.publications.preprints.size > 0 %}
       <h3 class="group">Preprints</h3>
       <ol class="pubs">
-        <li class="pub">
-          <a class="pub-fig" href="https://arxiv.org/abs/2608.27355" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="{{ '/assets/research/web/dissp_field_voigt.jpg' | relative_url }}" alt="" width="1100" height="1098" loading="lazy"></a>
+        {% for p in site.data.publications.preprints %}
+        {% if p.image %}<li class="pub">{% else %}<li class="pub pub--plain">{% endif %}
+          {% if p.image %}<a class="pub-fig" href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="{{ p.image | relative_url }}" alt="" width="{{ p.image_width }}" height="{{ p.image_height }}" loading="lazy"></a>{% endif %}
           <div>
-            <h4 class="pub-title"><a href="https://arxiv.org/abs/2608.27355" target="_blank" rel="noopener">Dynamical Slowdown, Bottlenecks, and Multiscaling in Voigt-Regularised Turbulence</a></h4>
-            <p class="pub-authors"><span class="me">Anikat Kankaria</span>, Bikram Pal, Edriss S. Titi and Samriddhi Sankar Ray</p>
-            <p class="pub-meta"><a href="https://arxiv.org/abs/2608.27355" target="_blank" rel="noopener">arXiv:2608.27355</a> · August 2026</p>
+            <h4 class="pub-title"><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">{{ p.title | escape }}</a></h4>
+            <p class="pub-authors">{{ p.authors | escape | replace: 'Anikat Kankaria', '<span class="me">Anikat Kankaria</span>' }}</p>
+            <p class="pub-meta"><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">arXiv:{{ p.arxiv }}</a> · {{ p.date }}</p>
           </div>
         </li>
-        <li class="pub">
-          <a class="pub-fig" href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="{{ '/assets/research/web/dissp.jpg' | relative_url }}" alt="" width="1100" height="1100" loading="lazy"></a>
-          <div>
-            <h4 class="pub-title"><a href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener">Reduction of Triadic Interactions Suppresses Intermittency and Anomalous Dissipation in Turbulence</a></h4>
-            <p class="pub-authors"><span class="me">Anikat Kankaria</span>, Ritwik Mukherjee, Sugan Durai Murugan, Marco Edoardo Rosti and Samriddhi Sankar Ray</p>
-            <p class="pub-meta"><a href="https://arxiv.org/abs/2603.19180" target="_blank" rel="noopener">arXiv:2603.19180</a> · March 2026</p>
-          </div>
-        </li>
-        <li class="pub">
-          <a class="pub-fig" href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="{{ '/assets/research/web/trap_escape_particles.jpg' | relative_url }}" alt="" width="848" height="786" loading="lazy"></a>
-          <div>
-            <h4 class="pub-title"><a href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">Shock Trapping and Inertial Escape: Dust-Particle Clustering in Compressible Turbulence</a></h4>
-            <p class="pub-authors"><span class="me">Anikat Kankaria</span> and Samriddhi Sankar Ray</p>
-            <p class="pub-meta"><a href="https://arxiv.org/abs/2512.07164" target="_blank" rel="noopener">arXiv:2512.07164</a> · December 2025</p>
-          </div>
-        </li>
+        {% endfor %}
       </ol>
+      {% endif %}
 
+      {% if site.data.publications.in_preparation.size > 0 %}
       <h3 class="group">In preparation</h3>
       <ol class="pubs">
+        {% for p in site.data.publications.in_preparation %}
         <li class="pub pub--plain">
           <div>
-            <h4 class="pub-title">The effect of observational and environmental noise in the D-dimensional Kuramoto-Model</h4>
-            <p class="pub-authors"><span class="me">Anikat Kankaria</span> and Sarthak Chandra</p>
-            <p class="pub-meta">Manuscript in preparation</p>
+            <h4 class="pub-title">{{ p.title | escape }}</h4>
+            <p class="pub-authors">{{ p.authors | escape | replace: 'Anikat Kankaria', '<span class="me">Anikat Kankaria</span>' }}</p>
+            <p class="pub-meta">{{ p.note | default: 'Manuscript in preparation' }}</p>
           </div>
         </li>
+        {% endfor %}
       </ol>
+      {% endif %}
     </section>
 
   </div>
