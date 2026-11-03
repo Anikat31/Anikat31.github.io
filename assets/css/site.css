@@ -20,6 +20,25 @@
   --serif: Georgia, "Times New Roman", serif;
 
   --wrap: 84rem;
+
+  color-scheme: light dark;
+}
+
+/* Dark theme follows the visitor's system setting. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1420;
+    --ink: #e6eaf2;
+    --ink-2: #b8c1d3;
+    --muted: #8d98ae;
+    --line: #262f44;
+    --tint: #182033;
+    --navy: #9db8e8;
+    --link: #7fb0f0;
+    --link-dark: #aacbf7;
+  }
+  a { text-decoration-color: rgba(127, 176, 240, .4); }
+  .pub-fig img, .gallery img, .gallery video { opacity: .94; }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
