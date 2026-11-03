@@ -6,15 +6,15 @@
    ========================================================================== */
 
 :root {
-  --bg: #fff;
-  --ink: #1d2433;
-  --ink-2: #465066;
-  --muted: #6b7487;
-  --line: #e4e8ef;
-  --tint: #f4f6fa;
-  --navy: #1e3a6b;
-  --link: #1f5aa6;
-  --link-dark: #143f7a;
+  --bg: #f3f3f3;
+  --ink: #1f1f1f;
+  --ink-2: #474747;
+  --muted: #6f6f6f;
+  --line: #d9d9d9;
+  --tint: #e9e9e9;
+  --navy: #2e2e2e;
+  --link: #525252;
+  --link-dark: #111111;
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --serif: Georgia, "Times New Roman", serif;
@@ -24,21 +24,39 @@
   color-scheme: light dark;
 }
 
-/* Dark theme follows the visitor's system setting. */
+/* Dark theme: set by the header toggle (remembered), otherwise the device setting. */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1c1c1c;
+  --ink: #e7e7e7;
+  --ink-2: #bababa;
+  --muted: #8f8f8f;
+  --line: #343434;
+  --tint: #262626;
+  --navy: #d4d4d4;
+  --link: #c9c9c9;
+  --link-dark: #ffffff;
+}
+:root[data-theme="dark"] a { text-decoration-color: rgba(201, 201, 201, .4); }
+:root[data-theme="dark"] .pub-fig img,
+:root[data-theme="dark"] .gallery img,
+:root[data-theme="dark"] .gallery video { opacity: .94; }
+
+/* same colours when scripts are off and the device is in dark mode */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f1420;
-    --ink: #e6eaf2;
-    --ink-2: #b8c1d3;
-    --muted: #8d98ae;
-    --line: #262f44;
-    --tint: #182033;
-    --navy: #9db8e8;
-    --link: #7fb0f0;
-    --link-dark: #aacbf7;
+  :root:not([data-theme]) {
+    --bg: #1c1c1c;
+    --ink: #e7e7e7;
+    --ink-2: #bababa;
+    --muted: #8f8f8f;
+    --line: #343434;
+    --tint: #262626;
+    --navy: #d4d4d4;
+    --link: #c9c9c9;
+    --link-dark: #ffffff;
   }
-  a { text-decoration-color: rgba(127, 176, 240, .4); }
-  .pub-fig img, .gallery img, .gallery video { opacity: .94; }
+  :root:not([data-theme]) a { text-decoration-color: rgba(201, 201, 201, .4); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -62,7 +80,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 a {
   color: var(--link);
   text-decoration: underline;
-  text-decoration-color: rgba(31, 90, 166, .35);
+  text-decoration-color: rgba(82, 82, 82, .4);
   text-underline-offset: .18em;
 }
 a:hover { color: var(--link-dark); text-decoration-color: currentColor; }
@@ -88,6 +106,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 
 /* ---------- header and footer ---------- */
 
+
 .site-header { border-bottom: 1px solid var(--line); }
 .site-header .wrap {
   display: flex;
@@ -107,6 +126,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 
 .site-nav ul {
   display: flex;
+  align-items: center;
   gap: 1.7rem;
   margin: 0;
   padding: 0;
@@ -126,6 +146,25 @@ a:focus-visible, video:focus-visible, button:focus-visible {
   color: var(--navy);
   font-weight: 600;
 }
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-left: .3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.theme-toggle:hover { background: var(--tint); color: var(--ink); }
+.theme-toggle svg { width: 1.1rem; height: 1.1rem; }
+.theme-toggle .sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
 
 .site-footer {
   margin-top: 5rem;
@@ -425,6 +464,8 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 
 @media (max-width: 38rem) {
   .wrap { padding-inline: 1.15rem; }
+  .site-nav ul { gap: .9rem; }
+  .theme-toggle { margin-left: 0; }
   .sidebar { grid-template-columns: 6.25rem minmax(0, 1fr); gap: .9rem 1.1rem; }
   .avatar { width: 6.25rem; height: 6.25rem; padding: 3px; }
   .name { font-size: 1.3rem; }
