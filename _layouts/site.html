@@ -25,7 +25,7 @@
       function saved() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
       function apply(t) {
         root.setAttribute('data-theme', t);
-        var src = document.querySelectorAll('.visitors source');
+        var src = document.querySelectorAll('.flagcounter source');
         for (var i = 0; i < src.length; i++) src[i].media = t === 'dark' ? 'all' : 'not all';
       }
       apply(saved() || (mq.matches ? 'dark' : 'light'));

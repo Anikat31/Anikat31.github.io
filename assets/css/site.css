@@ -175,6 +175,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 .site-footer .wrap {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: .3rem 1.5rem;
   padding-block: 1.25rem 2.25rem;
@@ -320,16 +321,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 
 .section h2 + .facts { margin-top: 0; }
 
-.visitors {
-  display: grid;
-  grid-template-columns: 7.25rem minmax(0, 1fr);
-  gap: .5rem 1.25rem;
-  align-items: start;
-  margin-top: .6rem;
-  color: var(--muted);
-  font-size: .93rem;
-}
-.visitors a { display: inline-block; }
+.flagcounter a, .flagcounter img { display: block; }
 
 
 /* ---------- inner pages ---------- */
@@ -471,9 +463,8 @@ a:focus-visible, video:focus-visible, button:focus-visible {
   .name { font-size: 1.3rem; }
   .affil { font-size: .9rem; }
 
-  .facts, .visitors { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .facts dt { margin-top: .7rem; }
-  .visitors { margin-top: 1rem; gap: .4rem; }
   .interests { columns: 1; }
   .pub { grid-template-columns: 4.75rem minmax(0, 1fr); gap: .9rem; }
   .edu { grid-template-columns: minmax(0, 1fr); gap: 0; }
