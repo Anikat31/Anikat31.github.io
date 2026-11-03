@@ -321,6 +321,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 
 .section h2 + .facts { margin-top: 0; }
 
+.flagcounter { margin-top: 1.5rem; }
 .flagcounter a, .flagcounter img { display: block; }
 
 
@@ -445,6 +446,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
   .avatar { width: 8rem; height: 8rem; }
   .name { margin-top: 0; font-size: 1.4rem; }
   .title { margin-top: .6rem; }
+  .flagcounter { grid-column: 1 / -1; margin-top: 0; }
   .side-links {
     grid-column: 1 / -1;
     display: flex;
