@@ -1,0 +1,25 @@
+.reading{max-width:850px;padding-block:35px 60px}
+.back-notes{color:var(--link);font-size:13px}
+.reading>h1{margin:13px 0 25px}
+.page-body{color:var(--ink-2);line-height:1.7;overflow-wrap:break-word}
+.page-body h1,.page-body h2,.page-body h3{color:var(--ink);letter-spacing:-.026em;margin:1.35em 0 .45em}
+.page-body h1{font-size:27px}.page-body h2{font-size:24px}.page-body h3{font-size:20px}
+.page-body p{margin:.62em 0}
+.page-body ul,.page-body ol{padding-left:1.5rem}
+.page-body a{text-decoration:underline;text-underline-offset:3px;color:var(--link)}
+.page-body hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+.page-body pre{overflow-x:auto;background:var(--tint);padding:13px 17px;border-radius:4px;font-size:13px}
+.page-body .equation-container,.page-body .equation,.page-body .katex-display{max-width:100%;overflow-x:auto;overflow-y:hidden}
+.page-body .equation{padding:4px 0}
+.page-body .katex{font-size:1.08em}
+.page-body .pdf-relative-link-path{display:none}
+.page-body .table_of_contents-item{font-size:14px;margin-bottom:4px}.table_of_contents-indent-1{margin-left:15px}.table_of_contents-indent-2{margin-left:30px}
+.page-body nav,.page-body blockquote,.page-body .callout,.page-body .source{padding:13px 18px;margin:14px 0;background:var(--tint);border-left:2px solid var(--line)}
+.page-body figure{margin:14px 0}
+.page-body .bookmark{display:block;font-size:14px;margin:10px 0;overflow-wrap:anywhere}
+.page-body .bookmark-description,.page-body .bookmark-href{color:var(--muted);font-size:12px}
+.page-body table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse}
+.page-body td,.page-body th{padding:7px 10px;border:1px solid var(--line)}
+
+.reading>h1, .page-body h1, .page-body h2, .page-body h3 { font-family: var(--serif); }
+.reading>h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }

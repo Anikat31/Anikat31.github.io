@@ -19,30 +19,11 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-  <script>
-    (function () {
-      var root = document.documentElement, mq = window.matchMedia('(prefers-color-scheme: dark)');
-      function saved() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
-      function apply(t) {
-        root.setAttribute('data-theme', t);
-        var src = document.querySelectorAll('.flagcounter source');
-        for (var i = 0; i < src.length; i++) src[i].media = t === 'dark' ? 'all' : 'not all';
-      }
-      apply(saved() || (mq.matches ? 'dark' : 'light'));
-      document.addEventListener('DOMContentLoaded', function () {
-        apply(root.getAttribute('data-theme'));
-        var b = document.querySelector('.theme-toggle');
-        if (b) b.addEventListener('click', function () {
-          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          apply(t);
-          try { localStorage.setItem('theme', t); } catch (e) {}
-        });
-      });
-      (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(function (e) {
-        if (!saved()) apply(e.matches ? 'dark' : 'light');
-      });
-    })();
-  </script>
+  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  {% if page.teaching_note %}
+  <link rel="stylesheet" href="{{ '/assets/math/katex-swap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/notes.css' | relative_url }}">
+  {% endif %}
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 </head>
 <body>
