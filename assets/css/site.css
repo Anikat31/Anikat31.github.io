@@ -295,6 +295,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 }
 .pub:last-child { border-bottom: 0; }
 .pub--plain { grid-template-columns: minmax(0, 1fr); }
+.pub-fig { align-self: start; }
 .pub-fig img {
   width: 100%;
   aspect-ratio: 1;
@@ -303,6 +304,21 @@ a:focus-visible, video:focus-visible, button:focus-visible {
   border-radius: 4px;
   background: var(--tint);
 }
+.pub-fig-preview {
+  position: fixed;
+  z-index: 20;
+  width: auto;
+  height: auto;
+  max-width: min(30rem, calc(100vw - 24px));
+  max-height: min(72vh, calc(100vh - 24px));
+  pointer-events: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  box-shadow: 0 6px 24px rgb(0 0 0 / .24);
+}
+.pub-fig-preview[hidden] { display: none; }
+@media print { .pub-fig-preview { display: none; } }
 .pub-title { margin: 0; font: 600 1.04rem/1.35 var(--sans); }
 .pub-title a { color: var(--ink); text-decoration: none; }
 .pub-title a:hover { color: var(--link); text-decoration: underline; }

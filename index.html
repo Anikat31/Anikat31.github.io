@@ -67,7 +67,11 @@ description: "Anikat Kankaria — PhD candidate in Physics at ICTS-TIFR, Bengalu
       <ol class="pubs">
         {% for p in site.data.publications.preprints %}
         {% if p.image %}<li class="pub">{% else %}<li class="pub pub--plain">{% endif %}
-          {% if p.image %}<a class="pub-fig" href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="{{ p.image | relative_url }}" alt="" width="{{ p.image_width }}" height="{{ p.image_height }}" loading="lazy"></a>{% endif %}
+          {% if p.image %}
+          <a class="pub-fig" href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">
+            <img src="{{ p.image | relative_url }}" alt="Figure from {{ p.title | escape }}" width="{{ p.image_width }}" height="{{ p.image_height }}" loading="lazy">
+          </a>
+          {% endif %}
           <div>
             <h4 class="pub-title"><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">{{ p.title | escape }}</a></h4>
             <p class="pub-authors">{{ p.authors | escape | replace: 'Anikat Kankaria', '<span class="me">Anikat Kankaria</span>' }}</p>
@@ -93,6 +97,8 @@ description: "Anikat Kankaria — PhD candidate in Physics at ICTS-TIFR, Bengalu
       </ol>
       {% endif %}
     </section>
+
+    <script defer src="{{ '/assets/js/publication-preview.js' | relative_url }}"></script>
 
     <section class="section" id="education">
       <h2>Education</h2>
