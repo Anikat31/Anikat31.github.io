@@ -78,24 +78,17 @@ description: "Photos and simulation visuals from Anikat Kankaria's research and 
       </figure>
     </div>
 
-    <div class="pair">
-      <figure data-group="Simulations" style="--r:1.187">
-        <video aria-label="2D active nematic turbulence simulation · 2026" controls playsinline preload="none" width="1282" height="1080" poster="{{ '/assets/videos/posters/nematic_vorticity.jpg' | relative_url }}">
-          <source src="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}" type="video/mp4">
-          Your browser doesn’t support embedded video.
-          <a href="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}">Open the simulation video</a>
-        </video>
-        <figcaption>2D active nematic turbulence simulation · 2026</figcaption>
-      </figure>
-      <figure data-group="Simulations" style="--r:1.191">
-        <video aria-label="2D active nematic turbulence simulation, order parameter · 2026" controls playsinline preload="none" width="1286" height="1080" poster="{{ '/assets/videos/posters/nematic_orderparam.jpg' | relative_url }}">
-          <source src="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}" type="video/mp4">
-          Your browser doesn’t support embedded video.
-          <a href="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}">Open the simulation video</a>
-        </video>
-        <figcaption>2D active nematic turbulence simulation, order parameter · 2026</figcaption>
-      </figure>
-    </div>
+    <figure data-group="Simulations" id="active-nematic">
+      <div class="comparison-labels" aria-hidden="true"><span>Vorticity</span><span>Order parameter</span></div>
+      <video aria-label="Active nematic turbulence, vorticity on the left and order parameter on the right" controls playsinline preload="none" width="1926" height="810" poster="{{ '/assets/videos/posters/nematic-comparison.jpg' | relative_url }}">
+        <source src="{{ '/assets/videos/nematic-comparison.mp4' | relative_url }}" type="video/mp4">
+        <a href="{{ '/assets/videos/nematic-comparison.mp4' | relative_url }}">Open the synchronized simulation</a>
+      </video>
+      <figcaption class="comparison-caption">Active nematic turbulence · 2026<br>
+        <a href="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}">Vorticity video</a>
+        · <a href="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}">Order parameter video</a>
+      </figcaption>
+    </figure>
 
   </div>
 

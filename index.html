@@ -75,7 +75,7 @@ description: "Anikat Kankaria — PhD candidate in Physics at ICTS-TIFR, Bengalu
           <div>
             <h4 class="pub-title"><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">{{ p.title | escape }}</a></h4>
             <p class="pub-authors">{{ p.authors | escape | replace: 'Anikat Kankaria', '<span class="me">Anikat Kankaria</span>' }}</p>
-            <p class="pub-meta"><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">arXiv:{{ p.arxiv }}</a> · {{ p.date }}</p>
+            <p class="pub-meta"><a href="https://arxiv.org/abs/{{ p.arxiv }}" target="_blank" rel="noopener">arXiv:{{ p.arxiv }}</a> · {{ p.date }} · <a href="{{ '/papers.bib' | relative_url }}" data-cite="{{ p.arxiv }}">BibTeX</a></p>
           </div>
         </li>
         {% endfor %}
@@ -98,7 +98,13 @@ description: "Anikat Kankaria — PhD candidate in Physics at ICTS-TIFR, Bengalu
       {% endif %}
     </section>
 
+    <dialog class="lightbox" id="publication-viewer" aria-labelledby="figure-caption">
+      <button type="button" aria-label="Close enlarged figure" autofocus>×</button>
+      <img alt="">
+      <p id="figure-caption"></p>
+    </dialog>
     <script defer src="{{ '/assets/js/publication-preview.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/citations.js' | relative_url }}"></script>
 
     <section class="section" id="education">
       <h2>Education</h2>

@@ -325,6 +325,14 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 .pub-authors { margin: .35rem 0 0; color: var(--ink-2); font-size: .92rem; line-height: 1.5; }
 .me { color: var(--ink); font-weight: 600; }
 .pub-meta { margin: .35rem 0 0; color: var(--muted); font-size: .88rem; }
+.copy-citation {
+  padding: .15em 0; border: 0; background: transparent; color: var(--link);
+  font: inherit; text-decoration: underline; text-underline-offset: .18em; cursor: pointer;
+}
+.citation-status:not(:empty) { margin-inline-start: .5em; color: var(--ink); }
+.citation-text { width: 100%; margin-top: .5rem; font-size: .85rem; }
+#publication-viewer { height: 100dvh; text-align: center; }
+#publication-viewer img { min-height: 0; max-height: calc(100dvh - 8rem); }
 
 .edu {
   display: grid;
@@ -361,6 +369,8 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 .pair { display: flex; align-items: flex-start; gap: 1.5rem; }
 .pair figure { flex: var(--r, 1) 1 0%; }
 .gallery a { display: block; }
+.gallery .comparison-caption a { display: inline; }
+.comparison-labels { display: grid; grid-template-columns: 1fr 1fr; text-align: center; margin-bottom: .4rem; font-weight: 600; }
 .gallery a[data-full] { cursor: zoom-in; }
 .gallery img, .gallery video {
   width: 100%;

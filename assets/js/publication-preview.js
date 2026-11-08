@@ -5,6 +5,7 @@ preview.hidden = true;
 document.body.append(preview);
 
 let activeFigure;
+const figureViewer = document.querySelector('#publication-viewer');
 
 function hidePreview() {
   preview.hidden = true;
@@ -38,11 +39,25 @@ function showPreview(link) {
 }
 
 for (const link of document.querySelectorAll('#publications .pub-fig')) {
+  let pointerType = '';
+  link.addEventListener('pointerdown', event => { pointerType = event.pointerType; });
+  link.addEventListener('click', event => {
+    const pointer = event.pointerType || pointerType;
+    const touch = pointer === 'touch' || (!pointer && matchMedia('(hover: none)').matches);
+    if ((!touch && event.detail !== 0) || !figureViewer?.showModal ||
+        event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+    event.preventDefault();
+    hidePreview();
+    const original = link.querySelector('img');
+    figureViewer.querySelector('img').src = original.currentSrc || original.src;
+    figureViewer.querySelector('p').textContent = original.alt;
+    figureViewer.showModal();
+  });
   link.addEventListener('pointerenter', event => {
     if (event.pointerType !== 'touch' && matchMedia('(any-hover: hover)').matches) showPreview(link);
   });
   link.addEventListener('focus', () => {
-    if (link.matches(':focus-visible')) showPreview(link);
+    if (!figureViewer?.open && link.matches(':focus-visible')) showPreview(link);
   });
   for (const event of ['pointerleave', 'pointercancel', 'blur']) {
     link.addEventListener(event, () => {
@@ -50,6 +65,15 @@ for (const link of document.querySelectorAll('#publications .pub-fig')) {
     });
   }
 }
+
+figureViewer.querySelector('button').addEventListener('click', () => figureViewer.close());
+figureViewer.addEventListener('click', event => {
+  if (event.target === figureViewer) figureViewer.close();
+});
+figureViewer.addEventListener('close', () => {
+  hidePreview();
+  figureViewer.querySelector('img').removeAttribute('src');
+});
 
 preview.addEventListener('load', positionPreview);
 preview.addEventListener('error', hidePreview);
