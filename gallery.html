@@ -21,16 +21,17 @@ description: "Photos and simulation visuals from Anikat Kankaria's research and 
 
   <div class="gallery">
 
-    <div class="pair">
-      <figure data-group="Campus" style="--r:1.497">
-        <a href="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" data-full><img src="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" alt="ICTS Fluid Dynamics Group, 2025" width="1800" height="1202" loading="lazy"></a>
-        <figcaption>ICTS Fluid Dynamics Group · 2025</figcaption>
-      </figure>
-      <figure data-group="Campus" style="--r:1.333">
-        <a href="{{ '/assets/ICTS_morning.jpg' | relative_url }}" data-full><img src="{{ '/assets/gallery/ICTS_morning.jpg' | relative_url }}" alt="A morning at ICTS" width="2000" height="1500" loading="lazy"></a>
-        <figcaption>Mornings at ICTS · 2025</figcaption>
-      </figure>
-    </div>
+    <figure data-group="Simulations" id="active-nematic">
+      <div class="comparison-labels" aria-hidden="true"><span>Vorticity</span><span>Order parameter</span></div>
+      <video aria-label="Active nematic turbulence, vorticity on the left and order parameter on the right" controls playsinline preload="none" width="1926" height="810" poster="{{ '/assets/videos/posters/nematic-comparison.jpg' | relative_url }}">
+        <source src="{{ '/assets/videos/nematic-comparison.mp4' | relative_url }}" type="video/mp4">
+        <a href="{{ '/assets/videos/nematic-comparison.mp4' | relative_url }}">Open the synchronized simulation</a>
+      </video>
+      <figcaption class="comparison-caption">Active nematic turbulence · 2026<br>
+        <a href="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}">Vorticity video</a>
+        · <a href="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}">Order parameter video</a>
+      </figcaption>
+    </figure>
 
     <div class="pair">
       <figure data-group="Simulations" style="--r:1">
@@ -51,6 +52,22 @@ description: "Photos and simulation visuals from Anikat Kankaria's research and 
       </figure>
     </div>
 
+    <figure data-group="Campus">
+      <a href="{{ '/assets/butterfly_garden.jpg' | relative_url }}" data-full><img src="{{ '/assets/gallery/butterfly_garden.jpg' | relative_url }}" alt="Butterfly Garden, Hesseraghatta" width="2800" height="562" loading="lazy"></a>
+      <figcaption>Butterfly Garden Hesseraghatta</figcaption>
+    </figure>
+
+    <div class="pair">
+      <figure data-group="Campus" style="--r:1.497">
+        <a href="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" data-full><img src="{{ '/assets/ICTS_Fluid_Group_2025_web.jpg' | relative_url }}" alt="ICTS Fluid Dynamics Group, 2025" width="1800" height="1202" loading="lazy"></a>
+        <figcaption>ICTS Fluid Dynamics Group · 2025</figcaption>
+      </figure>
+      <figure data-group="Campus" style="--r:1.333">
+        <a href="{{ '/assets/ICTS_morning.jpg' | relative_url }}" data-full><img src="{{ '/assets/gallery/ICTS_morning.jpg' | relative_url }}" alt="A morning at ICTS" width="2000" height="1500" loading="lazy"></a>
+        <figcaption>Mornings at ICTS · 2025</figcaption>
+      </figure>
+    </div>
+
     <div class="pair">
       <figure data-group="Outdoors" style="--r:1.333">
         <a href="{{ '/assets/IMG_0024.jpeg' | relative_url }}" data-full><img src="{{ '/assets/gallery/IMG_0024.jpg' | relative_url }}" alt="Kudremukh peak" width="2000" height="1500" loading="lazy"></a>
@@ -62,11 +79,6 @@ description: "Photos and simulation visuals from Anikat Kankaria's research and 
       </figure>
     </div>
 
-    <figure data-group="Campus">
-      <a href="{{ '/assets/butterfly_garden.jpg' | relative_url }}" data-full><img src="{{ '/assets/gallery/butterfly_garden.jpg' | relative_url }}" alt="Butterfly Garden, Hesseraghatta" width="2800" height="562" loading="lazy"></a>
-      <figcaption>Butterfly Garden Hesseraghatta</figcaption>
-    </figure>
-
     <div class="pair">
       <figure data-group="Outdoors" style="--r:1.333">
         <a href="{{ '/assets/kumar_peak.jpeg' | relative_url }}" data-full><img src="{{ '/assets/gallery/kumar_peak.jpg' | relative_url }}" alt="Kumara Parvat peak" width="2000" height="1500" loading="lazy"></a>
@@ -77,18 +89,6 @@ description: "Photos and simulation visuals from Anikat Kankaria's research and 
         <figcaption>Kumara Parvat view · 2026</figcaption>
       </figure>
     </div>
-
-    <figure data-group="Simulations" id="active-nematic">
-      <div class="comparison-labels" aria-hidden="true"><span>Vorticity</span><span>Order parameter</span></div>
-      <video aria-label="Active nematic turbulence, vorticity on the left and order parameter on the right" controls playsinline preload="none" width="1926" height="810" poster="{{ '/assets/videos/posters/nematic-comparison.jpg' | relative_url }}">
-        <source src="{{ '/assets/videos/nematic-comparison.mp4' | relative_url }}" type="video/mp4">
-        <a href="{{ '/assets/videos/nematic-comparison.mp4' | relative_url }}">Open the synchronized simulation</a>
-      </video>
-      <figcaption class="comparison-caption">Active nematic turbulence · 2026<br>
-        <a href="{{ '/assets/videos/nematic_vorticity.mp4' | relative_url }}">Vorticity video</a>
-        · <a href="{{ '/assets/videos/nematic_orderparam.mp4' | relative_url }}">Order parameter video</a>
-      </figcaption>
-    </figure>
 
   </div>
 

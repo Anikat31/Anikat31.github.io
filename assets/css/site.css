@@ -1,19 +1,20 @@
 /* ==========================================================================
    Site stylesheet — shared by every page.
 
-   Academic profile with a monochrome palette, a portrait sidebar, and serif headings.
+   Academic profile with ivory and charcoal themes, a portrait sidebar, and serif headings.
    ========================================================================== */
 
 :root {
-  --bg: #f3f3f3;
-  --ink: #1f1f1f;
-  --ink-2: #474747;
-  --muted: #606060;
-  --line: #d9d9d9;
-  --tint: #e9e9e9;
-  --navy: #2e2e2e;
-  --link: #525252;
-  --link-dark: #111111;
+  --bg: #f8f5ec;
+  --ink: #282923;
+  --ink-2: #484941;
+  --muted: #606157;
+  --line: #d1ccbf;
+  --tint: #eeeade;
+  --navy: #292a24;
+  --link: #46483f;
+  --link-dark: #25261f;
+  --accent: #964122;
 
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --serif: Georgia, "Times New Roman", serif;
@@ -27,17 +28,17 @@
 :root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #1c1c1c;
-  --ink: #e7e7e7;
-  --ink-2: #bababa;
-  --muted: #8f8f8f;
-  --line: #343434;
-  --tint: #262626;
-  --navy: #d4d4d4;
-  --link: #c9c9c9;
-  --link-dark: #ffffff;
+  --bg: #232422;
+  --ink: #f1eee6;
+  --ink-2: #c8c6bc;
+  --muted: #a9a99f;
+  --line: #454640;
+  --tint: #2d2e2a;
+  --navy: #e6e4da;
+  --link: #d0cfc4;
+  --link-dark: #f8f5ec;
+  --accent: #e99a75;
 }
-:root[data-theme="dark"] a { text-decoration-color: rgba(201, 201, 201, .4); }
 :root[data-theme="dark"] .pub-fig img,
 :root[data-theme="dark"] .gallery img,
 :root[data-theme="dark"] .gallery video { opacity: .94; }
@@ -45,17 +46,17 @@
 /* same colours when scripts are off and the device is in dark mode */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --bg: #1c1c1c;
-    --ink: #e7e7e7;
-    --ink-2: #bababa;
-    --muted: #8f8f8f;
-    --line: #343434;
-    --tint: #262626;
-    --navy: #d4d4d4;
-    --link: #c9c9c9;
-    --link-dark: #ffffff;
+    --bg: #232422;
+    --ink: #f1eee6;
+    --ink-2: #c8c6bc;
+    --muted: #a9a99f;
+    --line: #454640;
+    --tint: #2d2e2a;
+    --navy: #e6e4da;
+    --link: #d0cfc4;
+    --link-dark: #f8f5ec;
+    --accent: #e99a75;
   }
-  :root:not([data-theme]) a { text-decoration-color: rgba(201, 201, 201, .4); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -79,12 +80,12 @@ img, video { display: block; max-width: 100%; height: auto; }
 a {
   color: var(--link);
   text-decoration: underline;
-  text-decoration-color: rgba(82, 82, 82, .4);
+  text-decoration-color: var(--muted);
   text-underline-offset: .18em;
 }
-a:hover { color: var(--link-dark); text-decoration-color: currentColor; }
+a:hover { color: var(--link-dark); text-decoration-color: var(--accent); }
 a:focus-visible, video:focus-visible, button:focus-visible {
-  outline: 2px solid var(--link);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 3px;
 }
@@ -116,11 +117,23 @@ a:focus-visible, video:focus-visible, button:focus-visible {
   padding-block: 1rem;
 }
 
+.masthead h1 { margin: 0; font: inherit; }
 .brand {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .12rem .62rem;
   color: var(--navy);
-  font: 700 1.15rem/1.2 var(--serif);
+  font: 600 clamp(1.22rem, 1rem + .6vw, 1.5rem)/1.22 var(--serif);
+  letter-spacing: -.025em;
   text-decoration: none;
 }
+.brand-deva {
+  color: var(--ink-2);
+  font: 400 .96rem/1.4 "Kohinoor Devanagari", "Nirmala UI", "Noto Sans Devanagari", var(--sans);
+  letter-spacing: normal;
+}
+.brand-affiliation { margin: .22rem 0 0; color: var(--muted); font-size: .83rem; line-height: 1.45; }
 .brand:hover { color: var(--navy); }
 
 .site-nav ul {
@@ -141,7 +154,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 }
 .site-nav a:hover { color: var(--navy); }
 .site-nav a[aria-current="page"] {
-  border-bottom-color: var(--navy);
+  border-bottom-color: var(--accent);
   color: var(--navy);
   font-weight: 600;
 }
@@ -204,20 +217,6 @@ a:focus-visible, video:focus-visible, button:focus-visible {
   object-fit: cover;
   object-position: 50% 26%;
 }
-
-.name {
-  margin: 1.15rem 0 0;
-  letter-spacing: -.035em;
-  color: var(--navy);
-  font: 700 1.85rem/1.16 var(--serif);
-}
-.name-deva {
-  margin: .25rem 0 0;
-  color: var(--muted);
-  font: 400 1rem/1.4 "Kohinoor Devanagari", "Devanagari Sangam MN", "Nirmala UI", "Noto Sans Devanagari", var(--sans);
-}
-.title { margin: .9rem 0 0; font-size: .98rem; font-weight: 600; line-height: 1.4; }
-.affil { margin: .1rem 0 0; color: var(--ink-2); font-size: .95rem; line-height: 1.45; }
 
 .side-links {
   display: grid;
@@ -321,7 +320,7 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 @media print { .pub-fig-preview { display: none; } }
 .pub-title { margin: 0; font: 600 1.04rem/1.35 var(--sans); }
 .pub-title a { color: var(--ink); text-decoration: none; }
-.pub-title a:hover { color: var(--link); text-decoration: underline; }
+.pub-title a:hover { color: var(--ink); text-decoration: underline var(--accent); }
 .pub-authors { margin: .35rem 0 0; color: var(--ink-2); font-size: .92rem; line-height: 1.5; }
 .me { color: var(--ink); font-weight: 600; }
 .pub-meta { margin: .35rem 0 0; color: var(--muted); font-size: .88rem; }
@@ -463,13 +462,14 @@ a:focus-visible, video:focus-visible, button:focus-visible {
 [hidden] { display: none !important; }
 .section, .reading [id] { scroll-margin-top: 1.5rem; }
 .jump-link { margin: .85rem 0 0; font-size: .87rem; }
+.jump-link a, .pub-meta a, .copy-citation { text-decoration-color: var(--accent); }
 .jump-link span { display: inline-block; margin-left: .15rem; }
 .visitors { color: var(--muted); margin-top: 1rem; font-size: .8rem; }
 .visitors summary { cursor: pointer; width: fit-content; }
 .visitors .flagcounter { margin-top: .7rem; }
 .gallery-filters { display: flex; flex-wrap: wrap; gap: .5rem 1.3rem; margin: 1.6rem 0 0; }
 .gallery-filters button { font: 500 .9rem/1.4 var(--sans); color: var(--ink-2); padding: .35rem 0; background: transparent; border: 0; border-bottom: 2px solid transparent; cursor: pointer; }
-.gallery-filters button[aria-pressed=true] { color: var(--ink); border-bottom-color: currentColor; }
+.gallery-filters button[aria-pressed=true] { color: var(--ink); border-bottom-color: var(--accent); }
 .gallery-filters button:hover { color: var(--ink); }
 .gallery-filters + .gallery { margin-top: 1.25rem; }
 .lightbox:modal { overscroll-behavior: contain; }
@@ -489,11 +489,8 @@ body:has(.lightbox[open]) { overflow: hidden; }
   }
   .visitors { grid-column: 1 / -1; margin-top: 0; }
   .avatar { width: 8rem; height: 8rem; }
-  .name { margin-top: 0; font-size: 1.4rem; }
-  .title { margin-top: .6rem; }
   .flagcounter { grid-column: 1 / -1; margin-top: 0; }
   .side-links {
-    grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
     gap: .5rem 1.4rem;
@@ -507,8 +504,6 @@ body:has(.lightbox[open]) { overflow: hidden; }
   .theme-toggle { margin-left: 0; }
   .sidebar { grid-template-columns: 6.25rem minmax(0, 1fr); gap: .9rem 1.1rem; }
   .avatar { width: 6.25rem; height: 6.25rem; padding: 3px; }
-  .name { font-size: 1.3rem; }
-  .affil { font-size: .9rem; }
 
   .facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .facts dt { margin-top: .7rem; }
@@ -551,7 +546,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
 /* ---------- print ---------- */
 
 @media print {
-  .site-header, .skip, .side-links, .visitors, .jump-link, .gallery-filters { display: none; }
+  .site-nav, .skip, .side-links, .visitors, .jump-link, .gallery-filters { display: none; }
   .sidebar { position: static; }
   body { font-size: 11pt; }
   a { color: inherit; text-decoration: none; }

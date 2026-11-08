@@ -1,6 +1,14 @@
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{{ '/' | relative_url }}">Anikat Kankaria</a>
+    <div class="masthead">
+      {% if page.nav == 'home' %}<h1>{% endif %}
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span>Anikat Kankaria</span>
+        <span class="brand-deva" lang="hi"><span aria-hidden="true">· </span>अनिकेत कांकरिया</span>
+      </a>
+      {% if page.nav == 'home' %}</h1>{% endif %}
+      <p class="brand-affiliation">Physics · ICTS–TIFR, Bengaluru</p>
+    </div>
     <nav class="site-nav" aria-label="Main">
       <ul>
         <li><a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} aria-current="page"{% endif %}>Home</a></li>
